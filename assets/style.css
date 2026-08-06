@@ -267,6 +267,13 @@ html[data-theme="dark"] .path .db.opt{color:var(--gold);}
 
 /* ══ 時間軸 ═════════════════════════════ */
 .flow{margin:1rem 0 0;}
+/* 寬螢幕分兩欄。用多欄排版而非格線，時間才會沿著欄位由上往下讀 */
+@media(min-width:62rem){
+  .flow{columns:2;column-gap:2.4rem;}
+  .step{break-inside:avoid;-webkit-column-break-inside:avoid;}
+  .step:first-child{border-top:none;}
+  .step:last-child{border-bottom:none;}
+}
 .step{display:grid;grid-template-columns:5.4rem 1fr;gap:clamp(.8rem,2.4vw,1.5rem);
   padding:.62rem 0;border-top:1px solid var(--rule);}
 .step:last-child{border-bottom:1px solid var(--rule);}
@@ -275,7 +282,7 @@ html[data-theme="dark"] .path .db.opt{color:var(--gold);}
 .step .clock small{display:block;font-weight:600;font-size:.76rem;
   color:var(--muted);letter-spacing:.03em;}
 .step .t{font-weight:800;margin-bottom:.2rem;font-size:1.02rem;}
-.step .d{color:var(--ink-2);font-size:.93rem;line-height:1.72;max-width:var(--measure);}
+.step .d{color:var(--ink-2);font-size:.9rem;line-height:1.62;max-width:var(--measure);}
 .step.rest{background:var(--paper-2);}
 .step.rest .clock,.step.rest .t{color:var(--muted);}
 
