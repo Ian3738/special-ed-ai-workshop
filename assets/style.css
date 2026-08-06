@@ -139,6 +139,25 @@ body{
   text-decoration:none;white-space:nowrap;border-radius:.4rem;padding:.28rem .62rem;
   background:var(--card);}
 .toc a:hover{background:var(--brand);color:var(--brand-ink);text-decoration:none;}
+/* ══ 系統高對比模式 ═══════════════════════
+   Windows 高對比等設定會接管所有顏色，填色區塊將被壓平。
+   本站的區辨本來就不單靠顏色，此處僅補上邊框以維持形狀。 */
+@media (forced-colors: active){
+  .num,.flag,.path .cat,.path .db,.gate .g,.todo,.cmd .lbl,
+  .tabs a[aria-current="page"],.tog[aria-pressed="true"]{
+    border:1px solid currentColor;}
+  .path,.card,.gate,.law,.note,.redline,.a11y,.stair li,.tw,.pager a,.cmd{
+    border:1px solid currentColor;}
+  .steps>li::before{border:1px solid currentColor;}
+  .ph{border-bottom:2px solid currentColor;}
+  .ph::after,.tabs::after{display:none;}
+  .tabs a[aria-current="page"]{outline:2px solid currentColor;outline-offset:-3px;}
+  section > details > summary .head::after{border-color:currentColor;}
+  .thesis{border-left-color:currentColor;}
+  h3{border-left-color:currentColor;}
+  :focus-visible{outline:3px solid currentColor;}
+}
+
 @media print{.toc{display:none;}}
 
 /* ══ 頁首色塊 ═══════════════════════════ */

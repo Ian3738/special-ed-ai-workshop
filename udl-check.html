@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=8">
+<link rel="stylesheet" href="assets/style.css?v=9">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -73,6 +73,11 @@ d.setAttribute('data-fs',f||'m');})();
   <p>各類產出之使用者不同，惟其共通性在於：使用者群體中必然包含在資訊接收、動作表達或參與動機上具有困難者。學生如此，家長如此，同儕教師亦然。</p>
 
   <p>三道檢核之次序具有意義。<strong>資訊可及性未達成前，後續兩項不具檢核意義</strong>——使用者無從對其無法開啟之系統產生參與動機。</p>
+
+  <div class="note">
+    <p><b>不宜另設「視障模式」或「聽障模式」。</b>另立專屬模式即屬<strong>為特定群體作出特別設計</strong>，依定義為合理調整而非通用設計，且實務上該模式通常維護不足、內容落後於主要版本。正確作法為單一版本即滿足全部檢核：文字可放大、可由螢幕報讀軟體讀取、可僅以鍵盤操作，語音與影像則另附文字對應。</p>
+    <p>需要另行處置者，是點字、觸覺圖形、手語翻譯、一對一報讀等<strong>本質上無法通用化的個別支持</strong>；此類服務屬合理調整之範疇，依《特殊教育課程實施規範》另行提供，不因系統已符合通用設計而免除。</p>
+  </div>
     </div>
   </details>
 </section>
@@ -92,6 +97,7 @@ d.setAttribute('data-fs',f||'m');})();
     <ul>
       <li>字級放大至兩倍時，版面配置是否維持可用</li>
       <li>是否提供語音朗讀，或至少可由螢幕報讀軟體正確讀取</li>
+      <li><strong>語音或影片內容是否另附文字稿與字幕</strong>。語音是文字之外的<strong>增列</strong>路徑，不得取代文字；僅提供語音者，聽覺障礙學生反而失去取用途徑</li>
       <li>關鍵詞是否附有圖示或實例，抑或僅有文字定義</li>
       <li>是否存在單獨以顏色承載之訊息</li>
       <li>專有名詞首次出現時是否附有說明</li>
@@ -221,6 +227,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=8"></script>
+<script src="assets/site.js?v=9"></script>
 </body>
 </html>
