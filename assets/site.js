@@ -61,6 +61,39 @@
     });
   }
 
+  /* ── 頁內章節跳轉列：由各節 h2 自動生成 ── */
+  (function(){
+    var secs = document.querySelectorAll('main section[aria-labelledby]');
+    if(secs.length < 3) return;
+    var ph = document.querySelector('header.ph');
+    if(!ph) return;
+
+    var bar = document.createElement('nav');
+    bar.className = 'toc';
+    bar.setAttribute('aria-label', '本頁章節');
+    var wrap = document.createElement('div');
+    wrap.className = 'wrap';
+    var lbl = document.createElement('span');
+    lbl.className = 't';
+    lbl.textContent = '本頁章節';
+    wrap.appendChild(lbl);
+
+    secs.forEach(function(sec){
+      var id = sec.getAttribute('aria-labelledby');
+      var h  = document.getElementById(id);
+      if(!h) return;
+      if(!sec.id) sec.id = 'sec-' + id;
+      var a = document.createElement('a');
+      a.href = '#' + sec.id;
+      a.textContent = h.textContent.trim();
+      wrap.appendChild(a);
+    });
+
+    if(wrap.children.length < 4) return;
+    bar.appendChild(wrap);
+    ph.insertAdjacentElement('afterend', bar);
+  })();
+
   /* ── 分頁列：把目前頁捲進可視範圍（窄螢幕會橫向捲動） ── */
   var strip = document.querySelector('.tabs .wrap');
   var cur = strip && strip.querySelector('[aria-current="page"]');
