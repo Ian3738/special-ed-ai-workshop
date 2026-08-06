@@ -6,7 +6,14 @@
 <title>特殊教育 AI 工作坊｜學員版</title>
 <meta name="description" content="三小時，把你最痛的那件事做成一個會存資料的系統。用康軒 KUSE，UDL 當交付前的檢核規準。">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/style.css">
+<script>
+/* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
+(function(){var d=document.documentElement,t,f;
+try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catch(e){}
+d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+d.setAttribute('data-fs',f||'m');})();
+</script>
+<link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -233,6 +240,6 @@
   </div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/site.js?v=3"></script>
 </body>
 </html>

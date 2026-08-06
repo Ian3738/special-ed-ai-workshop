@@ -70,6 +70,10 @@ html[data-fs="xl"]{ --fs:22.5px; }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{font-size:var(--fs);-webkit-text-size-adjust:100%;}
 
+/* 切換主題的瞬間關閉所有過場（見 site.js 的 withoutTransition） */
+html.theming *,html.theming *::before,html.theming *::after{
+  transition:none !important;animation:none !important;}
+
 body{
   background:var(--paper);color:var(--ink);
   font-family:var(--sans);line-height:1.8;letter-spacing:.005em;

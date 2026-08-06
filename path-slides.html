@@ -6,7 +6,14 @@
 <title>簡報：個案研討與親師溝通｜特殊教育 AI 工作坊</title>
 <meta name="description" content="把零散的觀察紀錄整理成一份講得下去的簡報。每學期都要做的那個。">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/style.css">
+<script>
+/* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
+(function(){var d=document.documentElement,t,f;
+try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catch(e){}
+d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+d.setAttribute('data-fs',f||'m');})();
+</script>
+<link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -169,6 +176,6 @@
   <div class="wrap"><p><strong>特殊教育 AI 工作坊</strong>｜路線三．簡報</p></div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/site.js?v=3"></script>
 </body>
 </html>

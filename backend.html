@@ -6,7 +6,14 @@
 <title>後台與個資紅線｜特殊教育 AI 工作坊</title>
 <meta name="description" content="怎麼接資料庫、要存什麼不能存什麼、權限實測怎麼做。">
 <meta name="color-scheme" content="light dark">
-<link rel="stylesheet" href="assets/style.css">
+<script>
+/* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
+(function(){var d=document.documentElement,t,f;
+try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catch(e){}
+d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+d.setAttribute('data-fs',f||'m');})();
+</script>
+<link rel="stylesheet" href="assets/style.css?v=3">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -161,6 +168,6 @@
   <div class="wrap"><p><strong>特殊教育 AI 工作坊</strong>｜後台與個資紅線</p></div>
 </footer>
 
-<script src="assets/site.js"></script>
+<script src="assets/site.js?v=3"></script>
 </body>
 </html>
