@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>評量：多元作答系統｜特殊教育 AI 工作坊</title>
+<meta name="description" content="同一題可以打字、可以點選、可以錄音，共用一份評分規準，作答歷程存得下來。">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="home" href="index.html">特殊教育 AI 工作坊</a>
+    <span class="sep" aria-hidden="true">／</span>
+    <span class="here">評量</span>
+    <div class="ctrl">
+      <span class="lbl" id="fsLbl">文字</span>
+      <button class="tog" type="button" data-fs="m" aria-pressed="true" aria-describedby="fsLbl">標準</button>
+      <button class="tog" type="button" data-fs="l" aria-pressed="false" aria-describedby="fsLbl">大</button>
+      <button class="tog" type="button" data-fs="xl" aria-pressed="false" aria-describedby="fsLbl">特大</button>
+    </div>
+    <div class="ctrl"><button class="tog" type="button" id="themeBtn" aria-pressed="false">深色</button></div>
+  </div>
+</div>
+
+<header class="ph">
+  <div class="wrap">
+    <p class="kicker">路線四．評量</p>
+    <h1>多元作答的評量系統</h1>
+    <p class="thesis">評量調整不是給比較簡單的題目，<br>是<b>拿掉擋在能力前面的東西</b>。同一題、多條作答路、一份規準。</p>
+    <div class="tags"><span>需要後台</span><span>約 60 分鐘</span><span>兩段實作都用得上</span></div>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap narrow">
+
+<section aria-labelledby="s1">
+  <div class="head">
+    <span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">這條路在解什麼</h2></div>
+  </div>
+
+  <p>《特殊教育課程實施規範》早就寫了評量方式調整可以「採紙筆、口試、指認、實作、電子試題、有聲試題、提供試卷並報讀」。問題是這些在紙筆評量的現場很難同時提供——你不可能同一節課裡幫三個學生做三種試卷。</p>
+
+  <p>做成系統就可以。學生自己選作答方式，你收到的是同一份規準下的結果。</p>
+
+  <div class="note">
+    <p><b>核心判準：</b>這個障礙是我要測的能力，還是擋在能力前面的東西？要測「理解課文主旨」，書寫能力就是擋在前面的，該拿掉；要測「正確書寫國字」，書寫就是目標，不能替代。<a href="udl-check.html">檢核卡第二關</a>講的就是這件事。</p>
+  </div>
+</section>
+
+<section aria-labelledby="s2">
+  <div class="head">
+    <span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">實作一：把題目做出來</h2><p class="lead">01:00 那 45 分鐘。</p></div>
+  </div>
+
+  <ol class="steps">
+    <li><div><div class="t">先寫下這份評量到底要測什麼</div>
+      <div class="d">一句話。寫不出來就不要往下做——後面每一個決定都靠這句話。</div></div></li>
+    <li><div><div class="t">逐題標記：目標能力還是取用能力</div>
+      <div class="d">每一題問一次：學生答不出來，可能是因為不會，還是因為打不了字、看不清楚、聽不懂題目？後者全部要處理掉。</div></div></li>
+    <li><div><div class="t">給三種作答方式</div>
+      <div class="d">打字、點選、錄音。三種都要能對應到同一份評分規準——這是最難的一步，也是這條路真正的價值。</div></div></li>
+    <li><div><div class="t">寫出跨方式一致的評分規準</div>
+      <div class="d">「說得出三個理由」和「寫得出三個理由」給同樣的分。如果你的規準做不到這件事，那三種方式就不等值，等於暗中降低標準。</div></div></li>
+  </ol>
+
+  <div class="cmd">
+    <div class="lbl">貼進 KUSE 對話區</div>
+<pre>請做一個線上評量網頁，主題〔<span class="fill">單元／能力</span>〕，
+對象〔<span class="fill">年級／學習功能等級</span>〕，共〔<span class="fill">N</span>〕題。
+
+這份評量要測的是：〔<span class="fill">一句話寫清楚</span>〕
+不在這句話裡的任何能力，都不得影響作答結果。
+
+每一題請提供三種作答方式讓學生自己選：
+1. 打字輸入
+2. 點選（選項式，選項數不超過四個）
+3. 錄音口述
+
+三種方式共用同一份評分規準，請把規準寫出來，
+並逐條說明同一個評分等級在三種方式下分別長什麼樣。
+
+題目本身另外提供朗讀，題幹關鍵詞可點開解釋。
+無障礙要求：字級至少 20px 可放大兩倍不破版、對比 4.5:1 以上、
+全鍵盤可操作、不以顏色單獨傳達訊息、不設倒數計時。</pre>
+  </div>
+
+  <div class="note">
+    <p><b>「不設倒數計時」是刻意的。</b>時間限制是最常見的隱形障礙，而且幾乎沒有人真的在測作答速度。你若真的要測速度，那就明講並寫進上面那句「要測什麼」。</p>
+  </div>
+</section>
+
+<section aria-labelledby="s3">
+  <div class="head">
+    <span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">實作二：讓它存得住</h2><p class="lead">01:55 那 30 分鐘。</p></div>
+  </div>
+
+  <p>評量沒有資料就只是一張線上考卷。存下來之後才能回答：哪一題大家都錯（那是題目的問題）、哪種作答方式的人表現不同（那可能是規準沒等值）、同一個學生兩次之間有沒有進步。</p>
+
+  <p>要存什麼、絕對不能存什麼、權限怎麼測，全部在<a href="backend.html">後台那一頁</a>。這條路請務必讀完那頁再動手，評量資料是這五條路裡最敏感的。</p>
+
+  <div class="redline">
+    <div class="h"><span aria-hidden="true">▲</span>三件不能做的事</div>
+    <ul>
+      <li>不要存姓名或學號。存隨機碼，對照表留紙本。</li>
+      <li>不要存障礙類別，也不要存班級型態。有「資源班」三個字就等於標記身分。</li>
+      <li>作答方式欄位存中性代碼（<code>typed</code> / <code>selected</code> / <code>spoken</code>），不要寫成「輔具需求」。</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="s4">
+  <div class="head">
+    <span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">三關怎麼過</h2></div>
+  </div>
+
+  <div class="gates">
+    <div class="gate">
+      <div class="g">看得到嗎</div>
+      <div class="q">題目本身是不是障礙</div>
+      <ul>
+        <li>題幹有沒有朗讀</li>
+        <li>題幹的閱讀難度，有沒有高過它要測的能力</li>
+        <li>圖表題的圖，有沒有文字描述</li>
+      </ul>
+    </div>
+    <div class="gate">
+      <div class="g">做得到嗎</div>
+      <div class="q">三種作答方式真的等值嗎</div>
+      <ul>
+        <li>拿一份規準，用三種方式各答一題，分數算得出來嗎</li>
+        <li>錄音的那條路，靜音環境不足的教室怎麼辦</li>
+        <li>有沒有倒數計時</li>
+      </ul>
+    </div>
+    <div class="gate">
+      <div class="g">為什麼要用</div>
+      <div class="q">學生知道自己在做什麼嗎</div>
+      <ul>
+        <li>做完知不知道對幾題、錯在哪</li>
+        <li>能不能中途離開再回來</li>
+        <li>作答方式選錯了能不能換</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="path-slides.html"><span class="k">上一條路</span><span class="n">簡報：個案研討與親師溝通</span></a>
+  <a class="next" href="path-admin.html"><span class="k">下一條路</span><span class="n">行政：把 Excel 地獄變成系統</span></a>
+</div>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap"><p><strong>特殊教育 AI 工作坊</strong>｜路線四．評量</p></div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

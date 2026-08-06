@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>行政：把 Excel 地獄變成系統｜特殊教育 AI 工作坊</title>
+<meta name="description" content="IEP 進度追蹤、教具借用、巡迴排課、輔導紀錄。以前最痛、最沒工具的一塊。">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="home" href="index.html">特殊教育 AI 工作坊</a>
+    <span class="sep" aria-hidden="true">／</span>
+    <span class="here">行政</span>
+    <div class="ctrl">
+      <span class="lbl" id="fsLbl">文字</span>
+      <button class="tog" type="button" data-fs="m" aria-pressed="true" aria-describedby="fsLbl">標準</button>
+      <button class="tog" type="button" data-fs="l" aria-pressed="false" aria-describedby="fsLbl">大</button>
+      <button class="tog" type="button" data-fs="xl" aria-pressed="false" aria-describedby="fsLbl">特大</button>
+    </div>
+    <div class="ctrl"><button class="tog" type="button" id="themeBtn" aria-pressed="false">深色</button></div>
+  </div>
+</div>
+
+<header class="ph">
+  <div class="wrap">
+    <p class="kicker">路線五．行政</p>
+    <h1>把 Excel 地獄變成系統</h1>
+    <p class="thesis">這一塊以前沒有工具，只有一個愈開愈大的試算表。<br><b>能存資料</b>這件事，才是這次真正的新東西。</p>
+    <div class="tags"><span>需要後台</span><span>約 60 分鐘</span><span>兩段實作都用得上</span></div>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap narrow">
+
+<section aria-labelledby="s1">
+  <div class="head">
+    <span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">這條路在解什麼</h2></div>
+  </div>
+
+  <p>特教的行政負擔有一個共同形狀：<strong>同一份資料要在三個地方各抄一次，而且沒有一個地方是真正的正本</strong>。IEP 在一個檔、進度紀錄在另一個檔、要交出去的統計表又是第三個檔。</p>
+
+  <p>試算表撐不住是因為它沒有真正的資料庫，多人同時改就會壞，也沒辦法用手機隨手記。有後台之後，這件事第一次做得起來。</p>
+
+  <h3>常見的五個題目</h3>
+  <div class="grid">
+    <div class="card"><div class="t">IEP 目標進度追蹤</div><div class="d">每個目標的達成狀況隨手記，期末自動長出檢核表與統計</div></div>
+    <div class="card"><div class="t">教具與輔具借用</div><div class="d">誰借了什麼、什麼時候還、現在在哪一間教室</div></div>
+    <div class="card"><div class="t">巡迴輔導排課與紀錄</div><div class="d">跑幾所學校、看了哪些學生、這次談了什麼、下次要追什麼</div></div>
+    <div class="card"><div class="t">入班觀察紀錄</div><div class="d">手機當場填，回辦公室自動彙整成報告草稿</div></div>
+    <div class="card"><div class="t">轉銜資料檢核</div><div class="d">哪些學生的哪份文件還沒到位，一頁看完</div></div>
+    <div class="card"><div class="t">研習與輔導成效回報</div><div class="d">辦完就收，不用學期末再發一次問卷</div></div>
+  </div>
+</section>
+
+<section aria-labelledby="s2">
+  <div class="head">
+    <span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">實作一：先做輸入端</h2><p class="lead">01:00 那 45 分鐘。做輸入，不要先做報表。</p></div>
+  </div>
+
+  <p>最容易失敗的做法是先做漂亮的統計看板。<strong>沒有人填，就沒有資料，看板就是空的。</strong>先把「隨手填」做到夠簡單，報表之後再說。</p>
+
+  <ol class="steps">
+    <li><div><div class="t">寫下你現在怎麼做這件事</div>
+      <div class="d">照實寫，包含那些很蠢的步驟。「先開 A 檔複製，再開 B 檔貼上，再手動改日期」——這種句子就是規格。</div></div></li>
+    <li><div><div class="t">只留最少的欄位</div>
+      <div class="d">問每一欄：少了它會怎樣？不會怎樣就砍掉。欄位愈多，愈沒有人填。</div></div></li>
+    <li><div><div class="t">做成手機填得動的樣子</div>
+      <div class="d">你是站在教室後面填這個，不是坐在辦公桌前。按鈕要大、選項要多、打字要少。</div></div></li>
+    <li><div><div class="t">自己用一次完整流程</div>
+      <div class="d">不要用假資料點兩下就算。從頭走一遍，計時。超過兩分鐘就太久了。</div></div></li>
+  </ol>
+
+  <div class="cmd">
+    <div class="lbl">貼進 KUSE 對話區</div>
+<pre>請做一個〔<span class="fill">IEP 進度追蹤／教具借用／巡迴紀錄</span>〕系統，
+使用者是〔<span class="fill">特教教師／輔導員</span>〕，主要在〔<span class="fill">手機</span>〕上使用。
+
+我現在的做法是：〔<span class="fill">照實描述現況，含所有蠢步驟</span>〕
+
+請做出：
+1. 一個輸入畫面，欄位愈少愈好，能用選的就不要用打的
+2. 資料存進後台資料庫，下次打開還在
+3. 一個列表可以看歷史紀錄，能依〔<span class="fill">日期／學校／學生代號</span>〕篩選
+
+個資規則（務必遵守）：
+- 學生一律用代號欄位，不要有姓名或學號欄位
+- 不要有障礙類別、鑑定文號、班級型態等欄位
+- 資料表要設好列層級權限，未登入者不得讀取任何資料
+
+無障礙要求：字級至少 20px、按鈕點擊區至少 44×44px、
+對比 4.5:1 以上、全鍵盤可操作、不以顏色單獨傳達狀態。</pre>
+  </div>
+</section>
+
+<section aria-labelledby="s3">
+  <div class="head">
+    <span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">實作二：接後台與權限實測</h2><p class="lead">01:55 那 30 分鐘。這條路最重要的一段。</p></div>
+  </div>
+
+  <p>行政資料比教材資料敏感得多，因為它天生就是關於特定學生的。<strong>權限沒設好，等於把一張特教學生名單放在公開網址上。</strong></p>
+
+  <p>做法、要存什麼、權限怎麼測，全部在<a href="backend.html">後台那一頁</a>。這條路的人請務必把那頁讀完。</p>
+
+  <div class="redline">
+    <div class="h"><span aria-hidden="true">▲</span>行政系統的特有風險</div>
+    <ul>
+      <li><strong>間接識別：</strong>就算只存代號，一份「巡迴輔導紀錄」的存在本身就洩漏了那些學生是特教生。</li>
+      <li><strong>資料會累積：</strong>教材資料收一學期就停了，行政資料會一直長。保留期限要現在就訂。</li>
+      <li><strong>會有別人用：</strong>你做的東西同事會拿去用。誰能看到誰的資料，要在設計時就想清楚。</li>
+      <li><strong>維運歸屬：</strong>帳號綁在你身上，你調動之後這個系統誰接。這件事沒有技術解，回去要問行政。</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="s4">
+  <div class="head">
+    <span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">三關怎麼過</h2><p class="lead">行政系統的使用者是你的同事。他們一樣有人看不清楚、有人手忙不過來。</p></div>
+  </div>
+
+  <div class="gates">
+    <div class="gate">
+      <div class="g">看得到嗎</div>
+      <div class="q">在走廊上、單手拿手機、光線很亮的情況下看得到嗎</div>
+      <ul>
+        <li>字夠不夠大，對比夠不夠</li>
+        <li>狀態有沒有只用顏色表示（綠色代表完成，那色盲的同事呢）</li>
+        <li>欄位名稱是不是只有你看得懂的簡稱</li>
+      </ul>
+    </div>
+    <div class="gate">
+      <div class="g">做得到嗎</div>
+      <div class="q">兩分鐘填得完嗎</div>
+      <ul>
+        <li>要打多少字，能不能改成選的</li>
+        <li>按鈕夠不夠大（44×44px 是下限）</li>
+        <li>填到一半被學生打斷，回來還在嗎</li>
+      </ul>
+    </div>
+    <div class="gate">
+      <div class="g">為什麼要用</div>
+      <div class="q">同事憑什麼放棄他習慣的 Excel</div>
+      <ul>
+        <li>它有沒有省掉一個他現在必做的步驟</li>
+        <li>舊資料進得來嗎，還是要重打</li>
+        <li>他填了之後，自己看得到什麼好處</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note">
+    <p><b>最後那一格是這條路的成敗。</b>行政系統做不起來幾乎都不是技術問題，是沒有人願意改習慣。如果你的系統只是把工作從你身上轉到同事身上，它不會活過兩個月。</p>
+  </div>
+</section>
+
+<div class="pager">
+  <a href="path-assessment.html"><span class="k">上一條路</span><span class="n">評量：多元作答系統</span></a>
+  <a class="next" href="backend.html"><span class="k">接著讀</span><span class="n">後台與個資紅線</span></a>
+</div>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap"><p><strong>特殊教育 AI 工作坊</strong>｜路線五．行政</p></div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

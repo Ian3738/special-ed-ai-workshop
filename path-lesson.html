@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>教案：課程調整教案產生器｜特殊教育 AI 工作坊</title>
+<meta name="description" content="輸入單元與學習功能等級，吐出一份含調整說明的教案。下次換單元只要改一格。">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<div class="bar">
+  <div class="wrap">
+    <a class="home" href="index.html">特殊教育 AI 工作坊</a>
+    <span class="sep" aria-hidden="true">／</span>
+    <span class="here">教案</span>
+    <div class="ctrl">
+      <span class="lbl" id="fsLbl">文字</span>
+      <button class="tog" type="button" data-fs="m" aria-pressed="true" aria-describedby="fsLbl">標準</button>
+      <button class="tog" type="button" data-fs="l" aria-pressed="false" aria-describedby="fsLbl">大</button>
+      <button class="tog" type="button" data-fs="xl" aria-pressed="false" aria-describedby="fsLbl">特大</button>
+    </div>
+    <div class="ctrl"><button class="tog" type="button" id="themeBtn" aria-pressed="false">深色</button></div>
+  </div>
+</div>
+
+<header class="ph">
+  <div class="wrap">
+    <p class="kicker">路線一．教案</p>
+    <h1>課程調整教案產生器</h1>
+    <p class="thesis">你已經很會寫調整教案了。<br>問題是<b>每學期每個單元都要重寫一次</b>。</p>
+    <div class="tags"><span>不需後台</span><span>約 30 分鐘</span><span>成品是一個產生器，不是一份教案</span></div>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap narrow">
+
+<section aria-labelledby="s1">
+  <div class="head">
+    <span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">這條路在解什麼</h2></div>
+  </div>
+
+  <p>調整教案的格式其實固定：學習重點、調整方式、教學活動、評量調整、支持策略。真正變的只有單元內容和學生的學習功能等級。</p>
+
+  <p>所以不要再寫教案，<strong>寫一個會生教案的東西</strong>。填三格，它照你的格式吐一份出來，你只要改不對的地方。</p>
+
+  <div class="note">
+    <p><b>成品的判準：</b>離場時你換一個單元名稱重跑一次，能吐出一份格式一致、內容正確的新教案。做不到這件事，就只是生了一份教案而已。</p>
+  </div>
+</section>
+
+<section aria-labelledby="s2">
+  <div class="head">
+    <span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">怎麼做</h2><p class="lead">母版連結在課堂看板，從 fork 開始，不要從零寫。</p></div>
+  </div>
+
+  <ol class="steps">
+    <li><div><div class="t">先餵它你的格式</div>
+      <div class="d">把你們縣市或學校在用的教案表格貼進去。這一步決定成品能不能直接交，不要跳過。沒有現成表格的，用母版附的那份。</div></div></li>
+    <li><div><div class="t">寫死不變的部分</div>
+      <div class="d">五種調整方式的定義、四級學習功能的判定原則、你們慣用的支持策略清單。這些每次都一樣，寫進指令裡就不用每次重打。</div></div></li>
+    <li><div><div class="t">留三格當變數</div>
+      <div class="d">單元、學習功能等級、節數。只有這三格每次要換。</div></div></li>
+    <li><div><div class="t">跑兩次，比對差異</div>
+      <div class="d">同一個單元跑「輕微缺損」和「嚴重缺損」兩版，看它有沒有真的做出差別。沒有差別就是指令太籠統。</div></div></li>
+  </ol>
+
+  <div class="cmd">
+    <div class="lbl">貼進 KUSE 對話區</div>
+<pre>請依康軒〔<span class="fill">年級</span>〕〔<span class="fill">冊次</span>〕第〔<span class="fill">章節</span>〕，
+生成一份特殊教育課程調整教案，對象為該領域學習功能〔<span class="fill">輕微／嚴重</span>〕缺損學生。
+
+規則：
+1. 學習目標依《總綱》該領域學習重點，先列原目標。
+2. 調整方式限用簡化、減量、分解、替代、重整五種，
+   每一項調整都要標明用了哪一種，並說明理由。
+3. 優先使用「替代」（目標不變、換方式達成）；
+   若採簡化或減量，須另外說明為何替代不可行。
+4. 學習歷程、學習環境、學習評量三個向度各給至少兩項具體調整。
+5. 節數〔<span class="fill">N</span>〕節。輸出格式照我上面貼的表格。</pre>
+  </div>
+
+  <div class="note">
+    <p><b>第 3 條是這份指令的重點。</b>沒有那一句，AI 一定給你簡化和減量——那是網路上最常見的寫法。加了那一句，它會被迫先找替代方案，找不到才降級，而且要寫理由給你看。</p>
+  </div>
+</section>
+
+<section aria-labelledby="s3">
+  <div class="head">
+    <span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">三關怎麼過</h2><p class="lead">這條路的使用者是老師，不是學生——但一樣要過關。</p></div>
+  </div>
+
+  <div class="gates">
+    <div class="gate">
+      <div class="g">看得到嗎</div>
+      <div class="q">拿到教案的老師讀得動嗎</div>
+      <ul>
+        <li>調整理由有沒有寫成看得懂的話，還是一串專有名詞</li>
+        <li>有沒有一眼看得出哪些是原目標、哪些是調整後的</li>
+      </ul>
+    </div>
+    <div class="gate">
+      <div class="g">做得到嗎</div>
+      <div class="q">教案裡寫的調整，現場真的做得出來嗎</div>
+      <ul>
+        <li>有沒有要求不存在的設備或人力</li>
+        <li>評量調整的部分，一般班級的考試流程塞得進去嗎</li>
+      </ul>
+    </div>
+    <div class="gate">
+      <div class="g">為什麼要用</div>
+      <div class="q">別的老師為什麼要用你這個產生器</div>
+      <ul>
+        <li>換單元真的只要改一格嗎，還是要重講一遍</li>
+        <li>生出來的東西要改多少才能交</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="s4">
+  <div class="head">
+    <span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">加碼任務</h2><p class="lead">01:55 那一段做完了可以往下走。</p></div>
+  </div>
+
+  <ul>
+    <li>把產生器<strong>鑄成技能檔</strong>，直接發給輔導區的老師用</li>
+    <li>加一個<strong>教學正確性審查</strong>環節：讓 AI 把生成的題目、答案、概念說明列成對照表，你拿課本逐格核對</li>
+    <li>接後台，讓每次生成的教案<strong>存下來可以搜尋</strong>，累積成你自己的教案庫（<a href="backend.html">後台怎麼接</a>）</li>
+  </ul>
+</section>
+
+<div class="pager">
+  <a href="index.html"><span class="k">回到</span><span class="n">總覽</span></a>
+  <a class="next" href="path-material.html"><span class="k">下一條路</span><span class="n">教材：多路徑教材網頁</span></a>
+</div>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap"><p><strong>特殊教育 AI 工作坊</strong>｜路線一．教案</p></div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
