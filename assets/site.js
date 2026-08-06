@@ -35,6 +35,14 @@
     savedTheme = localStorage.getItem('sped-theme');
   }catch(e){}
 
+  /* 分頁列：把目前頁捲進可視範圍（窄螢幕上分頁列會橫向捲動） */
+  var strip = document.querySelector('.tabs .wrap');
+  var cur = strip && strip.querySelector('[aria-current="page"]');
+  if(strip && cur){
+    var off = cur.offsetLeft - (strip.clientWidth - cur.offsetWidth) / 2;
+    strip.scrollLeft = Math.max(0, off);
+  }
+
   setFs(savedFs || 'm', false);
   if(savedTheme){
     setTheme(savedTheme, false);

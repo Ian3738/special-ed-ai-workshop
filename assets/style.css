@@ -65,19 +65,34 @@ html[data-theme="dark"] body::before{
 .skip:focus{left:0;}
 :focus-visible{outline:3px solid var(--pine);outline-offset:3px;border-radius:2px;}
 
-/* ── 頂欄 ────────────────────────────── */
-.bar{position:sticky;top:0;z-index:40;
-  background:color-mix(in srgb,var(--paper) 90%,transparent);
-  backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);
-  border-bottom:1px solid var(--rule);}
-.bar .wrap{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;
-  min-height:3.2rem;padding-top:.4rem;padding-bottom:.4rem;}
-.bar .home{font-family:var(--serif);font-style:italic;font-size:.92rem;
-  color:var(--ink);text-decoration:none;border-bottom:1px solid transparent;white-space:nowrap;}
-.bar .home:hover{border-bottom-color:var(--pine);}
-.bar .sep{color:var(--rule-2);}
-.bar .here{font-size:.86rem;color:var(--muted);margin-right:auto;white-space:nowrap;
-  overflow:hidden;text-overflow:ellipsis;}
+/* ── 頂欄：招牌列＋分頁列 ─────────────── */
+.topbar{position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb,var(--paper) 93%,transparent);
+  backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);
+  border-bottom:1px solid var(--rule-2);}
+
+.topbar .row1{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;
+  min-height:2.9rem;padding-top:.35rem;padding-bottom:.35rem;}
+.brand{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--ink);
+  text-decoration:none;margin-right:auto;white-space:nowrap;
+  border-bottom:1px solid transparent;}
+.brand:hover{text-decoration:none;border-bottom-color:var(--pine);}
+
+/* 分頁：以顏色＋字重＋底線三重標示目前頁 */
+.tabs{border-top:1px solid var(--rule);}
+.tabs .wrap{display:flex;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scroll-snap-type:x proximity;}
+.tabs .wrap::-webkit-scrollbar{height:3px;}
+.tabs .wrap::-webkit-scrollbar-thumb{background:var(--rule-2);border-radius:3px;}
+.tabs a{flex:0 0 auto;scroll-snap-align:start;
+  padding:.58rem .82rem;font-size:.88rem;font-weight:600;line-height:1.4;
+  color:var(--muted);text-decoration:none;white-space:nowrap;
+  border-bottom:3px solid transparent;
+  transition:color .14s ease,border-color .14s ease,background .14s ease;}
+.tabs a:hover{color:var(--ink);background:var(--paper-2);text-decoration:none;}
+.tabs a[aria-current="page"]{color:var(--pine);font-weight:800;
+  border-bottom-color:var(--pine);background:var(--pine-bg);}
+.tabs .sp{flex:0 0 auto;width:1px;background:var(--rule-2);margin:.6rem .45rem;}
 .ctrl{display:flex;align-items:center;gap:.28rem;}
 .ctrl .lbl{font-size:.7rem;letter-spacing:.16em;color:var(--muted);margin-right:.3rem;white-space:nowrap;}
 .tog{font:inherit;font-size:.8rem;line-height:1;background:transparent;color:var(--ink-2);
@@ -277,11 +292,15 @@ footer p{max-width:100%;margin-bottom:.3rem;}
   .step .clock{display:flex;align-items:baseline;gap:.7rem;}
   .step .clock small{display:inline;}
   .head{gap:.75rem;}
-  .bar .here{display:none;}
   .steps>li{grid-template-columns:1.8rem 1fr;gap:.7rem;}
+  .topbar .row1{min-height:2.5rem;gap:.5rem;}
+  .brand{font-size:.86rem;}
+  .ctrl .lbl{display:none;}
+  .tog{padding:.38rem .55rem;font-size:.78rem;}
+  .tabs a{padding:.52rem .68rem;font-size:.84rem;}
 }
 @media print{
-  .bar,.skip,.pager,.cta{display:none;}
+  .topbar,.skip,.pager,.cta{display:none;}
   body::before{display:none;}
   section,.gate,.cmd,.steps>li{break-inside:avoid;}
   a{color:inherit;text-decoration:none;}
