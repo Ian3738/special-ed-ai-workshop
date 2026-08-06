@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=7">
+<link rel="stylesheet" href="assets/style.css?v=8">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -60,9 +60,12 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="wrap narrow">
 
 <section aria-labelledby="s1">
-  <div class="head"><span class="num" aria-hidden="true">01</span>
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">01</span>
     <div><h2 id="s1">問題界定</h2></div></div>
-
+    </summary>
+    <div class="sec-body">
   <p>提供多種呈現方式為《特殊教育課程實施規範》學習歷程調整所明列之要求，該規範並具體列舉點字版本、放大版本、電子版本與有聲版本等適性教材。實務上未能普遍實施之主因為製作工時：一份內容製作三種呈現方式，工時亦為三倍。</p>
 
   <p>本主題之核心在於<strong>三條路徑指向同一學習目標</strong>。文字、語音與圖像三者之內容深度須一致，差異僅在解碼方式。若製作為三種難度版本，則屬依程度分組，已逸出多元表徵之範疇。</p>
@@ -70,12 +73,17 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="note">
     <p><b>驗收標準：</b>將三條路徑之內容並列比對，任一路徑均應足以支撐同一份檢核試題。若有路徑無法支撐，即表示該路徑之內容已遭降低難度。</p>
   </div>
+    </div>
+  </details>
 </section>
 
 <section aria-labelledby="s2">
-  <div class="head"><span class="num" aria-hidden="true">02</span>
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">02</span>
     <div><h2 id="s2">建置程序</h2><p class="lead">路徑數以三條為限。</p></div></div>
-
+    </summary>
+    <div class="sec-body">
   <ol class="steps">
     <li><div><div class="t">擇定單一概念</div>
       <div class="d">以一節課之分量為度，非一整課。範圍過大將無法於時限內完成，亦不易檢視成效。</div></div></li>
@@ -114,12 +122,17 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="note">
     <p><b>末段之無障礙規格須完整貼入。</b>未指定時，生成結果多不符前述標準。本項亦為同儕檢核時段最先被檢出之項目。</p>
   </div>
+    </div>
+  </details>
 </section>
 
 <section aria-labelledby="s3">
-  <div class="head"><span class="num" aria-hidden="true">03</span>
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">03</span>
     <div><h2 id="s3">三向度檢核</h2></div></div>
-
+    </summary>
+    <div class="sec-body">
   <div class="gates">
     <div class="gate"><div class="g">多元表徵</div>
       <div class="q">三條路徑之內容難度是否確實一致</div>
@@ -137,15 +150,22 @@ d.setAttribute('data-fs',f||'m');})();
       <li>路徑數是否維持三條，未過度增加</li>
       <li>完成後學生是否得知作答結果</li></ul></div>
   </div>
+    </div>
+  </details>
 </section>
 
 <section aria-labelledby="s4">
-  <div class="head"><span class="num" aria-hidden="true">04</span>
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">04</span>
     <div><h2 id="s4">延伸任務：建置資料庫</h2><p class="lead">本主題之資料庫為選用，惟建置後方能驗證設計成效。</p></div></div>
-
+    </summary>
+    <div class="sec-body">
   <p>未建置資料庫時，「學生會選擇適合自身之取用路徑」僅為設計假設，無從驗證。建置後得就下列問題取得實證資料：各路徑之使用比例、選用不同路徑者於檢核試題之表現差異、路徑切換頻率（切換頻繁者，表示既有設計存在障礙）。</p>
 
   <p>欄位設計、蒐集限制與存取權限驗證程序詳見<a href="backend.html">資料庫建置與個人資料保護</a>。<strong>僅得儲存代號，不得儲存姓名。</strong></p>
+    </div>
+  </details>
 </section>
 
 <div class="pager">
@@ -159,9 +179,10 @@ d.setAttribute('data-fs',f||'m');})();
 <footer>
   <div class="wrap">
     <p><strong>特殊教育 AI 工作坊</strong>｜實作主題二．教材</p>
+    <p>講師　陳奕安　國立清華大學　｜　場次 8 月 11 日、8 月 21 日</p>
   </div>
 </footer>
 
-<script src="assets/site.js?v=7"></script>
+<script src="assets/site.js?v=8"></script>
 </body>
 </html>

@@ -61,37 +61,43 @@
     });
   }
 
-  /* ── 頁內章節跳轉列：由各節 h2 自動生成 ── */
+  /* ── 展開／收合全部 ── */
   (function(){
-    var secs = document.querySelectorAll('main section[aria-labelledby]');
-    if(secs.length < 3) return;
-    var ph = document.querySelector('header.ph');
-    if(!ph) return;
+    var ds = document.querySelectorAll('main section > details');
+    if(ds.length < 2) return;
+    var main = document.querySelector('main > .wrap');
+    if(!main) return;
 
-    var bar = document.createElement('nav');
-    bar.className = 'toc';
-    bar.setAttribute('aria-label', '本頁章節');
-    var wrap = document.createElement('div');
-    wrap.className = 'wrap';
+    var bar = document.createElement('div');
+    bar.className = 'allctl';
     var lbl = document.createElement('span');
     lbl.className = 't';
-    lbl.textContent = '本頁章節';
-    wrap.appendChild(lbl);
+    lbl.textContent = '本頁 ' + ds.length + ' 節';
+    bar.appendChild(lbl);
 
-    secs.forEach(function(sec){
-      var id = sec.getAttribute('aria-labelledby');
-      var h  = document.getElementById(id);
-      if(!h) return;
-      if(!sec.id) sec.id = 'sec-' + id;
-      var a = document.createElement('a');
-      a.href = '#' + sec.id;
-      a.textContent = h.textContent.trim();
-      wrap.appendChild(a);
+    [['展開全部', true], ['收合全部', false]].forEach(function(pair){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = pair[0];
+      b.addEventListener('click', function(){
+        ds.forEach(function(d){ d.open = pair[1]; });
+      });
+      bar.appendChild(b);
     });
 
-    if(wrap.children.length < 4) return;
-    bar.appendChild(wrap);
-    ph.insertAdjacentElement('afterend', bar);
+    main.insertBefore(bar, main.firstChild);
+
+    /* 由網址雜湊指定的分節自動展開並捲至定位 */
+    function openFromHash(){
+      if(!location.hash) return;
+      var el = document.querySelector(location.hash);
+      if(!el) return;
+      var d = el.closest('details') || el.querySelector('details');
+      if(d) d.open = true;
+      el.scrollIntoView();
+    }
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
   })();
 
   /* ── 分頁列：把目前頁捲進可視範圍（窄螢幕會橫向捲動） ── */
