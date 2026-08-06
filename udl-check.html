@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<title>UDL 三關檢核卡｜特殊教育 AI 工作坊</title>
-<meta name="description" content="不管你做哪一類系統，交付前要過的三關。UDL 在這場是規準，不是主題。">
+<title>通用學習設計三向度檢核表｜特殊教育 AI 工作坊</title>
+<meta name="description" content="交付前之三向度檢核項目。通用學習設計在本場次為品質規準，而非授課主題。">
 <meta name="color-scheme" content="light dark">
 <script>
 /* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -39,8 +39,8 @@ d.setAttribute('data-fs',f||'m');})();
       <a href="path-assessment.html">評量</a>
       <a href="path-admin.html">行政</a>
       <span class="sp" aria-hidden="true"></span>
-      <a href="udl-check.html" aria-current="page">檢核卡</a>
-      <a href="backend.html">後台</a>
+      <a href="udl-check.html" aria-current="page">檢核表</a>
+      <a href="backend.html">資料庫</a>
       <a href="law.html">法規</a>
       <a href="after.html">課後</a>
     </div>
@@ -50,8 +50,8 @@ d.setAttribute('data-fs',f||'m');})();
 <header class="ph">
   <div class="wrap">
     <p class="kicker">交付前檢核</p>
-    <h1>UDL 三關檢核卡</h1>
-    <p class="thesis">你做的東西一定有人用不了。<br>問題只在於——<b>你有沒有在交付前先發現</b>。</p>
+    <h1>通用學習設計三向度檢核表</h1>
+    <p class="thesis">任何系統皆存在無法使用之使用者。<br>檢核之目的在於<b>於交付前先行辨識</b>，而非於使用後補救。</p>
   </div>
 </header>
 
@@ -59,118 +59,125 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="wrap narrow">
 
 <section aria-labelledby="s0">
-  <h2 id="s0" class="visually-hidden" style="position:absolute;left:-9999px;">為什麼是規準不是主題</h2>
-  <p>UDL 在這場不是要教你的內容，是<strong>交付前的三個問題</strong>。不管你今天做的是教案產生器、評量系統，還是行政表單，使用者裡都會有讀不動、寫不了、動機撐不住的人。學生是這樣，家長是這樣，你的同事也是這樣。</p>
+  <div class="head">
+    <span class="num" aria-hidden="true">00</span>
+    <div><h2 id="s0">定位：規準而非主題</h2>
+    <p class="lead">本場次不講授通用學習設計之理論體系，僅取其三向度作為產出之驗收依據。</p></div>
+  </div>
 
-  <p>三關的順序有意義：<strong>先問看不看得到，再問做不做得到，最後才問為什麼要用</strong>。前兩關沒過，第三關無意義——沒有人會對一個他打不開的東西產生動機。</p>
+  <p>通用學習設計之三項原則為多元參與（engagement）、多元表徵（representation）、多元行動與表達（action and expression）。本檢核表將其轉為交付前之三道具體提問，適用於教案、教材、簡報、評量與行政五類產出。</p>
+
+  <p>各類產出之使用者不同，惟其共通性在於：使用者群體中必然包含在資訊接收、動作表達或參與動機上具有困難者。學生如此，家長如此，同儕教師亦然。</p>
+
+  <p>三道檢核之次序具有意義。<strong>資訊可及性未達成前，後續兩項不具檢核意義</strong>——使用者無從對其無法開啟之系統產生參與動機。</p>
 </section>
 
 <section aria-labelledby="g1">
   <div class="head">
     <span class="num" aria-hidden="true">壹</span>
-    <div><h2 id="g1">看得到嗎</h2><p class="lead">資訊有沒有第二條進得來的路。</p></div>
+    <div><h2 id="g1">多元表徵</h2><p class="lead">資訊是否具備第二條取用路徑。</p></div>
   </div>
 
   <div class="gate">
     <div class="g">Representation</div>
-    <div class="q">如果一個人讀不動字，他還拿得到這份資訊嗎？</div>
+    <div class="q">若使用者在文字解碼上具有困難，是否仍能取得本項資訊？</div>
     <ul>
-      <li>字級能不能放大到兩倍而版面不壞</li>
-      <li>有沒有朗讀，或至少可以被螢幕報讀軟體讀出來</li>
-      <li>關鍵詞有沒有圖示或範例，還是只有定義</li>
-      <li>顏色有沒有單獨承擔訊息（紅色代表未完成，那色盲的人怎麼辦）</li>
-      <li>專有名詞第一次出現時有沒有解釋</li>
+      <li>字級放大至兩倍時，版面配置是否維持可用</li>
+      <li>是否提供語音朗讀，或至少可由螢幕報讀軟體正確讀取</li>
+      <li>關鍵詞是否附有圖示或實例，抑或僅有文字定義</li>
+      <li>是否存在單獨以顏色承載之訊息</li>
+      <li>專有名詞首次出現時是否附有說明</li>
     </ul>
   </div>
 
   <div class="note">
-    <p><b>這一關最常被誤解成「把內容改簡單」。</b>不是。閱讀理解 = 解碼 × 語言理解，兩者可以分離——一個人讀不動字，不代表他想不動事情。你要移除的是解碼的障礙，內容的難度原封不動。</p>
+    <p><b>本向度常被誤解為降低內容難度。</b>依閱讀簡單觀點（Simple View of Reading），閱讀理解為解碼與語言理解之乘積，二者可分離。文字解碼困難不等同於概念理解困難。本向度所移除者為解碼之障礙，學習內容之難度應維持不變。</p>
   </div>
 </section>
 
 <section aria-labelledby="g2">
   <div class="head">
     <span class="num" aria-hidden="true">貳</span>
-    <div><h2 id="g2">做得到嗎</h2><p class="lead">你要求的輸入方式，是不是唯一的一種。</p></div>
+    <div><h2 id="g2">多元行動與表達</h2><p class="lead">所要求之輸入方式是否為唯一途徑。</p></div>
   </div>
 
   <div class="gate">
     <div class="g">Action &amp; Expression</div>
-    <div class="q">你要他做的那個動作，有沒有人身體上做不到？</div>
+    <div class="q">系統所要求之操作，是否存在使用者於生理上無法執行者？</div>
     <ul>
-      <li>一定要打字嗎，能不能點選、能不能錄音</li>
-      <li>一定要用滑鼠嗎，鍵盤能不能操作完</li>
-      <li>拖曳、雙擊、長按這些動作，精細動作有困難的人做得到嗎</li>
-      <li>有沒有時間限制，而那個限制是你要測的能力嗎</li>
-      <li>如果換了作答方式，你的評分規準還算得出來嗎</li>
+      <li>是否必須以鍵盤輸入文字，得否改以點選或語音替代</li>
+      <li>是否必須使用滑鼠，全程能否僅以鍵盤完成</li>
+      <li>拖曳、雙擊、長按等操作，精細動作困難者能否執行</li>
+      <li>是否設有時間限制，該限制是否屬於本次所欲測量之能力</li>
+      <li>更換作答方式後，評分規準是否仍可一致適用</li>
     </ul>
   </div>
 
   <div class="note">
-    <p><b>判準是：這個障礙是我要測的能力，還是擋在能力前面的東西。</b>要測「讀懂課文主旨」，握筆能力就是擋在前面的東西，該拿掉；要測「正確書寫國字」，書寫本身就是目標，不能替代。</p>
-    <p>心理計量學管這叫構念無關變異。分數的差異若來自不是你要測的能力，那不是嚴格，是測量誤差——移除它反而提高效度。</p>
+    <p><b>判準為：該項障礙屬所欲測量之能力，抑或屬取用該能力所需之附帶能力。</b>Ketterlin-Geller 於無障礙評量文獻中將前者稱為目標技能（target skills），後者稱為取用技能（access skills）。以閱讀理解為測量目標時，書寫能力屬取用技能；以國字書寫為測量目標時，書寫本身即為目標技能，不得替代。</p>
+    <p>Messick（1989）指出效度之兩大威脅為構念代表性不足與構念無關變異。分數差異若源自非所欲測量之能力，即屬測量誤差；移除該項障礙係提升效度，而非降低標準。</p>
   </div>
 </section>
 
 <section aria-labelledby="g3">
   <div class="head">
     <span class="num" aria-hidden="true">參</span>
-    <div><h2 id="g3">為什麼要用</h2><p class="lead">有沒有給選擇權，還是只有一條路。</p></div>
+    <div><h2 id="g3">多元參與</h2><p class="lead">使用者是否具有選擇權。</p></div>
   </div>
 
   <div class="gate">
     <div class="g">Engagement</div>
-    <div class="q">使用者有沒有任何一個地方可以自己決定？</div>
+    <div class="q">系統中是否存在任何由使用者自行決定之環節？</div>
     <ul>
-      <li>入口能不能選（要讀、要聽、還是要看圖）</li>
-      <li>作答方式能不能選</li>
-      <li>順序能不能自己決定，還是只能一路往下</li>
-      <li>做到一半離開，回來還在原地嗎</li>
-      <li>做完之後，他知道自己做得怎麼樣嗎</li>
+      <li>取用路徑得否選擇（文字、語音或圖像）</li>
+      <li>作答方式得否選擇</li>
+      <li>操作順序得否自行決定，抑或僅能循單一流程</li>
+      <li>中途離開後返回，狀態是否留存</li>
+      <li>完成後，使用者是否得知自身表現</li>
     </ul>
   </div>
 
   <div class="note">
-    <p><b>選擇要給，但不要給太多。</b>後設分析顯示提供選擇能提升內在動機與表現，效果在<strong>連續給 2 到 4 個</strong>時最好。給到七八個入口，選擇本身就變成新的障礙。三個剛好。</p>
+    <p><b>選擇項數宜有上限。</b>Patall、Cooper 與 Robinson（2008）之後設分析顯示，提供選擇可提升內在動機、努力程度與任務表現，其效果以<strong>連續提供二至四項</strong>時為最佳。選項過多將使選擇本身構成新的認知負荷。</p>
   </div>
 </section>
 
 <section aria-labelledby="s4">
   <div class="head">
     <span class="num" aria-hidden="true">04</span>
-    <div><h2 id="s4">互檢時怎麼用</h2><p class="lead">02:25 那一段，拿這張卡檢查隔壁的作品。</p></div>
+    <div><h2 id="s4">同儕檢核之實施方式</h2><p class="lead">對應時程 01:55 之時段。</p></div>
   </div>
 
   <ol>
-    <li>不要問「這個設計得好不好」。<strong>直接試著用不了它</strong>——把字放大兩倍、只用鍵盤操作、關掉聲音、閉著眼睛聽一次。</li>
-    <li>找到一個過不了的關，講出來就好。<strong>一個就夠</strong>，不用列清單。</li>
-    <li>回饋用口頭講，用你入班輔導時會用的講法。這一段同時在練你怎麼跟別的老師講他的問題。</li>
+    <li>檢核時不宜以「設計是否良好」提問。<strong>應實際嘗試使其無法使用</strong>：將字級放大至兩倍、僅以鍵盤操作、關閉音訊、閉眼聆聽一次。</li>
+    <li>指出一項未通過之檢核項目即可，<strong>無須逐項列舉</strong>。</li>
+    <li>回饋以口頭方式進行，比照入班輔導之語境。本環節同時具有輔導技巧演練之作用。</li>
   </ol>
 
   <div class="note">
-    <p><b>順便測一件無關 UDL 但更嚴重的事：</b>如果對方的作品有後台，開一個無痕視窗、不要登入，看看撈不撈得到資料。<a href="backend.html">做法看這裡</a>。</p>
+    <p><b>另須執行一項與本檢核表無涉、但後果更為嚴重之項目：</b>若受檢者之產出設有後端資料庫，應開啟無痕視窗、於未登入狀態下確認能否讀取資料。程序詳見<a href="backend.html">資料庫建置與個人資料保護</a>。</p>
   </div>
 </section>
 
 <section aria-labelledby="s5">
   <div class="head">
     <span class="num" aria-hidden="true">05</span>
-    <div><h2 id="s5">回去用得到的一句話</h2></div>
+    <div><h2 id="s5">溝通用語</h2><p class="lead">供輔導現場澄清概念時引用。</p></div>
   </div>
 
-  <p>當有人跟你說「我做了簡化版給那個孩子，這就是 UDL 吧」，你可以這樣回：</p>
+  <p>教師若表示「已為該生製作簡化版本，此即通用設計」，得依下列內容說明：</p>
 
   <div class="law">
-    <p>通用設計是<strong>事前設計讓所有人可以使用，無需作出調整或特別設計</strong>；合理調整才是根據個別學生的需要另外做修改。做一份簡單版給某些學生，那正好是「作出特別設計」——那是合理調整，不是通用設計。兩件事都要做，但別搞混。</p>
+    <p>通用設計係指<strong>盡最大可能在事前設計讓所有人可以使用，無需作出調整或特別設計</strong>；合理調整則係依個別學生之具體需要另行修改。為部分學生另製簡化版本，性質上即屬「作出特別設計」，應歸類為合理調整而非通用設計。二者依法均應實施，惟時機與對象不同。</p>
     <cite>依《十二年國民基本教育特殊教育課程實施規範》引《身心障礙者權利公約》第二條</cite>
   </div>
 
-  <p>更完整的法規原文與延伸論點在<a href="law.html">法規摘錄那一頁</a>，包含五種課程調整方式裡只有「替代」不動學習目標的對照表。</p>
+  <p>法規原文與延伸論據見<a href="law.html">法規原文摘錄</a>，內含五種學習內容調整方式之目標變動對照表。</p>
 </section>
 
 <div class="pager">
-  <a href="index.html"><span class="k">回到</span><span class="n">總覽</span></a>
-  <a class="next" href="backend.html"><span class="k">下一頁</span><span class="n">後台與個資紅線</span></a>
+  <a href="index.html"><span class="k">返回</span><span class="n">總覽</span></a>
+  <a class="next" href="backend.html"><span class="k">下一頁</span><span class="n">資料庫建置與個人資料保護</span></a>
 </div>
 
 </div>
@@ -178,11 +185,11 @@ d.setAttribute('data-fs',f||'m');})();
 
 <footer>
   <div class="wrap">
-    <p><strong>特殊教育 AI 工作坊</strong>｜UDL 三關檢核卡</p>
-    <p>這一頁設計成可以直接列印帶走，列印時會自動去掉頂欄與導覽。</p>
+    <p><strong>特殊教育 AI 工作坊</strong>｜通用學習設計三向度檢核表</p>
+    <p>本頁得直接列印，列印時自動隱去導覽元件。</p>
   </div>
 </footer>
 
-<script src="assets/site.js?v=3"></script>
+<script src="assets/site.js?v=4"></script>
 </body>
 </html>

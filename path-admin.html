@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<title>行政：把 Excel 地獄變成系統｜特殊教育 AI 工作坊</title>
-<meta name="description" content="IEP 進度追蹤、教具借用、巡迴排課、輔導紀錄。以前最痛、最沒工具的一塊。">
+<title>行政：行政業務資料系統化｜特殊教育 AI 工作坊</title>
+<meta name="description" content="個別化教育計畫目標追蹤、教具借用管理、巡迴輔導排課與紀錄。此類業務長期缺乏適用工具。">
 <meta name="color-scheme" content="light dark">
 <script>
 /* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -39,8 +39,8 @@ d.setAttribute('data-fs',f||'m');})();
       <a href="path-assessment.html">評量</a>
       <a href="path-admin.html" aria-current="page">行政</a>
       <span class="sp" aria-hidden="true"></span>
-      <a href="udl-check.html">檢核卡</a>
-      <a href="backend.html">後台</a>
+      <a href="udl-check.html">檢核表</a>
+      <a href="backend.html">資料庫</a>
       <a href="law.html">法規</a>
       <a href="after.html">課後</a>
     </div>
@@ -49,10 +49,10 @@ d.setAttribute('data-fs',f||'m');})();
 
 <header class="ph">
   <div class="wrap">
-    <p class="kicker">路線五．行政</p>
-    <h1>把 Excel 地獄變成系統</h1>
-    <p class="thesis">這一塊以前沒有工具，只有一個愈開愈大的試算表。<br><b>能存資料</b>這件事，才是這次真正的新東西。</p>
-    <div class="tags"><span>需要後台</span><span>約 60 分鐘</span><span>兩段實作都用得上</span></div>
+    <p class="kicker">實作主題五．行政</p>
+    <h1>行政業務資料系統化</h1>
+    <p class="thesis">此類業務長期缺乏適用工具，僅能以試算表因應。<br><b>具備資料留存能力</b>一項，為本次功能更新之實質意義所在。</p>
+    <div class="tags"><span>須建置資料庫</span><span>約 60 分鐘</span><span>兩階段實作皆適用</span></div>
   </div>
 </header>
 
@@ -60,141 +60,123 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="wrap narrow">
 
 <section aria-labelledby="s1">
-  <div class="head">
-    <span class="num" aria-hidden="true">01</span>
-    <div><h2 id="s1">這條路在解什麼</h2></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">問題界定</h2></div></div>
 
-  <p>特教的行政負擔有一個共同形狀：<strong>同一份資料要在三個地方各抄一次，而且沒有一個地方是真正的正本</strong>。IEP 在一個檔、進度紀錄在另一個檔、要交出去的統計表又是第三個檔。</p>
+  <p>特殊教育之行政負擔具有共同結構：<strong>同一份資料須於數處分別謄錄，且無單一權威版本</strong>。個別化教育計畫存於一處，進度紀錄存於另一處，對外報送之統計表又為第三份文件。</p>
 
-  <p>試算表撐不住是因為它沒有真正的資料庫，多人同時改就會壞，也沒辦法用手機隨手記。有後台之後，這件事第一次做得起來。</p>
+  <p>試算表無法承擔此類需求之原因，在於其不具真正之資料庫結構：多人同時編輯易生衝突，亦不支援以行動裝置即時登錄。具備後端資料庫後，此類業務方具備系統化之條件。</p>
 
-  <h3>常見的五個題目</h3>
+  <h3>常見題目</h3>
   <div class="grid">
-    <div class="card"><div class="t">IEP 目標進度追蹤</div><div class="d">每個目標的達成狀況隨手記，期末自動長出檢核表與統計</div></div>
-    <div class="card"><div class="t">教具與輔具借用</div><div class="d">誰借了什麼、什麼時候還、現在在哪一間教室</div></div>
-    <div class="card"><div class="t">巡迴輔導排課與紀錄</div><div class="d">跑幾所學校、看了哪些學生、這次談了什麼、下次要追什麼</div></div>
-    <div class="card"><div class="t">入班觀察紀錄</div><div class="d">手機當場填，回辦公室自動彙整成報告草稿</div></div>
-    <div class="card"><div class="t">轉銜資料檢核</div><div class="d">哪些學生的哪份文件還沒到位，一頁看完</div></div>
-    <div class="card"><div class="t">研習與輔導成效回報</div><div class="d">辦完就收，不用學期末再發一次問卷</div></div>
+    <div class="card"><div class="t">個別化教育計畫目標追蹤</div><div class="d">各項目標之達成狀況即時登錄，學期末自動彙整為檢核表與統計</div></div>
+    <div class="card"><div class="t">教具與輔具借用管理</div><div class="d">借用人、應歸還日期、現置地點之查詢與提醒</div></div>
+    <div class="card"><div class="t">巡迴輔導排課與紀錄</div><div class="d">服務學校、服務對象、輔導內容與後續追蹤事項</div></div>
+    <div class="card"><div class="t">入班觀察紀錄</div><div class="d">以行動裝置現場登錄，返回後自動彙整為報告草稿</div></div>
+    <div class="card"><div class="t">轉銜資料檢核</div><div class="d">各生所需文件之到位狀況，以單一頁面呈現</div></div>
+    <div class="card"><div class="t">研習與輔導成效回報</div><div class="d">辦理後即時蒐集，無須於學期末另行施測</div></div>
   </div>
 </section>
 
 <section aria-labelledby="s2">
-  <div class="head">
-    <span class="num" aria-hidden="true">02</span>
-    <div><h2 id="s2">實作一：先做輸入端</h2><p class="lead">01:00 那 45 分鐘。做輸入，不要先做報表。</p></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">實作（一）：輸入介面</h2><p class="lead">對應時程 01:00 之 45 分鐘時段。應先建置輸入端，統計報表後續處理。</p></div></div>
 
-  <p>最容易失敗的做法是先做漂亮的統計看板。<strong>沒有人填，就沒有資料，看板就是空的。</strong>先把「隨手填」做到夠簡單，報表之後再說。</p>
+  <p>常見之失敗模式為優先建置統計儀表板。<strong>無人登錄即無資料，儀表板將維持空白。</strong>應先將登錄流程簡化至可實際執行之程度。</p>
 
   <ol class="steps">
-    <li><div><div class="t">寫下你現在怎麼做這件事</div>
-      <div class="d">照實寫，包含那些很蠢的步驟。「先開 A 檔複製，再開 B 檔貼上，再手動改日期」——這種句子就是規格。</div></div></li>
-    <li><div><div class="t">只留最少的欄位</div>
-      <div class="d">問每一欄：少了它會怎樣？不會怎樣就砍掉。欄位愈多，愈沒有人填。</div></div></li>
-    <li><div><div class="t">做成手機填得動的樣子</div>
-      <div class="d">你是站在教室後面填這個，不是坐在辦公桌前。按鈕要大、選項要多、打字要少。</div></div></li>
-    <li><div><div class="t">自己用一次完整流程</div>
-      <div class="d">不要用假資料點兩下就算。從頭走一遍，計時。超過兩分鐘就太久了。</div></div></li>
+    <li><div><div class="t">記錄現行作業流程</div>
+      <div class="d">如實記錄，包含所有冗餘步驟。「開啟甲檔複製，開啟乙檔貼上，再手動修改日期」一類敘述即為系統規格之來源。</div></div></li>
+    <li><div><div class="t">刪減至最少必要欄位</div>
+      <div class="d">逐欄檢視：缺少該欄位將產生何種影響。無實質影響者予以刪除。欄位數與登錄意願呈反比。</div></div></li>
+    <li><div><div class="t">配合行動裝置之使用情境</div>
+      <div class="d">實際使用情境多為站立於教室後方登錄，而非於辦公桌前操作。應加大按鈕、增加選項、減少文字輸入。</div></div></li>
+    <li><div><div class="t">完整執行一次並計時</div>
+      <div class="d">不宜以測試資料略作點選即認定完成。應自起始至結束完整執行，並記錄所需時間。逾兩分鐘即屬過長。</div></div></li>
   </ol>
 
   <div class="cmd">
-    <div class="lbl">貼進 KUSE 對話區</div>
-<pre>請做一個〔<span class="fill">IEP 進度追蹤／教具借用／巡迴紀錄</span>〕系統，
-使用者是〔<span class="fill">特教教師／輔導員</span>〕，主要在〔<span class="fill">手機</span>〕上使用。
+    <div class="lbl">康軒 KUSE 指令</div>
+<pre>請建置一個〔<span class="fill">個別化教育計畫進度追蹤／教具借用／巡迴輔導紀錄</span>〕系統，
+使用者為〔<span class="fill">特殊教育教師／輔導員</span>〕，主要於〔<span class="fill">行動裝置</span>〕上使用。
 
-我現在的做法是：〔<span class="fill">照實描述現況，含所有蠢步驟</span>〕
+現行作業流程為：〔<span class="fill">如實描述，含所有冗餘步驟</span>〕
 
-請做出：
-1. 一個輸入畫面，欄位愈少愈好，能用選的就不要用打的
-2. 資料存進後台資料庫，下次打開還在
-3. 一個列表可以看歷史紀錄，能依〔<span class="fill">日期／學校／學生代號</span>〕篩選
+請建置下列功能：
+1. 輸入介面，欄位數盡量精簡，可選填者不採文字輸入
+2. 資料寫入後端資料庫，再次開啟時資料仍存在
+3. 歷史紀錄列表，可依〔<span class="fill">日期／學校／學生代號</span>〕篩選
 
-個資規則（務必遵守）：
-- 學生一律用代號欄位，不要有姓名或學號欄位
-- 不要有障礙類別、鑑定文號、班級型態等欄位
-- 資料表要設好列層級權限，未登入者不得讀取任何資料
+個人資料規則（須嚴格遵守）：
+- 學生一律以代號欄位表示，不得設置姓名或學號欄位
+- 不得設置障礙類別、鑑定文號、班級型態等欄位
+- 資料表須設定列層級安全性，未登入者不得讀取任何資料
 
-無障礙要求：字級至少 20px、按鈕點擊區至少 44×44px、
-對比 4.5:1 以上、全鍵盤可操作、不以顏色單獨傳達狀態。</pre>
+無障礙規格：字級至少 20px、點擊區至少 44×44px、
+對比度 4.5:1 以上、全程可僅以鍵盤操作、不以顏色單獨傳達狀態。</pre>
   </div>
 </section>
 
 <section aria-labelledby="s3">
-  <div class="head">
-    <span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">實作二：接後台與權限實測</h2><p class="lead">01:55 那 30 分鐘。這條路最重要的一段。</p></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">實作（二）：資料庫與權限驗證</h2><p class="lead">對應時程 01:55 之 30 分鐘時段。本主題最關鍵之環節。</p></div></div>
 
-  <p>行政資料比教材資料敏感得多，因為它天生就是關於特定學生的。<strong>權限沒設好，等於把一張特教學生名單放在公開網址上。</strong></p>
+  <p>行政資料之敏感度高於教材資料，其性質即為關於特定學生之紀錄。<strong>存取權限設定不當者，等同於將特殊教育學生名冊置於公開網址。</strong></p>
 
-  <p>做法、要存什麼、權限怎麼測，全部在<a href="backend.html">後台那一頁</a>。這條路的人請務必把那頁讀完。</p>
+  <p>建置方式、蒐集限制與權限驗證程序詳見<a href="backend.html">資料庫建置與個人資料保護</a>。選擇本主題者請完整閱讀該頁。</p>
 
   <div class="redline">
-    <div class="h"><span aria-hidden="true">▲</span>行政系統的特有風險</div>
+    <div class="h"><span aria-hidden="true">▲</span>行政系統之特有風險</div>
     <ul>
-      <li><strong>間接識別：</strong>就算只存代號，一份「巡迴輔導紀錄」的存在本身就洩漏了那些學生是特教生。</li>
-      <li><strong>資料會累積：</strong>教材資料收一學期就停了，行政資料會一直長。保留期限要現在就訂。</li>
-      <li><strong>會有別人用：</strong>你做的東西同事會拿去用。誰能看到誰的資料，要在設計時就想清楚。</li>
-      <li><strong>維運歸屬：</strong>帳號綁在你身上，你調動之後這個系統誰接。這件事沒有技術解，回去要問行政。</li>
+      <li><strong>間接識別：</strong>縱使僅儲存代號，「巡迴輔導紀錄」此一資料集之存在本身，即揭露該等學生之特殊教育身分。</li>
+      <li><strong>資料累積性：</strong>教材資料多於一學期後停止蒐集，行政資料則持續累積。保留期限應於建置時即行訂定。</li>
+      <li><strong>多人使用：</strong>系統建置後同仁將沿用。何人得檢視何等資料，應於設計階段即行界定。</li>
+      <li><strong>維運歸屬：</strong>帳號綁定於個人，人事異動後系統之接續維護無人負責。本項無技術解決方案，須循行政程序處理。</li>
     </ul>
   </div>
 </section>
 
 <section aria-labelledby="s4">
-  <div class="head">
-    <span class="num" aria-hidden="true">04</span>
-    <div><h2 id="s4">三關怎麼過</h2><p class="lead">行政系統的使用者是你的同事。他們一樣有人看不清楚、有人手忙不過來。</p></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">三向度檢核</h2><p class="lead">本主題之使用者為同仁，其中同樣存在視覺辨識或操作條件受限者。</p></div></div>
 
   <div class="gates">
-    <div class="gate">
-      <div class="g">看得到嗎</div>
-      <div class="q">在走廊上、單手拿手機、光線很亮的情況下看得到嗎</div>
-      <ul>
-        <li>字夠不夠大，對比夠不夠</li>
-        <li>狀態有沒有只用顏色表示（綠色代表完成，那色盲的同事呢）</li>
-        <li>欄位名稱是不是只有你看得懂的簡稱</li>
-      </ul>
-    </div>
-    <div class="gate">
-      <div class="g">做得到嗎</div>
-      <div class="q">兩分鐘填得完嗎</div>
-      <ul>
-        <li>要打多少字，能不能改成選的</li>
-        <li>按鈕夠不夠大（44×44px 是下限）</li>
-        <li>填到一半被學生打斷，回來還在嗎</li>
-      </ul>
-    </div>
-    <div class="gate">
-      <div class="g">為什麼要用</div>
-      <div class="q">同事憑什麼放棄他習慣的 Excel</div>
-      <ul>
-        <li>它有沒有省掉一個他現在必做的步驟</li>
-        <li>舊資料進得來嗎，還是要重打</li>
-        <li>他填了之後，自己看得到什麼好處</li>
-      </ul>
-    </div>
+    <div class="gate"><div class="g">多元表徵</div>
+      <div class="q">於走廊、單手持行動裝置、強光環境下能否辨識</div>
+      <ul><li>字級與對比度是否足夠</li>
+      <li>狀態是否單獨以顏色表示</li>
+      <li>欄位名稱是否採用僅建置者理解之簡稱</li></ul></div>
+    <div class="gate"><div class="g">多元行動與表達</div>
+      <div class="q">能否於兩分鐘內完成登錄</div>
+      <ul><li>文字輸入量能否改以選項替代</li>
+      <li>點擊區是否達 44×44px 之下限</li>
+      <li>登錄中途中斷後返回，已填內容是否留存</li></ul></div>
+    <div class="gate"><div class="g">多元參與</div>
+      <div class="q">同仁改採本系統之誘因為何</div>
+      <ul><li>是否減少一項其現行必須執行之步驟</li>
+      <li>既有資料能否匯入，抑或須重新登錄</li>
+      <li>登錄後使用者本身可獲得何種效益</li></ul></div>
   </div>
 
   <div class="note">
-    <p><b>最後那一格是這條路的成敗。</b>行政系統做不起來幾乎都不是技術問題，是沒有人願意改習慣。如果你的系統只是把工作從你身上轉到同事身上，它不會活過兩個月。</p>
+    <p><b>末項為本主題成敗之關鍵。</b>行政系統推行失敗多非技術因素，而在於使用習慣之轉換成本。若系統僅係將工作負擔自建置者轉移至同仁，其存續期通常不逾兩個月。</p>
   </div>
 </section>
 
 <div class="pager">
-  <a href="path-assessment.html"><span class="k">上一條路</span><span class="n">評量：多元作答系統</span></a>
-  <a class="next" href="backend.html"><span class="k">接著讀</span><span class="n">後台與個資紅線</span></a>
+  <a href="path-assessment.html"><span class="k">上一主題</span><span class="n">評量：多元作答評量系統</span></a>
+  <a class="next" href="backend.html"><span class="k">接續閱讀</span><span class="n">資料庫建置與個人資料保護</span></a>
 </div>
 
 </div>
 </main>
 
 <footer>
-  <div class="wrap"><p><strong>特殊教育 AI 工作坊</strong>｜路線五．行政</p></div>
+  <div class="wrap">
+    <p><strong>特殊教育 AI 工作坊</strong>｜實作主題五．行政</p>
+  </div>
 </footer>
 
-<script src="assets/site.js?v=3"></script>
+<script src="assets/site.js?v=4"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-<title>課後怎麼繼續｜特殊教育 AI 工作坊</title>
-<meta name="description" content="母版連結、資源清單、回報約定，以及這個網站本身的無障礙設計。">
+<title>課後延續｜特殊教育 AI 工作坊</title>
+<meta name="description" content="範例系統連結、資源清單、追蹤機制，以及本網站之無障礙設計說明。">
 <meta name="color-scheme" content="light dark">
 <script>
 /* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -39,8 +39,8 @@ d.setAttribute('data-fs',f||'m');})();
       <a href="path-assessment.html">評量</a>
       <a href="path-admin.html">行政</a>
       <span class="sp" aria-hidden="true"></span>
-      <a href="udl-check.html">檢核卡</a>
-      <a href="backend.html">後台</a>
+      <a href="udl-check.html">檢核表</a>
+      <a href="backend.html">資料庫</a>
       <a href="law.html">法規</a>
       <a href="after.html" aria-current="page">課後</a>
     </div>
@@ -49,9 +49,9 @@ d.setAttribute('data-fs',f||'m');})();
 
 <header class="ph">
   <div class="wrap">
-    <p class="kicker">散場之後</p>
-    <h1>課後怎麼繼續</h1>
-    <p class="thesis">今天做的東西只是<b>一個能跑的版本</b>。<br>回去用不用得起來，看接下來兩週。</p>
+    <p class="kicker">研習後</p>
+    <h1>課後延續</h1>
+    <p class="thesis">研習當日之產出為<b>可運作之原型</b>。<br>其能否進入實際業務流程，取決於後續兩週之處置。</p>
   </div>
 </header>
 
@@ -59,87 +59,79 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="wrap narrow">
 
 <section aria-labelledby="s1">
-  <div class="head">
-    <span class="num" aria-hidden="true">01</span>
-    <div><h2 id="s1">兩週內做這三件事</h2><p class="lead">超過兩週沒碰，這場就白來了。</p></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">兩週內應完成之三項工作</h2><p class="lead">逾兩週未再使用者，研習成效通常不復存在。</p></div></div>
 
   <ol class="steps">
-    <li><div><div class="t">自己用一次真的</div>
-      <div class="d">用真實情境跑一次完整流程（資料仍要去識別化）。你會馬上發現三個現場才看得到的問題。</div></div></li>
-    <li><div><div class="t">給一個同事用</div>
-      <div class="d">不要解釋，把連結丟給他，看他卡在哪。他卡住的地方就是你的設計問題，不是他的問題。</div></div></li>
-    <li><div><div class="t">再跑一次三關檢核</div>
-      <div class="d">研習當天是在半成品上檢的。做完之後重檢一次，尤其是權限那一項。</div></div></li>
+    <li><div><div class="t">以實際情境完整執行一次</div>
+      <div class="d">資料仍須去識別化。實際執行後通常可發現數項於研習現場未能察覺之問題。</div></div></li>
+    <li><div><div class="t">交付一位同仁試用</div>
+      <div class="d">不予說明，逕行提供網址，觀察其受阻之處。受阻位置即為設計缺失所在，非使用者之問題。</div></div></li>
+    <li><div><div class="t">重新執行三向度檢核</div>
+      <div class="d">研習當日所檢核者為半成品。完成後應重新檢核，其中存取權限一項尤須複驗。</div></div></li>
   </ol>
 </section>
 
 <section aria-labelledby="s2">
-  <div class="head">
-    <span class="num" aria-hidden="true">02</span>
-    <div><h2 id="s2">資源清單</h2></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">資源清單</h2></div></div>
 
   <div class="tw">
     <table>
-      <thead><tr><th scope="col">資源</th><th scope="col">用在哪</th><th scope="col">連結</th></tr></thead>
+      <thead><tr><th scope="col">資源</th><th scope="col">用途</th><th scope="col">連結</th></tr></thead>
       <tbody>
-        <tr><th scope="row">課堂看板</th><td>當天全部素材、痛點牆、成果連結</td><td><span class="todo">待填</span></td></tr>
-        <tr><th scope="row">教案母版</th><td>路線一，課程調整教案產生器</td><td><span class="todo">待填</span></td></tr>
-        <tr><th scope="row">教材母版</th><td>路線二，多路徑教材網頁</td><td><span class="todo">待填</span></td></tr>
-        <tr><th scope="row">簡報母版</th><td>路線三，個案研討與親師溝通</td><td><span class="todo">待填</span></td></tr>
-        <tr><th scope="row">評量母版</th><td>路線四，多元作答系統（含後台）</td><td><span class="todo">待填</span></td></tr>
-        <tr><th scope="row">行政母版</th><td>路線五，IEP 追蹤／教具借用／巡迴紀錄</td><td><span class="todo">待填</span></td></tr>
-        <tr><th scope="row"><a href="udl-check.html">UDL 三關檢核卡</a></th><td>入班輔導時直接拿來用</td><td>本站</td></tr>
-        <tr><th scope="row"><a href="backend.html">後台與個資紅線</a></th><td>接資料庫前必讀</td><td>本站</td></tr>
-        <tr><th scope="row"><a href="law.html">法規原文摘錄</a></th><td>說服普師與行政</td><td>本站</td></tr>
-        <tr><th scope="row">三個月回報表單</th><td>你的東西後來被誰用了</td><td><span class="todo">待填</span></td></tr>
+        <tr><th scope="row">課堂共用看板</th><td>當日全部素材與成果連結</td><td><span class="todo">待填</span></td></tr>
+        <tr><th scope="row">教案範例系統</th><td>實作主題一</td><td><span class="todo">待填</span></td></tr>
+        <tr><th scope="row">教材範例系統</th><td>實作主題二</td><td><span class="todo">待填</span></td></tr>
+        <tr><th scope="row">簡報範例系統</th><td>實作主題三</td><td><span class="todo">待填</span></td></tr>
+        <tr><th scope="row">評量範例系統</th><td>實作主題四，含資料庫</td><td><span class="todo">待填</span></td></tr>
+        <tr><th scope="row">行政範例系統</th><td>實作主題五，含資料庫</td><td><span class="todo">待填</span></td></tr>
+        <tr><th scope="row"><a href="udl-check.html">三向度檢核表</a></th><td>入班輔導時逕行採用</td><td>本站</td></tr>
+        <tr><th scope="row"><a href="backend.html">資料庫與個人資料保護</a></th><td>建置資料庫前必讀</td><td>本站</td></tr>
+        <tr><th scope="row"><a href="law.html">法規原文摘錄</a></th><td>與普通班教師及行政溝通</td><td>本站</td></tr>
+        <tr><th scope="row">追蹤回報表單</th><td>三個月後之使用情形回報</td><td><span class="todo">待填</span></td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
 <section aria-labelledby="s3">
-  <div class="head">
-    <span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">三個月後回報什麼</h2><p class="lead">不用寫報告，回答三題就好。</p></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">三個月後之回報項目</h2><p class="lead">無須撰寫書面報告，回覆三項即可。</p></div></div>
 
   <ul>
-    <li>你的東西還在用嗎？沒有的話，卡在哪一步</li>
-    <li>有沒有別人拿去用？幾個人</li>
-    <li>你想做但今天沒做出來的是什麼</li>
+    <li>系統是否仍在使用。若已停用，係於哪一環節中止</li>
+    <li>是否有其他人員採用，人數若干</li>
+    <li>研習當日未能完成、但實務上確有需求之項目為何</li>
   </ul>
 
   <div class="note">
-    <p>第三題最重要。那是下一場研習該講的東西。</p>
+    <p>第三項之回覆內容，即為後續場次之課程規劃依據。</p>
   </div>
 </section>
 
 <section aria-labelledby="s4">
-  <div class="head">
-    <span class="num" aria-hidden="true">04</span>
-    <div><h2 id="s4">這個網站本身</h2></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">本網站之無障礙設計</h2></div></div>
 
   <div class="a11y">
-    <div class="h">它是示範品，不只是說明書</div>
-    <p>講 UDL 的研習網站自己不無障礙，第一頁就破功。這個站做了下面這些事，你可以直接拿去對照自己做的東西：</p>
+    <div class="h">本站同時作為示範案例</div>
+    <p>討論通用學習設計之研習網站若自身不符無障礙規格，其論述之可信度即受影響。本站已實作下列項目，與會者得逕行對照自身產出檢視：</p>
     <ul>
-      <li>右上角可以把文字調到<strong>特大</strong>，任何一頁都不會破版</li>
-      <li>深淺主題可切換，也跟隨系統設定，選了之後跨頁記住</li>
-      <li>所有文字對比度符合 WCAG AA，多數超過 AAA</li>
-      <li>不用顏色單獨傳達訊息，顏色一律配文字與符號</li>
-      <li>可全程鍵盤操作，每頁有跳至主要內容連結與明顯的焦點框</li>
-      <li>系統開啟「減少動態」時，動畫自動關閉</li>
-      <li>零外部字型與資源，研習現場斷線也讀得到，每頁都能直接列印</li>
+      <li>文字大小提供三段調整，最大級距下<strong>各頁版面配置均維持可用</strong></li>
+      <li>深色與淺色主題可切換，亦依系統設定自動判定，選定後跨頁留存</li>
+      <li>全站文字對比度符合 WCAG AA，多數項目達 AAA</li>
+      <li>不以顏色單獨傳達訊息，顏色一律併同文字與符號標示</li>
+      <li>全程可僅以鍵盤操作，各頁設有跳至主要內容連結與明顯之焦點指示</li>
+      <li>系統啟用「減少動態效果」時，動畫自動停用</li>
+      <li>無外部字型與外部資源，斷線狀態下仍可閱讀，各頁均可直接列印</li>
     </ul>
   </div>
 </section>
 
 <div class="pager">
   <a href="law.html"><span class="k">上一頁</span><span class="n">法規原文摘錄</span></a>
-  <a class="next" href="index.html"><span class="k">回到</span><span class="n">總覽</span></a>
+  <a class="next" href="index.html"><span class="k">返回</span><span class="n">總覽</span></a>
 </div>
 
 </div>
@@ -147,11 +139,11 @@ d.setAttribute('data-fs',f||'m');})();
 
 <footer>
   <div class="wrap">
-    <p><strong>特殊教育 AI 工作坊</strong>｜課後怎麼繼續</p>
-    <p><span class="todo">待填</span> 講師姓名／單位／場次日期</p>
+    <p><strong>特殊教育 AI 工作坊</strong>｜課後延續</p>
+    <p><span class="todo">待填</span> 講師姓名／服務單位／場次日期</p>
   </div>
 </footer>
 
-<script src="assets/site.js?v=3"></script>
+<script src="assets/site.js?v=4"></script>
 </body>
 </html>

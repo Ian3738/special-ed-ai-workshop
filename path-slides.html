@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <title>簡報：個案研討與親師溝通｜特殊教育 AI 工作坊</title>
-<meta name="description" content="把零散的觀察紀錄整理成一份講得下去的簡報。每學期都要做的那個。">
+<meta name="description" content="將分散之觀察紀錄與評量結果整理為具結構之簡報草稿，並逐頁標註資料依據。">
 <meta name="color-scheme" content="light dark">
 <script>
 /* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=3">
+<link rel="stylesheet" href="assets/style.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -39,8 +39,8 @@ d.setAttribute('data-fs',f||'m');})();
       <a href="path-assessment.html">評量</a>
       <a href="path-admin.html">行政</a>
       <span class="sp" aria-hidden="true"></span>
-      <a href="udl-check.html">檢核卡</a>
-      <a href="backend.html">後台</a>
+      <a href="udl-check.html">檢核表</a>
+      <a href="backend.html">資料庫</a>
       <a href="law.html">法規</a>
       <a href="after.html">課後</a>
     </div>
@@ -49,10 +49,10 @@ d.setAttribute('data-fs',f||'m');})();
 
 <header class="ph">
   <div class="wrap">
-    <p class="kicker">路線三．簡報</p>
+    <p class="kicker">實作主題三．簡報</p>
     <h1>個案研討與親師溝通簡報</h1>
-    <p class="thesis">一整個學期的觀察紀錄散在三個地方。<br>開會前一晚，你在<b>把它們對照著抄成投影片</b>。</p>
-    <div class="tags"><span>不需後台</span><span>約 30 分鐘</span><span>成品是一個轉換器</span></div>
+    <p class="thesis">一學期之觀察紀錄分散於數個檔案。<br>本主題所建置者為<b>紀錄至簡報之轉換流程</b>。</p>
+    <div class="tags"><span>無須資料庫</span><span>約 30 分鐘</span><span>產出為轉換流程</span></div>
   </div>
 </header>
 
@@ -60,122 +60,104 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="wrap narrow">
 
 <section aria-labelledby="s1">
-  <div class="head">
-    <span class="num" aria-hidden="true">01</span>
-    <div><h2 id="s1">這條路在解什麼</h2></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">問題界定</h2></div></div>
 
-  <p>個案研討簡報難的不是做投影片，是<strong>把散落的紀錄變成一個講得下去的故事</strong>。你手上有課堂觀察、有評量結果、有家長回饋，但它們不會自己排成順序。</p>
+  <p>個案研討簡報之困難不在版面製作，而在<strong>將分散之紀錄整理為具邏輯結構之敘述</strong>。課堂觀察、評量結果與家長回饋分屬不同來源，其排列順序須由撰寫者自行判斷。</p>
 
-  <p>這條路做的是一個轉換器：把去識別化的原始紀錄丟進去，吐出一份有結構的簡報草稿。你負責判斷對不對，它負責排版和整理。</p>
+  <p>本主題建置之轉換流程，係將去識別化之原始紀錄輸入後，輸出具既定結構之簡報草稿。內容正確性之判斷仍由撰寫者負責，系統負責之部分為整理與版面配置。</p>
 
   <div class="redline">
-    <div class="h"><span aria-hidden="true">▲</span>這條路的個資風險最高</div>
-    <p>個案研討的素材本身就是最敏感的資料。<strong>今天現場一律用假個案或全代號的資料。</strong>回去用真實資料時，姓名、學號、鑑定文號、就醫紀錄一律先換掉，AI 平台不需要知道那孩子叫什麼。</p>
+    <div class="h"><span aria-hidden="true">▲</span>本主題之個人資料風險最高</div>
+    <p>個案研討素材本身即屬高敏感度資料。<strong>研習現場一律使用虛擬個案或全代號資料。</strong>研習後處理實際資料時，姓名、學號、鑑定文號與就醫紀錄均應先行置換；生成式 AI 平台無須取得學生之識別資訊。</p>
   </div>
 </section>
 
 <section aria-labelledby="s2">
-  <div class="head">
-    <span class="num" aria-hidden="true">02</span>
-    <div><h2 id="s2">怎麼做</h2></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">建置程序</h2></div></div>
 
   <ol class="steps">
-    <li><div><div class="t">先決定這場要說服誰</div>
-      <div class="d">給家長看和給個案研討會看是兩份不同的東西。用詞、深度、要不要放數據都不同。先選一個。</div></div></li>
-    <li><div><div class="t">定好固定結構</div>
-      <div class="d">背景、現況（優勢先講）、已經試過什麼、結果如何、接下來要什麼。這個順序每次都一樣，寫進指令。</div></div></li>
-    <li><div><div class="t">丟原始紀錄進去</div>
-      <div class="d">去識別化過的觀察紀錄、評量結果、作品照片。愈原始愈好，不用先整理。</div></div></li>
-    <li><div><div class="t">檢查它有沒有編造</div>
-      <div class="d">最重要的一步。AI 會把你沒寫的東西補得很像真的。逐頁對照原始紀錄，補出來的一律刪掉。</div></div></li>
+    <li><div><div class="t">確認溝通對象</div>
+      <div class="d">提送個案研討會與提供家長者為兩份不同文件，其用詞、詳略程度與數據呈現方式均不相同。應先擇定其一。</div></div></li>
+    <li><div><div class="t">訂定固定結構</div>
+      <div class="d">背景、現況（優勢先行陳述）、已實施之策略、實施結果、後續所需支持。此一順序每次相同，寫入指令。</div></div></li>
+    <li><div><div class="t">輸入原始紀錄</div>
+      <div class="d">去識別化之觀察紀錄、評量結果與作品影像。原始程度愈高愈佳，無須預先整理。</div></div></li>
+    <li><div><div class="t">查核有無虛構內容</div>
+      <div class="d">本步驟最為關鍵。生成式 AI 具有補足缺漏資訊之傾向，且其產出具有相當之表面合理性。應逐頁對照原始紀錄，凡未見於原始資料者一律刪除。</div></div></li>
   </ol>
 
   <div class="cmd">
-    <div class="lbl">貼進 KUSE 對話區</div>
-<pre>我要做一份〔<span class="fill">個案研討／親師溝通</span>〕簡報，
-對象是〔<span class="fill">個案研討會成員／家長</span>〕，時間〔<span class="fill">N</span>〕分鐘。
+    <div class="lbl">康軒 KUSE 指令</div>
+<pre>請製作一份〔<span class="fill">個案研討／親師溝通</span>〕簡報，
+提送對象為〔<span class="fill">個案研討會／家長</span>〕，報告時間〔<span class="fill">N</span>〕分鐘。
 
-我會貼上去識別化的觀察紀錄與評量結果。請照這個結構整理：
-1. 背景（一頁，只講必要的）
-2. 現況——優勢先講，再講困難
-3. 這學期試過哪些做法
-4. 結果，有數據就放數據，沒有就說沒有
-5. 接下來需要什麼支持
+我將提供去識別化之觀察紀錄與評量結果，請依下列結構整理：
+1. 背景（一頁，僅列必要資訊）
+2. 現況：優勢先行陳述，其後說明困難
+3. 本學期已實施之策略
+4. 實施結果；有量化資料者呈現數據，無則明確敘明
+5. 後續所需之支持
 
 規則：
-- 只使用我提供的資料。沒有寫到的一律不要補，寧可留白。
-- 每一頁最後標註這頁的依據來自我哪一段紀錄。
-- 對家長的版本避免專業術語，必要時附一句白話解釋。
-- 不要出現姓名，一律用「該生」。</pre>
+- 僅得使用我所提供之資料。未載明者一律不得補充，寧可留白。
+- 每一頁末尾標註該頁內容所依據之原始紀錄段落。
+- 提供家長之版本應避免專業術語，必要時附一句白話說明。
+- 不得出現姓名，一律以「該生」表示。</pre>
   </div>
 
   <div class="note">
-    <p><b>「每一頁標註依據來自哪一段」這條是防編造用的。</b>標不出來的那一頁，就是它自己編的。這一招在所有需要事實正確的產出上都適用。</p>
+    <p><b>「逐頁標註資料依據」一項係為抑制虛構內容而設。</b>無法標註依據之頁面，即屬系統自行補充之內容。此一作法適用於所有要求事實正確性之產出。</p>
   </div>
 </section>
 
 <section aria-labelledby="s3">
-  <div class="head">
-    <span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">三關怎麼過</h2><p class="lead">這條路的使用者是家長和會議成員，門檻比你想的高。</p></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">三向度檢核</h2><p class="lead">本主題之使用者為家長與會議成員，其可及性門檻高於一般預期。</p></div></div>
 
   <div class="gates">
-    <div class="gate">
-      <div class="g">看得到嗎</div>
-      <div class="q">家長讀得動這一頁嗎</div>
-      <ul>
-        <li>專業術語有沒有白話版本</li>
-        <li>投影片字級，坐最後一排看得到嗎</li>
-        <li>圖表有沒有一句話的說明，還是要自己解讀</li>
-      </ul>
-    </div>
-    <div class="gate">
-      <div class="g">做得到嗎</div>
-      <div class="q">你要對方做的事，他做得到嗎</div>
-      <ul>
-        <li>「請家長在家配合練習」——他的作息允許嗎</li>
-        <li>需求有沒有講到具體可執行，還是只有方向</li>
-      </ul>
-    </div>
-    <div class="gate">
-      <div class="g">為什麼要用</div>
-      <div class="q">聽完之後對方想不想繼續談</div>
-      <ul>
-        <li>優勢有沒有先講（先講困難，家長就關機了）</li>
-        <li>有沒有留位置讓對方講他知道的事</li>
-      </ul>
-    </div>
+    <div class="gate"><div class="g">多元表徵</div>
+      <div class="q">家長能否理解本頁內容</div>
+      <ul><li>專業術語是否附有白話說明</li>
+      <li>投影片字級於會場後排能否辨識</li>
+      <li>圖表是否附有一句結論說明，抑或須由讀者自行判讀</li></ul></div>
+    <div class="gate"><div class="g">多元行動與表達</div>
+      <div class="q">所請求對方執行之事項能否達成</div>
+      <ul><li>「請家長於家中配合練習」一類請求，是否符合其實際作息條件</li>
+      <li>需求敘述是否具體可執行，抑或僅陳述方向</li></ul></div>
+    <div class="gate"><div class="g">多元參與</div>
+      <div class="q">對方於會後是否願意繼續討論</div>
+      <ul><li>是否先行陳述優勢（先陳述困難將顯著降低家長之參與意願）</li>
+      <li>是否保留由對方補充資訊之環節</li></ul></div>
   </div>
 </section>
 
 <section aria-labelledby="s4">
-  <div class="head">
-    <span class="num" aria-hidden="true">04</span>
-    <div><h2 id="s4">加碼任務</h2></div>
-  </div>
+  <div class="head"><span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">延伸任務</h2></div></div>
 
   <ul>
-    <li>做<strong>兩個版本</strong>：給會議的和給家長的，看同一份資料怎麼講成兩種說法</li>
-    <li>把轉換器<strong>鑄成技能檔</strong>，下學期直接用</li>
-    <li>接後台，把歷次紀錄存起來，<strong>下次開會自動帶出上次的追蹤事項</strong>（<a href="backend.html">後台怎麼接</a>）</li>
+    <li>製作<strong>兩種版本</strong>：提送會議者與提供家長者，比較同一份資料之不同呈現方式</li>
+    <li>將轉換流程<strong>封裝為技能檔</strong>，供後續學期沿用</li>
+    <li>建置資料庫留存歷次紀錄，使<strong>下次會議得自動帶出前次之追蹤事項</strong>（<a href="backend.html">建置方式</a>）</li>
   </ul>
 </section>
 
 <div class="pager">
-  <a href="path-material.html"><span class="k">上一條路</span><span class="n">教材：多路徑教材網頁</span></a>
-  <a class="next" href="path-assessment.html"><span class="k">下一條路</span><span class="n">評量：多元作答系統</span></a>
+  <a href="path-material.html"><span class="k">上一主題</span><span class="n">教材：多元表徵教材網頁</span></a>
+  <a class="next" href="path-assessment.html"><span class="k">下一主題</span><span class="n">評量：多元作答評量系統</span></a>
 </div>
 
 </div>
 </main>
 
 <footer>
-  <div class="wrap"><p><strong>特殊教育 AI 工作坊</strong>｜路線三．簡報</p></div>
+  <div class="wrap">
+    <p><strong>特殊教育 AI 工作坊</strong>｜實作主題三．簡報</p>
+  </div>
 </footer>
 
-<script src="assets/site.js?v=3"></script>
+<script src="assets/site.js?v=4"></script>
 </body>
 </html>
