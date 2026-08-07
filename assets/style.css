@@ -377,6 +377,16 @@ tr.spot th{color:var(--brand);}
 .card .t{font-weight:800;margin-bottom:.35rem;font-size:1.02rem;}
 .card .d{font-size:.9rem;color:var(--muted);line-height:1.7;}
 
+/* ══ 參考文獻（APA 第七版，首行凸排）═════ */
+.refs{list-style:none;margin:1rem 0 0;padding:0;max-width:100%;}
+.refs li{padding-left:2.2em;text-indent:-2.2em;margin-bottom:.7rem;
+  font-size:.94rem;line-height:1.7;max-width:var(--measure);}
+.refs li::marker{content:none;}
+.refs cite{font-style:italic;}
+.refs .kind{display:block;font-size:.72rem;letter-spacing:.16em;font-weight:900;
+  color:var(--brand);margin:1.3rem 0 .55rem;padding-left:0;text-indent:0;}
+.refs li:first-child .kind{margin-top:0;}
+
 /* ══ 引文與提示 ═════════════════════════ */
 .law{background:var(--card);border-radius:.75rem;padding:1rem 1.2rem;margin:1rem 0;
   box-shadow:var(--shadow);border-left:6px solid var(--ink);}
