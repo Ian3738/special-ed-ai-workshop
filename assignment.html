@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=14">
+<link rel="stylesheet" href="assets/style.css?v=15">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -33,13 +33,15 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="wrap">
       <a href="index.html">總覽</a>
       <span class="sp" aria-hidden="true"></span>
+      <a href="method.html">設計方法</a>
+      <a href="udl-check.html">檢核表</a>
+      <span class="sp" aria-hidden="true"></span>
       <a href="path-lesson.html">教案</a>
       <a href="path-material.html">教材</a>
       <a href="path-slides.html">簡報</a>
       <a href="path-assessment.html">評量</a>
       <a href="path-admin.html">行政</a>
       <span class="sp" aria-hidden="true"></span>
-      <a href="udl-check.html">檢核表</a>
       <a href="backend.html">資料庫</a>
       <a href="law.html">法規</a>
       <a href="assignment.html" aria-current="page">作業</a>
@@ -68,6 +70,8 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="sec-body">
   <p>連續辦理之兩日研習，第二日多為第一日之延長：講師續講，學員續作，其間並無外部資訊進入。本工作坊兩日相隔十日，學員得將第一日之產出攜回學校實際使用，<strong>第二日開場即具備真實之使用經驗可供討論</strong>。</p>
 
+  <p>回報之重點並非產出能否運作，而在於<strong>第一天的拆解何處判斷有誤</strong>——當初認為不必處理的部分是否其實必要、寫入指令的規則是否漏了條件、限制是否評估錯誤。工具修得好是一次性的收穫，拆解修得對才帶得走。相關提問見<a href="method.html">設計方法</a>。</p>
+
   <p>據此，第二天上午之內容於當日方確定，由回場報告之共通問題決定。此為兩日分開辦理唯一不可替代之價值；若逕依預定教材授課，該十日即形同虛設。</p>
     </div>
   </details>
@@ -86,7 +90,7 @@ d.setAttribute('data-fs',f||'m');})();
     <li><div><div class="t">交付一位同仁試用</div>
       <div class="d">不予任何說明，逕行提供網址，於旁觀察其受阻之處並記錄。<strong>受阻位置即為設計缺失所在，非使用者之問題。</strong>此項最能揭露建置者自身察覺不到的假設。</div></div></li>
     <li><div><div class="t">記錄想做而未能完成之功能</div>
-      <div class="d">研習當日受時間所限未及處理、惟實務上確有需求者。本項之彙整結果將決定第二天下午之調整方向，亦為後續場次之規劃依據。</div></div></li>
+      <div class="d">研習當日受時間所限未及處理、惟實務上確有需求者。若該項係因第一天拆解時未察覺而遺漏，請一併註明是哪一個提問沒問到。本項之彙整結果將決定第二天下午之調整方向。</div></div></li>
   </ol>
 
   <div class="note">
@@ -151,6 +155,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=14"></script>
+<script src="assets/site.js?v=15"></script>
 </body>
 </html>
