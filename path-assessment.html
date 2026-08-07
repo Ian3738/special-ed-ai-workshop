@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=16">
+<link rel="stylesheet" href="assets/style.css?v=17">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -179,6 +179,69 @@ d.setAttribute('data-fs',f||'m');})();
   </details>
 </section>
 
+<section aria-labelledby="s5">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">05</span>
+    <div><h2 id="s5">延伸：報讀音檔批次產生</h2><p class="lead">段考報讀之完整拆解見<a href="method.html#s2">設計方法之案例</a>。本節為該規格導出之實作。</p></div></div>
+    </summary>
+    <div class="sec-body">
+
+  <p>作法比照國中教育會考語音報讀服務：<strong>一題一軌，另附曲目對照表</strong>。依規範不報讀之題目仍產生一軌並提示自行閱讀試題本，使軌號與題號一致，考生不致因跳號而錯亂。</p>
+
+  <h3>三個步驟</h3>
+  <ol class="steps">
+    <li><div><div class="t">取得純文字，不上傳試卷影像</div>
+      <div class="d">以裝置內建功能於本機擷取：Mac 與 iPhone 之照片可直接選取文字，Windows 11 剪取工具設有文字動作。出題教師持有電子檔者，本步驟略過。</div></div></li>
+    <li><div><div class="t">轉為報讀腳本</div>
+      <div class="d">以生成式 AI 依報讀規則規範化，並將圖形、表格、特殊符號、形音義辨、區辨整合五類標示為不報讀。指令範本見<a href="method.html#s2">設計方法之案例</a>。</div></div></li>
+    <li><div><div class="t">批次合成音檔</div>
+      <div class="d">執行腳本，一次產出逐題音檔與曲目對照表。實測七題約五秒，三十題約二十秒。語音合成使用作業系統內建功能，離線執行，題目文字不外傳。</div></div></li>
+  </ol>
+
+  <h3>腳本格式</h3>
+  <div class="cmd">
+    <div class="lbl">報讀腳本.txt</div>
+<pre># 01
+下列選項中，何者為質數？
+選項 A，四。
+選項 B，七。
+
+# 04 <span class="fill">[不報讀]</span>
+本題含幾何圖形。</pre>
+  </div>
+
+  <div class="tw">
+    <table>
+      <caption>批次產生器。原始碼置於本站 <code>tools/</code> 目錄，可自行修改。</caption>
+      <thead><tr><th scope="col">環境</th><th scope="col">語音來源</th><th scope="col">輸出格式</th><th scope="col">檔案</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">macOS</th><td>內建 <code>say</code>，九種臺灣中文語音</td><td>裝有 lame 者為 MP3，否則 M4A</td>
+          <td><a href="tools/make-readaloud.sh">make-readaloud.sh</a></td></tr>
+        <tr><th scope="row">Windows</th><td>內建 System.Speech</td><td>裝有 ffmpeg 者為 MP3，否則 WAV</td>
+          <td><a href="tools/make-readaloud.ps1">make-readaloud.ps1</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>兩者輸入格式相同，輸出均含逐題音檔、曲目對照表 CSV 與可列印之 HTML。使用說明見 <a href="tools/README.md">tools/README.md</a>，輸入範例見<a href="tools/%E7%AF%84%E4%BE%8B%E8%85%B3%E6%9C%AC.txt">範例腳本</a>。</p>
+
+  <div class="note">
+    <p><b>macOS 與 Windows 之內建工具均無法直接編碼 MP3</b>——前者之 <code>afconvert</code> 僅能解碼，後者之語音合成僅輸出 WAV。腳本會自動偵測並改用可行格式。需要 MP3 時，macOS 執行 <code>brew install lame</code>，Windows 安裝 ffmpeg。M4A 與 WAV 多數播放器亦可播放。</p>
+  </div>
+
+  <div class="redline">
+    <div class="h"><span aria-hidden="true">▲</span>三項前提</div>
+    <ul>
+      <li>試卷影像不上傳，文字於本機擷取後方交由生成式 AI 處理</li>
+      <li>音檔可重複播放，與人工報讀一至二次不等值，屬不同強度之評量調整，須於個別化教育計畫會議記載</li>
+      <li>題目文字用畢即自平台移除，音檔於考試結束後一併刪除</li>
+    </ul>
+  </div>
+    </div>
+  </details>
+</section>
+
 <div class="pager">
   <a href="path-slides.html"><span class="k">上一主題</span><span class="n">簡報：個案研討與親師溝通</span></a>
   <a class="next" href="path-admin.html"><span class="k">下一主題</span><span class="n">行政：行政業務資料系統化</span></a>
@@ -194,6 +257,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=16"></script>
+<script src="assets/site.js?v=17"></script>
 </body>
 </html>
