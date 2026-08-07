@@ -387,6 +387,25 @@ tr.spot th{color:var(--brand);}
   color:var(--brand);margin:1.3rem 0 .55rem;padding-left:0;text-indent:0;}
 .refs li:first-child .kind{margin-top:0;}
 
+/* ══ 圖表 ═══════════════════════════════
+   圖片本身為淺底，兩種主題下均維持淺色底板，
+   避免深色模式下白圖浮在暗背景上。 */
+figure.chart{margin:1.2rem 0;background:#FFFCF6;border-radius:.75rem;
+  padding:.6rem .6rem .2rem;box-shadow:var(--shadow);border:1px solid var(--rule);}
+figure.chart img{display:block;width:100%;height:auto;border-radius:.45rem;}
+figure.chart figcaption{padding:.7rem .8rem .8rem;font-size:.88rem;
+  color:#5E5A54;line-height:1.65;}
+figure.chart figcaption b{color:#0A5A4B;font-weight:900;}
+figure.chart .tw{margin:.2rem .4rem .6rem;box-shadow:none;border:1px solid #E4DCCB;}
+figure.chart table{font-size:.88rem;min-width:20rem;color:#15181C;}
+figure.chart thead th{background:#0A5A4B;color:#FFFCF6;}
+figure.chart th,figure.chart td{border-bottom:1px solid #E4DCCB;}
+figure.chart caption{color:#5E5A54;}
+figure.chart details{margin:0 .4rem .6rem;}
+figure.chart summary{cursor:pointer;font-size:.86rem;font-weight:800;color:#0A5A4B;
+  padding:.35rem .4rem;}
+@media (forced-colors: active){figure.chart{border:1px solid currentColor;}}
+
 /* ══ 引文與提示 ═════════════════════════ */
 .law{background:var(--card);border-radius:.75rem;padding:1rem 1.2rem;margin:1rem 0;
   box-shadow:var(--shadow);border-left:6px solid var(--ink);}

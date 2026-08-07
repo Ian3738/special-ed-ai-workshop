@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>資料儀表板（示範）｜特殊教育 AI 工作坊</title>
+<meta name="description" content="以模擬資料示範六個參考欄位蒐集後可回答之問題，並示範圖表之無障礙作法。資料為模擬產生，非實際施測結果。">
+<meta name="color-scheme" content="light dark">
+<script>
+/* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
+(function(){var d=document.documentElement,t,f;
+try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catch(e){}
+d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+d.setAttribute('data-fs',f||'m');})();
+</script>
+<link rel="stylesheet" href="assets/style.css?v=18">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<header class="topbar">
+  <div class="wrap row1">
+    <a class="brand" href="index.html">特殊教育 AI 工作坊</a>
+    <div class="ctrl">
+      <span class="lbl" id="fsLbl">文字大小</span>
+      <button class="tog" type="button" data-fs="m" aria-pressed="true" aria-describedby="fsLbl">標準</button>
+      <button class="tog" type="button" data-fs="l" aria-pressed="false" aria-describedby="fsLbl">大</button>
+      <button class="tog" type="button" data-fs="xl" aria-pressed="false" aria-describedby="fsLbl">特大</button>
+    </div>
+    <div class="ctrl"><button class="tog" type="button" id="themeBtn" aria-pressed="false">深色</button></div>
+  </div>
+  <nav class="tabs" aria-label="頁面導覽">
+    <div class="wrap">
+      <a href="index.html">總覽</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="method.html">設計方法</a>
+      <a href="udl-check.html">檢核表</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="path-lesson.html">教案</a>
+      <a href="path-material.html">教材</a>
+      <a href="path-slides.html">簡報</a>
+      <a href="path-assessment.html">評量</a>
+      <a href="path-admin.html">行政</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="backend.html">資料庫</a>
+      <a href="dashboard.html" aria-current="page">儀表板</a>
+      <a href="law.html">法規</a>
+      <a href="assignment.html">作業</a>
+      <a href="after.html">課後</a>
+    </div>
+  </nav>
+</header>
+
+<header class="ph">
+  <div class="wrap">
+    <p class="kicker">示範資料</p>
+    <h1>資料儀表板</h1>
+    <p class="thesis">收了那六個欄位之後，究竟看得出什麼。<br><b>本頁資料為模擬產生，非實際施測結果。</b></p>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap narrow">
+
+<section aria-labelledby="s0">
+  <details open>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">00</span>
+    <div><h2 id="s0">本頁為示範，資料為模擬</h2><p class="lead">研習尚未辦理，故無實際施測資料。</p></div></div>
+    </summary>
+    <div class="sec-body">
+  <div class="redline">
+    <div class="h"><span aria-hidden="true">▲</span>資料性質</div>
+    <p>本頁全部圖表之資料<strong>均為模擬產生，非任何實際施測或輔導之結果</strong>，不得引用為研究發現或成效證據。模擬以固定亂數種子產生，n = 480，欄位比照<a href="backend.html#s4">資料庫頁所列之參考欄位</a>。</p>
+  </div>
+
+  <p>本頁之用途為回答一個具體問題：<strong>依那六個欄位蒐集資料之後，究竟看得出什麼</strong>。此點先前僅以文字說明，與會者不易想像。</p>
+
+  <p>另有一項副作用值得注意：本站原先不含任何圖片，加入圖表後即須提供替代文字與資料表，否則違反<a href="udl-check.html">檢核表</a>第一向度之要求。本頁四張圖均附替代文字與可展開之資料表，得作為對照。</p>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s1">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">各取用路徑之使用比例</h2><p class="lead">回答：語音與圖解路徑是否真的有人使用。</p></div></div>
+    </summary>
+    <div class="sec-body">
+  <figure class="chart">
+    <img src="assets/charts/path-usage.png" alt="長條圖。文字路徑使用比例 45%（214 人次）最高，語音 33%（158 人次）次之，圖解 23%（108 人次）最低。三條路徑均有相當數量之使用者。">
+    <figcaption><b>三條路徑均有人使用。</b>若某一路徑之使用比例低於一成，通常並非學生不需要，而是該路徑之入口不明顯或內容品質不佳，應先檢視設計而非逕行移除。</figcaption>
+    <details>
+      <summary>以表格檢視本圖資料</summary>
+      <div class="tw"><table><caption>各取用路徑之使用人次與比例（模擬資料）</caption>
+        <thead><tr><th scope="col">取用路徑</th><th scope="col">人次</th><th scope="col">比例</th></tr></thead><tbody><tr><td>文字</td><td>214</td><td>44.6%</td></tr><tr><td>語音</td><td>158</td><td>32.9%</td></tr><tr><td>圖解</td><td>108</td><td>22.5%</td></tr></tbody></table></div>
+    </details>
+  </figure>
+
+  <div class="note">
+    <p>此為最基本的一張圖，卻是最常被略過的。未建置資料庫者，「學生會選擇適合自己的路徑」始終停留在設計假設，無從驗證。</p>
+  </div>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s2">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">各取用路徑之答對率</h2><p class="lead">回答：多元表徵是否確實未降低內容難度。</p></div></div>
+    </summary>
+    <div class="sec-body">
+  <figure class="chart">
+    <img src="assets/charts/path-accuracy.png" alt="長條圖附 95% 信賴區間。文字路徑答對率 60.3%、語音 60.1%、圖解 63.0%。三者之信賴區間相互重疊。">
+    <figcaption><b>三者信賴區間重疊，表示內容深度一致。</b>此即多元表徵之設計目標——改變的是取用方式，不是難度。若某一路徑之答對率顯著偏高，通常表示該路徑的內容已被簡化。</figcaption>
+    <details>
+      <summary>以表格檢視本圖資料</summary>
+      <div class="tw"><table><caption>各取用路徑之答對率（模擬資料）</caption>
+        <thead><tr><th scope="col">取用路徑</th><th scope="col">人次</th><th scope="col">答對率</th><th scope="col">95% 信賴區間</th></tr></thead><tbody><tr><td>文字</td><td>214</td><td>60.3%</td><td>53.7% – 66.8%</td></tr><tr><td>語音</td><td>158</td><td>60.1%</td><td>52.5% – 67.8%</td></tr><tr><td>圖解</td><td>108</td><td>63.0%</td><td>53.9% – 72.1%</td></tr></tbody></table></div>
+    </details>
+  </figure>
+
+  <div class="note">
+    <p><b>這張圖的正確讀法是「沒有差異」。</b>設計良好時三條路徑應趨於一致；出現顯著差距反而是警訊，須回頭檢查該路徑的內容是否遭簡化。</p>
+  </div>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s3">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">各單元之路徑切換次數</h2><p class="lead">回答：哪些單元的既有設計存在障礙。</p></div></div>
+    </summary>
+    <div class="sec-body">
+  <figure class="chart">
+    <img src="assets/charts/unit-switch.png" alt="長條圖附 95% 信賴區間，依平均切換次數由高至低排列。U03 為 1.59 次、U05 為 1.37 次，兩者以警示色標示為需檢視；其餘 U02 為 1.07、U06 為 0.71、U04 為 0.59、U01 為 0.36。">
+    <figcaption><b>切換頻繁者，表示既有設計存在障礙。</b>學生反覆更換取用方式，通常是因為第一條路徑讀不下去。U03 與 U05 之平均切換次數為 U01 的三至四倍，應優先檢視該兩單元。</figcaption>
+    <details>
+      <summary>以表格檢視本圖資料</summary>
+      <div class="tw"><table><caption>各單元之平均路徑切換次數（模擬資料）</caption>
+        <thead><tr><th scope="col">單元</th><th scope="col">人次</th><th scope="col">平均切換次數</th><th scope="col">判讀</th></tr></thead><tbody><tr><td>U03</td><td>83</td><td>1.59</td><td>需檢視</td></tr><tr><td>U05</td><td>84</td><td>1.37</td><td>需檢視</td></tr><tr><td>U02</td><td>76</td><td>1.07</td><td>—</td></tr><tr><td>U06</td><td>80</td><td>0.71</td><td>—</td></tr><tr><td>U04</td><td>80</td><td>0.59</td><td>—</td></tr><tr><td>U01</td><td>77</td><td>0.36</td><td>—</td></tr></tbody></table></div>
+    </details>
+  </figure>
+
+  <div class="note">
+    <p>此圖之價值在於<strong>指出應該去看哪裡</strong>，而非直接給出答案。切換次數高只說明該單元有問題，問題為何仍須回到現場觀察。單因子變異數分析顯示單元間差異顯著（F(5, 474) = 19.58，p &lt; .001），此項差異確實存在於模擬資料的生成設定中。</p>
+  </div>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s4">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">各作答方式之答對率</h2><p class="lead">這張圖是陷阱，請先看圖再讀說明。</p></div></div>
+    </summary>
+    <div class="sec-body">
+  <figure class="chart">
+    <img src="assets/charts/response-mode.png" alt="點與信賴區間圖。口述作答答對率 72.8%（n=92），書寫 60.0%（n=210），點選 55.6%（n=178）。口述與點選之信賴區間未重疊。虛線標示整體平均 60.8%。">
+    <figcaption><b>口述之答對率明顯高於點選，且信賴區間未重疊。</b>卡方檢定亦達統計顯著（χ²(2) = 7.65，p = .022）。看起來像是口述較有利。</figcaption>
+    <details>
+      <summary>以表格檢視本圖資料</summary>
+      <div class="tw"><table><caption>各作答方式之答對率（模擬資料）</caption>
+        <thead><tr><th scope="col">作答方式</th><th scope="col">人次</th><th scope="col">答對率</th><th scope="col">95% 信賴區間</th></tr></thead><tbody><tr><td>口述</td><td>92</td><td>72.8%</td><td>63.7% – 81.9%</td></tr><tr><td>書寫</td><td>210</td><td>60.0%</td><td>53.4% – 66.6%</td></tr><tr><td>點選</td><td>178</td><td>55.6%</td><td>48.3% – 62.9%</td></tr></tbody></table></div>
+    </details>
+  </figure>
+
+  <div class="redline">
+    <div class="h"><span aria-hidden="true">▲</span>這個差異是假的</div>
+    <p>本頁模擬資料的生成模型中，答對機率<strong>僅取決於單元難度與取用路徑，完全未設定任何作答方式效果</strong>。上圖的差距、未重疊的信賴區間與 p = .022 的顯著結果，全部來自抽樣變異。</p>
+    <p>這是儀表板最危險的地方：<strong>資料愈多，看起來顯著的假差異就愈多</strong>。三種作答方式、六個單元、三條路徑，交叉起來有數十種比較；其中出現幾個 p &lt; .05 是必然的。</p>
+  </div>
+
+  <p>實務上的處置方式：</p>
+  <ul>
+    <li><strong>先問這個比較是不是事前就要做的。</strong>事後翻找出來的顯著結果，證據力遠低於事前設定的檢核項目。</li>
+    <li><strong>看效果量與樣本數，不只看 p 值。</strong>口述組 n = 92，僅為點選組之一半。</li>
+    <li><strong>回到現場確認。</strong>若真有差異，應能在教學現場觀察到對應的現象；找不到對應現象者，多半是雜訊。</li>
+    <li><strong>先檢查評分規準是否對齊。</strong>三種作答方式若確實出現穩定差距，最可能的原因是規準未等值，而非某種方式較優。</li>
+  </ul>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s5">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">05</span>
+    <div><h2 id="s5">圖表本身的無障礙要求</h2><p class="lead">加入圖表後，本站即須符合自身所訂之規準。</p></div></div>
+    </summary>
+    <div class="sec-body">
+  <p>本頁四張圖均已實作下列項目，與會者建置儀表板時得逕行對照：</p>
+
+  <ul>
+    <li><strong>替代文字敘明結論而非圖形</strong>。撰寫「長條圖」無助於理解，應寫出數值與判讀。</li>
+    <li><strong>每張圖均附可展開之資料表</strong>。螢幕報讀軟體無從讀取圖片中的數值，表格是唯一等值的取用路徑。</li>
+    <li><strong>不以顏色單獨傳達訊息</strong>。第三張圖之警示色另以「需檢視」文字標註於資料表。</li>
+    <li><strong>圖表底色於深淺主題下維持一致</strong>。淺底圖片置於深色背景不易辨識，故圖表容器固定為淺色底板。</li>
+    <li><strong>信賴區間一律呈現</strong>。僅給點估計值會使讀者高估精確度。</li>
+  </ul>
+
+  <div class="note">
+    <p><b>圖表為原始碼產生，非截圖。</b>以 R 之 ggplot2 繪製，資料與繪圖程式可重新執行。與會者若欲修改配色或加入自身資料，逕行更動資料來源即可。</p>
+  </div>
+    </div>
+  </details>
+</section>
+
+<div class="pager">
+  <a href="backend.html"><span class="k">上一頁</span><span class="n">資料庫建置與個人資料保護</span></a>
+  <a class="next" href="law.html"><span class="k">下一頁</span><span class="n">法規原文摘錄</span></a>
+</div>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>特殊教育 AI 工作坊</strong>｜資料儀表板（示範）</p>
+    <p>講師　陳奕安　國立清華大學　｜　場次 8 月 11 日、8 月 21 日</p>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=18"></script>
+</body>
+</html>

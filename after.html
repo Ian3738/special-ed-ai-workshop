@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=17">
+<link rel="stylesheet" href="assets/style.css?v=18">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -43,6 +43,7 @@ d.setAttribute('data-fs',f||'m');})();
       <a href="path-admin.html">行政</a>
       <span class="sp" aria-hidden="true"></span>
       <a href="backend.html">資料庫</a>
+      <a href="dashboard.html">儀表板</a>
       <a href="law.html">法規</a>
       <a href="assignment.html">作業</a>
       <a href="after.html" aria-current="page">課後</a>
@@ -101,6 +102,7 @@ d.setAttribute('data-fs',f||'m');})();
         <tr><th scope="row"><a href="path-assessment.html#s5">報讀音檔批次產生器</a></th><td>macOS 與 Windows 版，離線執行</td><td>本站</td></tr>
         <tr><th scope="row"><a href="udl-check.html">三向度檢核表</a></th><td>入班輔導時逕行採用</td><td>本站</td></tr>
         <tr><th scope="row"><a href="backend.html">資料庫與個人資料保護</a></th><td>建置資料庫前必讀</td><td>本站</td></tr>
+        <tr><th scope="row"><a href="dashboard.html">資料儀表板（示範）</a></th><td>欄位蒐集後可回答之問題，含圖表無障礙作法</td><td>本站</td></tr>
         <tr><th scope="row"><a href="law.html">法規原文摘錄</a></th><td>與普通班教師及行政溝通</td><td>本站</td></tr>
         <tr><th scope="row">追蹤回報表單</th><td>三個月後之使用情形回報</td><td><span class="todo">待填</span></td></tr>
       </tbody>
@@ -148,7 +150,8 @@ d.setAttribute('data-fs',f||'m');})();
       <li>全程可僅以鍵盤操作，各頁設有跳至主要內容連結與明顯之焦點指示</li>
       <li>系統啟用「減少動態效果」時，動畫自動停用</li>
       <li>支援系統高對比模式，顏色遭系統接管時仍以邊框與符號維持區辨</li>
-      <li>本站不含語音、影片與圖片，故無字幕需求；<strong>與會者產出若含語音或影片，須另附文字稿與字幕</strong></li>
+      <li>圖表均附替代文字與可展開之資料表，替代文字敘明數值與判讀而非圖形類別；圖表容器於深淺主題下固定為淺色底板，避免淺底圖片置於深色背景</li>
+      <li>本站不含語音與影片，故無字幕需求；<strong>與會者產出若含語音或影片，須另附文字稿與字幕</strong></li>
       <li>無外部字型與外部資源，斷線狀態下仍可閱讀，各頁均可直接列印</li>
     </ul>
   </div>
@@ -171,6 +174,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=17"></script>
+<script src="assets/site.js?v=18"></script>
 </body>
 </html>
