@@ -366,6 +366,9 @@ tr.spot th{color:var(--brand);}
   padding:.15rem .5rem;margin-bottom:.55rem;}
 .gate .q{font-weight:900;font-size:1.1rem;margin-bottom:.6rem;letter-spacing:-.015em;}
 .gate ul{margin:.5rem 0 0 1.2rem;max-width:100%;}
+.gate .out{margin:.75rem 0 0;padding-top:.6rem;border-top:1px solid var(--rule);
+  font-size:.9rem;max-width:100%;}
+.gate .out b{color:var(--brand);font-weight:900;}
 .gate li{font-size:.92rem;color:var(--ink-2);margin-bottom:.35rem;}
 
 /* ══ 卡片 ═══════════════════════════════ */

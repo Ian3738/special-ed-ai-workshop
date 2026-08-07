@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <title>特殊教育 AI 工作坊｜學員版</title>
-<meta name="description" content="運用康軒 KUSE 建置具資料庫之教學與行政支援系統，並以通用學習設計三向度作為交付前之檢核依據。三小時實作工作坊，對象為縣市特殊教育輔導員。">
+<meta name="description" content="運用康軒 KUSE 建置具資料庫之教學與行政支援系統，並以通用學習設計三向度作為交付前之檢核依據。兩日實作工作坊，8 月 11 日與 8 月 21 日，對象為縣市特殊教育輔導員。">
 <meta name="color-scheme" content="light dark">
 <script>
 /* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=9">
+<link rel="stylesheet" href="assets/style.css?v=10">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -42,6 +42,7 @@ d.setAttribute('data-fs',f||'m');})();
       <a href="udl-check.html">檢核表</a>
       <a href="backend.html">資料庫</a>
       <a href="law.html">法規</a>
+      <a href="assignment.html">作業</a>
       <a href="after.html">課後</a>
     </div>
   </nav>
@@ -49,15 +50,16 @@ d.setAttribute('data-fs',f||'m');})();
 
 <header class="ph big">
   <div class="wrap">
-    <p class="kicker rise">學員版．三小時實作工作坊</p>
+    <p class="kicker rise">學員版．兩日實作工作坊</p>
     <h1 class="rise">以生成式 AI 建置<span class="x">具資料庫</span>之教學與行政支援系統</h1>
     <p class="thesis rise">
-      本工作坊以實作為主。學員就自身教學或行政業務中<b>重複性最高的一項工作</b>，
+      本工作坊以實作為主。學員就自身教學或行政業務中<b>重複性最高的工作</b>，
       運用康軒 KUSE 建置可實際運作之原型系統，並以通用學習設計三向度作為交付前之檢核依據。
+      兩日之間相隔十日，學員得將第一日之產出攜回實際使用，第二日依真實使用經驗修正。
     </p>
     <div class="tags rise">
-      <span>180 分鐘</span><span>康軒 KUSE</span><span>五類實作主題</span>
-      <span>無須程式基礎</span><span>需自備筆記型電腦</span>
+      <span>8 月 11 日、8 月 21 日</span><span>兩個整天</span><span>康軒 KUSE</span>
+      <span>五類實作主題</span><span>無須程式基礎</span><span>需自備筆記型電腦</span>
     </div>
     <p class="cta rise">
       <a class="btn" href="#" target="_blank" rel="noopener">課堂共用看板</a>
@@ -89,14 +91,14 @@ d.setAttribute('data-fs',f||'m');})();
   <p>通用學習設計（Universal Design for Learning，UDL）在本場次的定位為<strong>交付前之品質規準</strong>，而非授課主題。無論產出屬於何種類別，其使用者皆可能包含在資訊接收、動作表達或參與動機上具有困難者，故須通過同一組檢核。檢核項目詳見<a href="udl-check.html">三向度檢核表</a>。</p>
 
   <ul class="stair">
-    <li><span class="s">壹</span><span><span class="t">概念釐清</span><span class="d">辨析通用設計與合理調整之分野，並就五種學習內容調整方式是否變動學習目標加以區分</span></span></li>
-    <li><span class="s">貳</span><span><span class="t">系統建置</span><span class="d">自講師提供之範例系統修改，置換為學員自身之業務情境，完成可運作之原型</span></span></li>
-    <li><span class="s">參</span><span><span class="t">資料欄位規格研議</span><span class="d">全場就欄位定義形成共識並定稿。統一規格屬輔導團之職權，個別教師無從為之</span></span></li>
-    <li><span class="s">肆</span><span><span class="t">封裝與擴散</span><span class="d">將建置流程與定稿欄位封裝為技能檔，供輔導區內其他教師沿用</span></span></li>
+    <li><span class="s">壹</span><span><span class="t">第一天上午　建立判準</span><span class="d">辨析通用設計與合理調整之分野、五種調整方式之目標變動判讀、個人資料之四種風險來源，隨即完成第一項產出</span></span></li>
+    <li><span class="s">貳</span><span><span class="t">第一天下午　資料留存</span><span class="d">建置具後端資料庫之系統，並逐一驗證存取權限</span></span></li>
+    <li><span class="s">參</span><span><span class="t">第二天上午　依實況修正</span><span class="d">回場報告十日內之實際使用情形，依現場回報之共通問題修正產出</span></span></li>
+    <li><span class="s">肆</span><span><span class="t">第二天下午　封裝與擴散</span><span class="d">研議共用欄位規格、封裝技能檔、確認擴散與維運機制</span></span></li>
   </ul>
 
   <div class="note">
-    <p><b>最低完成標準：</b>離場時學員帳號內存有一個可開啟、可操作、可供他人檢視之系統原型。功能完整性非本場次之要求。</p>
+    <p><b>最低完成標準：</b>第二日離場時，學員帳號內存有一份經他人測試可用之技能檔，及一項可開啟、可操作之系統原型。功能完整性非本場次之要求。</p>
   </div>
     </div>
   </details>
@@ -109,11 +111,12 @@ d.setAttribute('data-fs',f||'m');})();
     <span class="num" aria-hidden="true">02</span>
     <div>
       <h2 id="s2">五類實作主題</h2>
-      <p class="lead">開場後擇一，後續依該主題之專頁進行。建議選擇實務困難度最高者，而非操作最簡便者。</p>
+      <p class="lead">第一天上午自前三類擇一，下午自後兩類擇一，共完成兩項產出。建議選擇實務困難度最高者，而非操作最簡便者。</p>
     </div>
   </div>
     </summary>
     <div class="sec-body">
+  <h3>第一天上午　無須資料庫</h3>
   <div class="paths">
     <a class="path" href="path-lesson.html">
       <div class="cat">教案</div>
@@ -133,6 +136,10 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="d">將分散之觀察紀錄與評量結果整理為具結構之簡報草稿，並逐頁標註資料依據</div>
       <span class="db no">無須資料庫</span>
     </a>
+  </div>
+
+  <h3>第一天下午　須建置資料庫</h3>
+  <div class="paths">
     <a class="path" href="path-assessment.html">
       <div class="cat">評量</div>
       <div class="t">多元作答評量系統</div>
@@ -148,7 +155,7 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 
   <div class="note">
-    <p>提前完成者得於第二階段實作時段另擇一類主題，或為既有產出建置資料庫。相關規範詳見<a href="backend.html">資料庫建置與個人資料保護</a>。</p>
+    <p>教材類得選擇是否建置資料庫，上午或下午進行均可。相關規範詳見<a href="backend.html">資料庫建置與個人資料保護</a>。</p>
   </div>
     </div>
   </details>
@@ -157,60 +164,63 @@ d.setAttribute('data-fs',f||'m');})();
 <section aria-labelledby="s3">
   <details>
     <summary>
-      <div class="head">
-    <span class="num" aria-hidden="true">03</span>
-    <div>
-      <h2 id="s3">時程規劃</h2>
-      <p class="lead">單向講述時段合計 25 分鐘，其餘為實作、檢核與研議。</p>
-    </div>
-  </div>
+      <div class="head"><span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">兩日四個半天</h2><p class="lead">單向講述集中於第一天上午，其餘時段為實作、檢核與研議。</p></div></div>
     </summary>
     <div class="sec-body">
-  <div class="flow">
-    <div class="step">
-      <div class="clock">00:00<small>20 分鐘</small></div>
-      <div><div class="t">前導案例研討</div>
-      <div class="d">提供一份實際之調整後學習單，由與會者判讀其是否變動學習目標並說明依據。本時段不進行講述。</div></div>
+  <div class="gates">
+    <div class="gate">
+      <div class="g">第一天上午　8 / 11</div>
+      <div class="q">建立判準，完成第一項產出</div>
+      <ul>
+        <li>痛點盤點：各自寫下重複性最高的三項業務並張貼，該清單決定後續實作題目</li>
+        <li>概念地基：通用設計與合理調整之分野、五種調整方式之目標變動判讀、學習功能四級逐領域判定</li>
+        <li>個人資料分級：四種風險來源與三條可操作判準</li>
+        <li>實作：自教案、教材、簡報三類擇一，完成無須資料庫之產出</li>
+      </ul>
+      <p class="out"><b>半天產出</b>　一項可開啟、可操作之系統原型。</p>
     </div>
-    <div class="step">
-      <div class="clock">00:20<small>25 分鐘</small></div>
-      <div><div class="t">法規依據與概念釐清</div>
-      <div class="d">通用設計與合理調整之定義分野、五種學習內容調整方式之目標變動判讀、學習功能四級之逐領域判定、適配性分析、拒絕合理調整之法律效果。</div></div>
+
+    <div class="gate">
+      <div class="g">第一天下午　8 / 11</div>
+      <div class="q">處理資料留存與存取權限</div>
+      <ul>
+        <li>上午產出快閃展示</li>
+        <li>資料庫概念：何種情形須建置、欄位如何設計、列層級安全性</li>
+        <li>實作：自評量、行政兩類擇一，完成具資料庫之產出</li>
+        <li>存取權限驗證：每人自行以無痕視窗於未登入狀態測試</li>
+      </ul>
+      <p class="out"><b>半天產出</b>　第二項產出上線，且權限驗證通過。<a href="assignment.html">交付十日內之指定作業</a>。</p>
     </div>
-    <div class="step">
-      <div class="clock">00:45<small>15 分鐘</small></div>
-      <div><div class="t">範例系統導覽</div>
-      <div class="d">講師示範預先建置之系統，與會者以使用者身分完整操作一次，並檢視操作紀錄於後端資料庫之留存情形。</div></div>
+
+    <div class="gate">
+      <div class="g">第二天上午　8 / 21</div>
+      <div class="q">依真實使用經驗修正</div>
+      <ul>
+        <li>回場報告：各自陳述十日內之使用情形、試用者受阻之處</li>
+        <li>共通問題排解：講師依現場回報之內容示範修正，本時段之內容當日方確定</li>
+        <li>生成內容之錯誤類型：虛構內容、教學正確性、無障礙未達標及其抑制手法</li>
+        <li>實作：依回報結果修正並擴充功能</li>
+      </ul>
+      <p class="out"><b>半天產出</b>　產出已依真實使用狀況修正一輪。</p>
     </div>
-    <div class="step">
-      <div class="clock">01:00<small>45 分鐘</small></div>
-      <div><div class="t">實作（一）：系統建置</div>
-      <div class="d">自範例系統修改，置換為學員自身之業務情境，完成可運作之原型並確認資料寫入正常。</div></div>
+
+    <div class="gate">
+      <div class="g">第二天下午　8 / 21</div>
+      <div class="q">自個人工具轉為輔導區工具</div>
+      <ul>
+        <li>資料欄位規格研議：全場定稿。此為輔導團職權範圍，個別教師無從為之</li>
+        <li>技能檔封裝：依既有骨架填入適用領域、代碼規則與該領域特有之路徑類型</li>
+        <li>交互測試：以他人之技能檔生成一份產出，測試通過方屬封裝完成</li>
+        <li>擴散與維運：發布方式、維護歸屬、人事異動後之接續、費用來源</li>
+        <li>成果發表與三個月後之追蹤約定</li>
+      </ul>
+      <p class="out"><b>半天產出</b>　一份經他人測試可用之技能檔，及一份全場共用之欄位規格。</p>
     </div>
-    <div class="step rest">
-      <div class="clock">01:45<small>10 分鐘</small></div>
-      <div><div class="t">休息</div><div class="d">實作遭遇困難者得於本時段個別詢問。</div></div>
-    </div>
-    <div class="step">
-      <div class="clock">01:55<small>25 分鐘</small></div>
-      <div><div class="t">同儕檢核</div>
-      <div class="d">交互檢視他人產出，項目包含教學內容正確性、無障礙設計與資料表存取權限。回饋以口頭方式進行，比照入班輔導之情境。</div></div>
-    </div>
-    <div class="step">
-      <div class="clock">02:20<small>20 分鐘</small></div>
-      <div><div class="t">資料欄位規格研議</div>
-      <div class="d">全場就欄位定義提出增刪意見並於時限內定稿。本時段為全場唯一須以輔導團身分方能完成之工作。</div></div>
-    </div>
-    <div class="step">
-      <div class="clock">02:40<small>15 分鐘</small></div>
-      <div><div class="t">技能檔封裝</div>
-      <div class="d">依既有骨架填入適用領域、單元代碼規則與該領域特有之路徑類型，完成後交互測試。</div></div>
-    </div>
-    <div class="step">
-      <div class="clock">02:55<small>5 分鐘</small></div>
-      <div><div class="t">成果發表與追蹤約定</div>
-      <div class="d">交換產出網址與技能檔，並約定三個月後之使用情形回報。</div></div>
-    </div>
+  </div>
+
+  <div class="note">
+    <p><b>三項不予刪減：</b>存取權限驗證（設定不當之後果不可回復，優先於無障礙檢核）、第二天上午之回場報告（為兩日分開辦理唯一不可替代之價值）、擴散與維運（無技術解決方案，惟未經確認者其產出難以存續一學期）。</p>
   </div>
     </div>
   </details>
@@ -231,12 +241,12 @@ d.setAttribute('data-fs',f||'m');})();
   <ul>
     <li><strong>攜帶筆記型電腦。</strong>行動裝置無法完成本場次之實作。</li>
     <li><strong>確認康軒 KUSE 帳號可正常登入</strong>，並查閱剩餘點數。建置具資料庫之專案，點數耗用高於一般網頁產出。</li>
-    <li><strong>擇定一項業務情境</strong>，並攜帶相關檔案（須先行去識別化）。本項為決定學習成效之關鍵。</li>
+    <li><strong>擇定兩項業務情境</strong>：一項無須資料庫者供上午使用，一項須留存資料者供下午使用。並攜帶相關檔案（須先行去識別化）。本項為決定學習成效之關鍵。</li>
     <li><strong>不得攜帶學生個人資料。</strong>個別化教育計畫正本、鑑定證明、含姓名之成績檔案均不得攜入，現場示範一律使用代號。</li>
   </ul>
 
   <div class="note">
-    <p>第三項須審慎選擇。以非實際需求之題目進行實作，其產出不具後續使用價值；擇定實務上長期困擾之業務，方能於研習後持續運用。</p>
+    <p>第三項須審慎選擇。以非實際需求之題目進行實作，其產出不具後續使用價值；擇定實務上長期困擾之業務，方能於兩日之間實際試用，並於第二天帶回可討論之經驗。</p>
   </div>
     </div>
   </details>
@@ -258,6 +268,7 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="card"><div class="t"><a href="udl-check.html">通用學習設計三向度檢核表</a></div><div class="d">交付前之檢核項目，得於入班輔導時逕行採用</div></div>
     <div class="card"><div class="t"><a href="backend.html">資料庫建置與個人資料保護</a></div><div class="d">欄位設計原則、蒐集限制、存取權限驗證程序</div></div>
     <div class="card"><div class="t"><a href="law.html">法規原文摘錄</a></div><div class="d">與普通班教師及學校行政溝通時得以引用之條文</div></div>
+    <div class="card"><div class="t"><a href="assignment.html">兩日之間的指定作業</a></div><div class="d">十日內須完成之三項工作，第二天上午須提出報告</div></div>
     <div class="card"><div class="t"><a href="after.html">課後延續</a></div><div class="d">範例系統連結、資源清單與追蹤機制</div></div>
   </div>
     </div>
@@ -274,6 +285,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=9"></script>
+<script src="assets/site.js?v=10"></script>
 </body>
 </html>
