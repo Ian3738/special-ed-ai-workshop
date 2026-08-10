@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=19">
+<link rel="stylesheet" href="assets/style.css?v=20">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -95,7 +95,7 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="rm">
         <div class="when"><b>第一天上午</b><span>8 月 11 日</span></div>
         <h3>學會拆解</h3>
-        <p>先寫下自身重複性最高的三項業務。接著全場以段考報讀為共同案例，走完五個提問；講師不先提供答案。概念地基與個人資料分級於提問二處帶入，作為限制條件。最後就自己的業務走一次同樣五問。</p>
+        <p>先寫下自身重複性最高的三項業務。接著以段考報讀為共同案例，走完五個提問，過程中會帶入法規概念與個人資料的限制條件。最後就自己的業務走一次同樣五問。</p>
         <div class="pages"><span class="lbl">用到</span><a href="method.html">設計方法</a><a href="law.html">法規</a></div>
         <p class="out"><b>產出</b>　一份規格：處理範圍、不處理之部分、須寫入指令的領域規則、無法處理時的處置方式。</p>
       </div>
@@ -105,7 +105,7 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="rm">
         <div class="when"><b>第一天下午</b><span>8 月 11 日</span></div>
         <h3>依規格建置</h3>
-        <p>規格快閃展示，相互指出遺漏的限制。接著依規格建置為可運作之系統，卡關時才對照參考案例。散會前每人自行以無痕視窗完成一次存取權限驗證。</p>
+        <p>先相互檢視彼此的規格，指出遺漏的限制。接著依規格建置為可運作之系統，卡關時再對照參考案例。散會前每人自行以無痕視窗完成一次存取權限驗證。</p>
         <div class="pages"><span class="lbl">先讀</span><a href="backend.html">資料庫與個資</a><a href="udl-check.html">三向度檢核表</a></div>
         <div class="pages"><span class="lbl">參考案例</span><a href="path-lesson.html">教案</a><a href="path-material.html">教材</a><a href="path-slides.html">簡報</a><a href="path-assessment.html">評量</a><a href="path-admin.html">行政</a><a href="dashboard.html">儀表板</a></div>
         <p class="out"><b>產出</b>　一項可開啟、可操作之系統原型，且權限驗證通過。</p>
@@ -126,7 +126,7 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="rm">
         <div class="when"><b>第二天上午</b><span>8 月 21 日</span></div>
         <h3>檢討拆解</h3>
-        <p>回場報告，重點在於第一天的拆解何處判斷有誤。講師依現場回報之共通問題示範修正，本時段之內容當日方確定。接著談生成內容的錯誤類型，再回頭修正自己的產出。</p>
+        <p>回場報告，重點在於第一天的拆解何處判斷有誤。就現場提出的共通問題一起處理，接著認識生成內容常見的錯誤類型，再回頭修正自己的產出。</p>
         <div class="pages"><span class="lbl">回顧</span><a href="method.html">五個提問</a><a href="udl-check.html">三向度檢核表</a></div>
         <p class="out"><b>產出</b>　產出已依真實使用狀況修正一輪。</p>
       </div>
@@ -136,7 +136,7 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="rm">
         <div class="when"><b>第二天下午</b><span>8 月 21 日</span></div>
         <h3>帶他人走一次</h3>
-        <p>兩人一組互為對方之輔導員，就對方一項業務帶完五個提問，每輪二十分鐘後交換。接著全場研議共用欄位規格並定稿，封裝技能檔並交互測試，最後確認擴散與維運的行政事項。</p>
+        <p>兩人一組互為對方之輔導員，就對方一項業務帶完五個提問，之後交換角色。接著全場研議共用欄位規格並定稿，封裝技能檔並交互測試，最後確認擴散與維運的行政事項。</p>
         <div class="pages"><span class="lbl">用到</span><a href="method.html#s3">帶他人走一次</a><a href="backend.html#s4">欄位設計</a><a href="after.html">課後延續</a></div>
         <p class="out"><b>產出</b>　帶領他人完成拆解的能力，及一份經他人測試可用之技能檔。</p>
       </div>
@@ -144,7 +144,7 @@ d.setAttribute('data-fs',f||'m');})();
   </ol>
 
   <div class="note">
-    <p><b>三項不予刪減：</b>第一天上午之共同案例拆解（略過此段，後續實作將退化為照著範例修改）、存取權限驗證（設定不當之後果不可回復）、第二天下午之相互帶領演練（輔導員之產出即在於此）。</p>
+    <p><b>兩日之間相隔十日。</b>第一天的產出攜回學校實際使用，第二天帶著真實的使用經驗回來，這是整個安排的關鍵。該十日內須完成的三件事載於<a href="assignment.html">作業頁</a>。</p>
   </div>
     </div>
   </details>
@@ -164,7 +164,7 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="sec-body">
   <p>生成式 AI 之功能每數月即有變動，今日建置之系統一年後多半須重做；惟拆解問題的方式不隨工具改變。兩日之產出因此設定為<strong>一套可自行套用、亦可帶領他人使用的提問順序</strong>，系統原型則為該方法確實習得之證明。</p>
 
-  <p>與會者為縣市輔導員。輔導區內教師之業務各不相同，逐一提供工具並不可行；能提供的是方法。據此，第二天下午安排相互帶領之演練——<strong>帶得動一位同仁，即帶得動一個輔導區</strong>。</p>
+  <p>輔導區內教師之業務各不相同，逐一提供工具並不可行，能提供的是方法。第二天下午的相互帶領演練即為此而設——<strong>帶得動一位同仁，即帶得動一個輔導區</strong>。</p>
 
   <p>五個提問之內容、完整案例與帶領方式，詳見<a href="method.html">設計方法</a>。</p>
 
@@ -245,7 +245,7 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <ul>
-    <li><strong>攜帶筆記型電腦。</strong>行動裝置無法完成本場次之實作。</li>
+    <li><strong>攜帶筆記型電腦。</strong>行動裝置無法完成實作。</li>
     <li><strong>確認康軒 KUSE 帳號可正常登入</strong>，並查閱剩餘點數。建置具資料庫之專案，點數耗用高於一般網頁產出。</li>
     <li><strong>擇定兩項業務情境</strong>：一項無須資料庫者供上午使用，一項須留存資料者供下午使用。並攜帶相關檔案（須先行去識別化）。本項為決定學習成效之關鍵。</li>
     <li><strong>不得攜帶學生個人資料。</strong>個別化教育計畫正本、鑑定證明、含姓名之成績檔案均不得攜入，現場示範一律使用代號。</li>
@@ -293,6 +293,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=19"></script>
+<script src="assets/site.js?v=20"></script>
 </body>
 </html>
