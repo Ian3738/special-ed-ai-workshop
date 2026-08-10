@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=21">
+<link rel="stylesheet" href="assets/style.css?v=22">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -40,7 +40,10 @@ d.setAttribute('data-fs',f||'m');})();
       <a href="path-material.html">教材</a>
       <a href="path-slides.html">簡報</a>
       <a href="path-assessment.html">評量</a>
-      <a href="path-admin.html">行政</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="path-admin.html">團務行政</a>
+      <a href="path-outcome.html">成果建置</a>
+      <a href="path-plan.html">課程計畫</a>
       <span class="sp" aria-hidden="true"></span>
       <a href="backend.html">資料庫</a>
       <a href="dashboard.html">儀表板</a>
@@ -95,8 +98,10 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="rm">
         <div class="when"><b>第一天上午</b><span>8 月 11 日</span></div>
         <h3>學會拆解</h3>
-        <p>先寫下自身重複性最高的三項業務。接著以「給普通班教師的一頁式學生支持說明」為共同案例，走完五個提問，過程中會帶入法規概念與個人資料的限制條件。最後就自己的業務走一次同樣五問。</p>
-        <div class="pages"><span class="lbl">用到</span><a href="method.html">設計方法</a><a href="law.html">法規</a></div>
+        <p>先寫下自身重複性最高的三項業務。接著開<a href="method.html">設計方法</a>，以「給普通班教師的一頁式學生支持說明」為共同案例走完五個提問，過程中帶入法規概念與個人資料的限制條件。之後就自己的業務走一次同樣五問，並開教案、教材或簡報其中一頁對照建置。</p>
+        <div class="pages"><span class="lbl">先開</span><a href="method.html">設計方法</a></div>
+        <div class="pages"><span class="lbl">再開</span><a href="path-lesson.html">教案</a><a href="path-material.html">教材</a><a href="path-slides.html">簡報</a></div>
+        <div class="pages"><span class="lbl">隨時可查</span><a href="law.html">法規</a><a href="udl-check.html">檢核表</a></div>
         <p class="out"><b>產出</b>　一份規格：處理範圍、不處理之部分、須寫入指令的領域規則、無法處理時的處置方式。</p>
       </div>
     </li>
@@ -105,9 +110,11 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="rm">
         <div class="when"><b>第一天下午</b><span>8 月 11 日</span></div>
         <h3>依規格建置</h3>
-        <p>先相互檢視彼此的規格，指出遺漏的限制。接著依規格建置為可運作之系統，卡關時再對照參考案例。散會前每人自行以無痕視窗完成一次存取權限驗證。</p>
-        <div class="pages"><span class="lbl">先讀</span><a href="backend.html">資料庫與個資</a><a href="udl-check.html">三向度檢核表</a></div>
-        <div class="pages"><span class="lbl">參考案例</span><a href="path-lesson.html">教案</a><a href="path-material.html">教材</a><a href="path-slides.html">簡報</a><a href="path-assessment.html">評量</a><a href="path-admin.html">行政</a><a href="dashboard.html">儀表板</a></div>
+        <p>先相互檢視彼此的規格。接著讀<a href="backend.html">資料庫與個資</a>，再依所屬層級擇一建置：個人教學業務選評量，團務與校務業務選團務行政、成果建置或課程計畫。散會前每人自行以無痕視窗完成一次存取權限驗證。</p>
+        <div class="pages"><span class="lbl">先讀</span><a href="backend.html">資料庫與個資</a></div>
+        <div class="pages"><span class="lbl">個人層級</span><a href="path-assessment.html">評量</a></div>
+        <div class="pages"><span class="lbl">團務層級</span><a href="path-admin.html">團務行政</a><a href="path-outcome.html">成果建置</a><a href="path-plan.html">課程計畫</a></div>
+        <div class="pages"><span class="lbl">延伸</span><a href="dashboard.html">儀表板</a></div>
         <p class="out"><b>產出</b>　一項可開啟、可操作之系統原型，且權限驗證通過。</p>
       </div>
     </li>
@@ -182,12 +189,12 @@ d.setAttribute('data-fs',f||'m');})();
     <span class="num" aria-hidden="true">03</span>
     <div>
       <h2 id="s3">五類參考案例</h2>
-      <p class="lead">拆解完成、寫出規格之後，再自下列案例中選擇最接近者對照參考。順序為先有自己的規格，再看案例。</p>
+      <p class="lead">拆解完成、寫出規格之後，再自下列案例中選擇最接近者對照參考。分個人層級與團務層級兩類——校長與團務承辦人員宜自團務層級擇一。</p>
     </div>
   </div>
     </summary>
     <div class="sec-body">
-  <h3>第一天上午　無須資料庫</h3>
+  <h3>個人層級．第一天上午　無須資料庫</h3>
   <div class="paths">
     <a class="path" href="path-lesson.html">
       <div class="cat">教案</div>
@@ -209,7 +216,7 @@ d.setAttribute('data-fs',f||'m');})();
     </a>
   </div>
 
-  <h3>第一天下午　須建置資料庫</h3>
+  <h3>個人層級．第一天下午　須建置資料庫</h3>
   <div class="paths">
     <a class="path" href="path-assessment.html">
       <div class="cat">評量</div>
@@ -217,15 +224,32 @@ d.setAttribute('data-fs',f||'m');})();
       <div class="d">同一試題提供書寫、點選、口述三種作答方式，共用一份評分規準，作答歷程得以留存</div>
       <span class="db yes">須建置資料庫</span>
     </a>
+  </div>
+
+  
+  <h3>團務層級．第一天下午　須建置資料庫</h3>
+  <div class="paths">
     <a class="path" href="path-admin.html">
-      <div class="cat">行政</div>
-      <div class="t">行政業務資料系統化</div>
-      <div class="d">個別化教育計畫目標追蹤、教具借用管理、巡迴輔導排課與紀錄。此類業務長期缺乏適用工具</div>
+      <div class="cat">團務行政</div>
+      <div class="t">排程、紀錄與經費</div>
+      <div class="d">團員與輔導區分配、到校服務排程與紀錄、會議決議追蹤、經費核銷、研習辦理</div>
+      <span class="db yes">須建置資料庫</span>
+    </a>
+    <a class="path" href="path-outcome.html">
+      <div class="cat">成果建置</div>
+      <div class="t">訪視佐證與年度成果</div>
+      <div class="d">同一批事實每年重新組裝成不同格式。先建立留存機制，再談彙整輸出</div>
+      <span class="db yes">須建置資料庫</span>
+    </a>
+    <a class="path" href="path-plan.html">
+      <div class="cat">課程計畫</div>
+      <div class="t">送審前檢核</div>
+      <div class="d">審查意見高度集中於少數幾種。可自動化者為比對，不是代寫——工具只回報，不動筆</div>
       <span class="db yes">須建置資料庫</span>
     </a>
   </div>
 
-  <div class="note">
+<div class="note">
     <p><b>案例並非起點。</b>直接自案例修改，所習得者為照樣操作；先完成拆解再對照案例，所習得者方為設計。教材類得選擇是否建置資料庫。相關規範詳見<a href="backend.html">資料庫建置與個人資料保護</a>。</p>
   </div>
     </div>
@@ -293,6 +317,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=21"></script>
+<script src="assets/site.js?v=22"></script>
 </body>
 </html>

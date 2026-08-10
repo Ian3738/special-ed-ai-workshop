@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>課程計畫行政流程：送審前檢核｜特殊教育 AI 工作坊</title>
+<meta name="description" content="學校課程計畫特殊教育部分之送審前檢核。工具只回報不修改，檢核結果非審查結果。">
+<meta name="color-scheme" content="light dark">
+<script>
+/* 首次繪製前就決定主題與字級，避免閃爍與變數過場卡住 */
+(function(){var d=document.documentElement,t,f;
+try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catch(e){}
+d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
+d.setAttribute('data-fs',f||'m');})();
+</script>
+<link rel="stylesheet" href="assets/style.css?v=22">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<header class="topbar">
+  <div class="wrap row1">
+    <a class="brand" href="index.html">特殊教育 AI 工作坊</a>
+    <div class="ctrl">
+      <span class="lbl" id="fsLbl">文字大小</span>
+      <button class="tog" type="button" data-fs="m" aria-pressed="true" aria-describedby="fsLbl">標準</button>
+      <button class="tog" type="button" data-fs="l" aria-pressed="false" aria-describedby="fsLbl">大</button>
+      <button class="tog" type="button" data-fs="xl" aria-pressed="false" aria-describedby="fsLbl">特大</button>
+    </div>
+    <div class="ctrl"><button class="tog" type="button" id="themeBtn" aria-pressed="false">深色</button></div>
+  </div>
+  <nav class="tabs" aria-label="頁面導覽">
+    <div class="wrap">
+      <a href="index.html">總覽</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="method.html">設計方法</a>
+      <a href="udl-check.html">檢核表</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="path-lesson.html">教案</a>
+      <a href="path-material.html">教材</a>
+      <a href="path-slides.html">簡報</a>
+      <a href="path-assessment.html">評量</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="path-admin.html">團務行政</a>
+      <a href="path-outcome.html">成果建置</a>
+      <a href="path-plan.html" aria-current="page">課程計畫</a>
+      <span class="sp" aria-hidden="true"></span>
+      <a href="backend.html">資料庫</a>
+      <a href="dashboard.html">儀表板</a>
+      <a href="law.html">法規</a>
+      <a href="assignment.html">作業</a>
+      <a href="after.html">課後</a>
+    </div>
+  </nav>
+</header>
+
+<div class="stage">
+  <div class="wrap">
+    <span class="tag">第一天下午</span>
+    <span class="txt">輔導團層級之題目。校長與團務承辦人員宜自此三類擇一</span>
+    <a class="nx" href="dashboard.html">延伸：資料儀表板 →</a>
+  </div>
+</div>
+
+<header class="ph">
+  <div class="wrap">
+    <p class="kicker">團務層級．課程計畫</p>
+    <h1>課程計畫行政流程：送審前檢核</h1>
+    <p class="thesis">審查意見高度集中於少數幾種。<br>可自動化者為<b>比對，不是代寫</b>——工具只回報，不動筆。</p>
+    <div class="tags"><span>須建置資料庫</span><span>團務層級</span><span>第一天下午</span></div>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap narrow">
+
+<section aria-labelledby="s1">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">01</span>
+    <div><h2 id="s1">問題界定</h2></div></div>
+    </summary>
+    <div class="sec-body">
+  <p>學校課程計畫每學年送審一次，特殊教育部分之審查意見高度集中於少數幾種：學習重點與調整方式未對應、節數與學分數配置與規範不符、個別化教育計畫與課程計畫兩者所載不一致、特殊需求領域課程之開設依據未敘明。</p>
+
+  <p>此類問題的共同性質是<strong>格式與一致性的檢核，而非教學專業判斷</strong>。承辦人員逐份人工比對，一所學校數十份計畫，錯誤仍難以避免。</p>
+
+  <div class="note">
+    <p><b>本主題之產出並非代寫課程計畫，而是「送審前檢核」。</b>課程計畫之內容須由學校依實際情形擬訂；可自動化者為比對——所填內容與規範是否相符、各份文件之間是否一致。</p>
+  </div>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s2">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">02</span>
+    <div><h2 id="s2">建置程序</h2></div></div>
+    </summary>
+    <div class="sec-body">
+  <ol class="steps">
+    <li><div><div class="t">整理歷年審查意見</div>
+      <div class="d">將過去數年之審查意見分類，統計各類出現次數。實務上約六至八類即涵蓋九成。此份分類即為檢核項目之來源。</div></div></li>
+    <li><div><div class="t">將檢核項目轉為可判定之敘述</div>
+      <div class="d">「學習重點與調整方式未對應」須改寫為可逐條判定之條件，例如：每一項調整方式是否均標明所對應之學習重點編號。</div></div></li>
+    <li><div><div class="t">建置檢核工具</div>
+      <div class="d">貼入課程計畫內容，逐項回報通過與否及未通過之處。<strong>輸出為待確認清單，非修改後的文件。</strong></div></div></li>
+    <li><div><div class="t">以歷年已通過之計畫回測</div>
+      <div class="d">若已通過之計畫被判為不通過，表示檢核條件過嚴；反之則過寬。回測後再調整條件。</div></div></li>
+  </ol>
+
+  <div class="cmd">
+    <div class="lbl">康軒 KUSE 指令</div>
+<pre>請就以下特殊教育課程計畫內容，逐項檢核並回報結果。
+不得修改原文，僅回報檢核結果。
+
+檢核項目：
+1. 每一項調整方式是否標明所對應之學習重點編號
+2. 調整方式是否限用簡化、減量、分解、替代、重整五種
+3. 採簡化或減量者，是否敘明替代方案不可行之理由
+4. 節數與學分數配置是否與該教育階段之規範相符
+5. 特殊需求領域課程之開設，是否敘明其依據
+6. 學習功能等級之記載，是否以領域為單位而非以學生為單位
+
+輸出格式：
+- 每項檢核回報「通過」或「未通過」，未通過者指出所在段落
+- 無法判定者標示「須人工確認」並說明原因，不得逕行推定
+- 末尾列出未通過與須人工確認之項目清單</pre>
+  </div>
+
+  <div class="redline">
+    <div class="h"><span aria-hidden="true">▲</span>三項限制</div>
+    <ul>
+      <li><strong>不得代為修改內容。</strong>課程計畫為學校之法定文件，修改須由承辦人員為之。工具只回報，不動筆。</li>
+      <li><strong>檢核結果非審查結果。</strong>通過本檢核不代表必然通過審查；未通過亦可能因情形特殊而合理。</li>
+      <li><strong>個別化教育計畫不得輸入。</strong>需比對兩者一致性時，僅輸入課程計畫之對應欄位與去識別化之摘要。</li>
+    </ul>
+  </div>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s3">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">03</span>
+    <div><h2 id="s3">三向度檢核</h2><p class="lead">本主題之使用者為各校承辦人員，多數並非特殊教育背景。</p></div></div>
+    </summary>
+    <div class="sec-body">
+  <div class="gates">
+    <div class="gate"><div class="g">多元表徵</div>
+      <div class="q">承辦人員看得懂未通過的原因嗎</div>
+      <ul><li>是否指出具體段落，抑或僅回報項目名稱</li>
+      <li>是否附有修正方向，抑或僅指出錯誤</li>
+      <li>專業術語是否附有說明</li></ul></div>
+    <div class="gate"><div class="g">多元行動與表達</div>
+      <div class="q">檢核一份計畫要花多久</div>
+      <ul><li>是否須逐段貼入，抑或可整份處理</li>
+      <li>檢核結果能否匯出，供逐項修正後複查</li></ul></div>
+    <div class="gate"><div class="g">多元參與</div>
+      <div class="q">學校為何要在送審前自行檢核</div>
+      <ul><li>是否確實減少往返補件之次數</li>
+      <li>回報方式是否為協助而非糾錯的語氣</li></ul></div>
+  </div>
+
+  <div class="note">
+    <p><b>末項並非細節。</b>檢核工具若讀來如同挑錯，承辦人員將不會使用，寧可送審後再依審查意見修改。用語須設定為協助送審，而非事前審查。</p>
+  </div>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="s4">
+  <details>
+    <summary>
+      <div class="head"><span class="num" aria-hidden="true">04</span>
+    <div><h2 id="s4">延伸任務</h2></div></div>
+    </summary>
+    <div class="sec-body">
+  <ul>
+    <li>將檢核工具<strong>封裝為技能檔</strong>，於送審期間提供輔導區各校自行使用</li>
+    <li>累積各校之檢核結果（僅存學校與項目，不存內容），<strong>統計最常未通過之項目</strong>，作為下一年度輔導重點</li>
+    <li>依<a href="law.html">法規原文摘錄</a>擴充檢核項目，特別是學習功能逐領域判定與變動學習目標之程序要件兩項</li>
+  </ul>
+    </div>
+  </details>
+</section>
+
+<div class="pager">
+  <a href="path-outcome.html"><span class="k">上一主題</span><span class="n">成果建置</span></a>
+  <a class="next" href="backend.html"><span class="k">接著讀</span><span class="n">資料庫建置與個人資料保護</span></a>
+</div>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>特殊教育 AI 工作坊</strong>｜團務層級．課程計畫行政流程</p>
+    <p>講師　陳奕安　國立清華大學　｜　場次 8 月 11 日、8 月 21 日</p>
+  </div>
+</footer>
+
+<script src="assets/site.js?v=22"></script>
+</body>
+</html>
