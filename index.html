@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=23">
+<link rel="stylesheet" href="assets/style.css?v=24">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -32,6 +32,7 @@ d.setAttribute('data-fs',f||'m');})();
   <nav class="tabs" aria-label="頁面導覽">
     <div class="wrap">
       <a href="index.html" aria-current="page">總覽</a>
+      <a href="kuse.html">認識 KUSE</a>
       <span class="sp" aria-hidden="true"></span>
       <a href="method.html">設計方法</a>
       <a href="udl-check.html">檢核表</a>
@@ -68,7 +69,7 @@ d.setAttribute('data-fs',f||'m');})();
     </div>
     <p class="cta rise">
       <a class="btn" href="#" target="_blank" rel="noopener">課堂共用看板</a>
-      <a class="btn ghost" href="method.html">設計方法</a>
+      <a class="btn ghost" href="kuse.html">認識 KUSE</a>
       <span class="u"><span class="todo">待填</span> 研習前置換為實際看板網址</span>
     </p>
   </div>
@@ -99,6 +100,7 @@ d.setAttribute('data-fs',f||'m');})();
         <div class="when"><b>第一天上午</b><span>8 月 11 日</span></div>
         <h3>學會拆解</h3>
         <p>先寫下自身重複性最高的三項業務。接著開<a href="method.html">設計方法</a>，以「給普通班教師的一頁式學生支持說明」為共同案例走完五個提問，過程中帶入法規概念與個人資料的限制條件。之後就自己的業務走一次同樣五問，並開教案、教材或簡報其中一頁對照建置。</p>
+        <div class="pages"><span class="lbl">行前</span><a href="kuse.html">認識 KUSE</a></div>
         <div class="pages"><span class="lbl">先開</span><a href="method.html">設計方法</a></div>
         <div class="pages"><span class="lbl">再開</span><a href="path-lesson.html">教案</a><a href="path-material.html">教材</a><a href="path-slides.html">簡報</a></div>
         <div class="pages"><span class="lbl">隨時可查</span><a href="law.html">法規</a><a href="udl-check.html">檢核表</a></div>
@@ -270,7 +272,7 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="sec-body">
   <ul>
     <li><strong>攜帶筆記型電腦。</strong>行動裝置無法完成實作。</li>
-    <li><strong>確認康軒 KUSE 帳號可正常登入</strong>，並查閱剩餘點數。建置具資料庫之專案，點數耗用高於一般網頁產出。</li>
+    <li><strong>讀過<a href="kuse.html">認識 KUSE</a>並完成該頁第四節的三個動作</strong>：登入並查看點數、試指定一次教材、生一個最小的東西並發布。現場排除登入問題將佔用實作時間。</li>
     <li><strong>擇定兩項業務情境</strong>：一項無須資料庫者供上午使用，一項須留存資料者供下午使用。並攜帶相關檔案（須先行去識別化）。本項為決定學習成效之關鍵。</li>
     <li><strong>不得攜帶學生個人資料。</strong>個別化教育計畫正本、鑑定證明、含姓名之成績檔案均不得攜入，現場示範一律使用代號。</li>
   </ul>
@@ -295,6 +297,7 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <div class="grid">
+    <div class="card"><div class="t"><a href="kuse.html">認識康軒 KUSE</a></div><div class="d">行前必讀。工具是什麼、會用到哪些功能、三個確認動作</div></div>
     <div class="card"><div class="t"><a href="method.html">設計方法：五個提問</a></div><div class="d">兩日主軸，含段考報讀完整案例與帶領他人的做法</div></div>
     <div class="card"><div class="t"><a href="udl-check.html">通用學習設計三向度檢核表</a></div><div class="d">交付前之檢核項目，得於入班輔導時逕行採用</div></div>
     <div class="card"><div class="t"><a href="backend.html">資料庫建置與個人資料保護</a></div><div class="d">欄位設計原則、蒐集限制、存取權限驗證程序</div></div>
@@ -317,6 +320,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=23"></script>
+<script src="assets/site.js?v=24"></script>
 </body>
 </html>

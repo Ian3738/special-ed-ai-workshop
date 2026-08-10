@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=23">
+<link rel="stylesheet" href="assets/style.css?v=24">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -32,6 +32,7 @@ d.setAttribute('data-fs',f||'m');})();
   <nav class="tabs" aria-label="頁面導覽">
     <div class="wrap">
       <a href="index.html">總覽</a>
+      <a href="kuse.html">認識 KUSE</a>
       <span class="sp" aria-hidden="true"></span>
       <a href="method.html" aria-current="page">設計方法</a>
       <a href="udl-check.html">檢核表</a>
@@ -100,6 +101,61 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s1">五個提問</h2><p class="lead">依序提出。順序本身即為方法之一部分。</p></div></div>
     </summary>
     <div class="sec-body">
+
+  <figure class="dia">
+  <div class="t">五個提問，走完得到一份規格</div>
+  <svg viewBox="0 0 700 478" role="img" aria-labelledby="d1t d1d">
+    <title id="d1t">五個提問的順序</title>
+    <desc id="d1d">五個提問由上而下依序連接，走完之後得到一份規格。各提問內容見圖下方的文字說明。</desc>
+  <g>
+    <rect x="46" y="8" width="654" height="62" rx="10" class="fill-c st-r" stroke-width="1.5"/>
+    <circle cx="24" cy="39" r="20" class="fill-b"/>
+    <text x="24" y="46" text-anchor="middle" class="tx-i" font-size="19" font-weight="900">一</text>
+    <text x="66" y="35" class="tx" font-size="17" font-weight="800">這件事的麻煩分成幾種？</text>
+    <text x="66" y="58" class="tx-m" font-size="13.5">人力／判斷／重複工時，只有第三種是 AI 的守備範圍</text>
+  </g>
+  <path d="M24 59 L24 91" class="st-r" stroke-width="2" fill="none"/>
+  <g>
+    <rect x="46" y="90" width="654" height="62" rx="10" class="fill-c st-r" stroke-width="1.5"/>
+    <circle cx="24" cy="121" r="20" class="fill-b"/>
+    <text x="24" y="128" text-anchor="middle" class="tx-i" font-size="19" font-weight="900">二</text>
+    <text x="66" y="117" class="tx" font-size="17" font-weight="800">有什麼是絕對不能做的？</text>
+    <text x="66" y="140" class="tx-m" font-size="13.5">保密、個資、法定程序。限制把方案從十種縮到兩種</text>
+  </g>
+  <path d="M24 141 L24 173" class="st-r" stroke-width="2" fill="none"/>
+  <g>
+    <rect x="46" y="172" width="654" height="62" rx="10" class="fill-c st-r" stroke-width="1.5"/>
+    <circle cx="24" cy="203" r="20" class="fill-b"/>
+    <text x="24" y="210" text-anchor="middle" class="tx-i" font-size="19" font-weight="900">三</text>
+    <text x="66" y="199" class="tx" font-size="17" font-weight="800">下次還會再發生嗎？</text>
+    <text x="66" y="222" class="tx-m" font-size="13.5">會，就做產生器，不做交付物</text>
+  </g>
+  <path d="M24 223 L24 255" class="st-r" stroke-width="2" fill="none"/>
+  <g>
+    <rect x="46" y="254" width="654" height="62" rx="10" class="fill-c st-r" stroke-width="1.5"/>
+    <circle cx="24" cy="285" r="20" class="fill-b"/>
+    <text x="24" y="292" text-anchor="middle" class="tx-i" font-size="19" font-weight="900">四</text>
+    <text x="66" y="281" class="tx" font-size="17" font-weight="800">這裡面哪一段只有你會？</text>
+    <text x="66" y="304" class="tx-m" font-size="13.5">專業存於規則之中，不在工具之中</text>
+  </g>
+  <path d="M24 305 L24 337" class="st-r" stroke-width="2" fill="none"/>
+  <g>
+    <rect x="46" y="336" width="654" height="62" rx="10" class="fill-c st-r" stroke-width="1.5"/>
+    <circle cx="24" cy="367" r="20" class="fill-b"/>
+    <text x="24" y="374" text-anchor="middle" class="tx-i" font-size="19" font-weight="900">五</text>
+    <text x="66" y="363" class="tx" font-size="17" font-weight="800">它做不到的時候會怎樣？</text>
+    <text x="66" y="386" class="tx-m" font-size="13.5">標示並停止，不勉強產出</text>
+  </g>
+  <rect x="0" y="420" width="700" height="54" rx="10" class="fill-s"/>
+  <text x="20" y="444" class="tx-b" font-size="12.5" font-weight="900" letter-spacing="2">產出</text>
+  <text x="20" y="465" class="tx" font-size="16" font-weight="800">一份規格：做什麼、不做什麼、寫進指令的規則、做不到時怎麼辦</text>
+  </svg>
+  <figcaption><b>順序本身即為方法之一部分。</b>先問限制較先問可能性省事；提問三未問，多數人會停在解決眼前這一次。</figcaption>
+  <details class="alt"><summary>以文字檢視本圖</summary>
+    <ol><li><strong>這件事的麻煩分成幾種？</strong>　人力／判斷／重複工時，只有第三種是 AI 的守備範圍</li><li><strong>有什麼是絕對不能做的？</strong>　保密、個資、法定程序。限制把方案從十種縮到兩種</li><li><strong>下次還會再發生嗎？</strong>　會，就做產生器，不做交付物</li><li><strong>這裡面哪一段只有你會？</strong>　專業存於規則之中，不在工具之中</li><li><strong>它做不到的時候會怎樣？</strong>　標示並停止，不勉強產出</li></ol>
+    <p>走完之後的產出為一份規格，內容包含：做什麼、不做什麼、須寫進指令的規則、做不到時的處置方式。</p>
+  </details>
+</figure>
 
   <div class="gates">
     <div class="gate">
@@ -373,6 +429,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=23"></script>
+<script src="assets/site.js?v=24"></script>
 </body>
 </html>

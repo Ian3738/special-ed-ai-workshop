@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=23">
+<link rel="stylesheet" href="assets/style.css?v=24">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -32,6 +32,7 @@ d.setAttribute('data-fs',f||'m');})();
   <nav class="tabs" aria-label="頁面導覽">
     <div class="wrap">
       <a href="index.html">總覽</a>
+      <a href="kuse.html">認識 KUSE</a>
       <span class="sp" aria-hidden="true"></span>
       <a href="method.html">設計方法</a>
       <a href="udl-check.html">檢核表</a>
@@ -94,6 +95,42 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s2">蒐集限制</h2><p class="lead">共七項。無法全數遵守者，不宜建置資料庫；靜態版本同樣可供使用。</p></div></div>
     </summary>
     <div class="sec-body">
+
+  <figure class="dia">
+  <div class="t">個人資料的四種風險來源</div>
+  <svg viewBox="0 0 700 272" role="img" aria-labelledby="d4t d4d">
+    <title id="d4t">個人資料的四種風險來源</title>
+    <desc id="d4d">四種來源分別為特種個人資料、準識別符、資料集存在本身、夾帶第三人資料。各項之例示與說明見圖下方文字。</desc>
+  <g><rect x="4" y="4" width="340" height="124" rx="11" class="fill-hs st-h" stroke-width="1.5"/>
+    <circle cx="30" cy="34" r="15" class="fill-b"/>
+    <text x="30" y="40" text-anchor="middle" class="tx-i" font-size="15" font-weight="900">1</text>
+    <text x="54" y="40" class="tx-h" font-size="17" font-weight="900">特種個人資料</text>
+    <text x="22" y="70" class="tx" font-size="13.5">例：障礙類別、鑑定結果、心評報告、就醫紀錄</text>
+    <text x="22" y="96" class="tx-m" font-size="13">適用比一般個資嚴格得多的規定</text></g>
+  <g><rect x="356" y="4" width="340" height="124" rx="11" class="fill-hs st-h" stroke-width="1.5"/>
+    <circle cx="382" cy="34" r="15" class="fill-b"/>
+    <text x="382" y="40" text-anchor="middle" class="tx-i" font-size="15" font-weight="900">2</text>
+    <text x="406" y="40" class="tx-h" font-size="17" font-weight="900">準識別符</text>
+    <text x="374" y="70" class="tx" font-size="13.5">例：借用擴視機、電動輪椅加人工電子耳</text>
+    <text x="374" y="96" class="tx-m" font-size="13">樣本小時，代號等於沒有用</text></g>
+  <g><rect x="4" y="140" width="340" height="124" rx="11" class="fill-p st-r" stroke-width="1.5"/>
+    <circle cx="30" cy="170" r="15" class="fill-b"/>
+    <text x="30" y="176" text-anchor="middle" class="tx-i" font-size="15" font-weight="900">3</text>
+    <text x="54" y="176" class="tx" font-size="17" font-weight="900">資料集存在本身</text>
+    <text x="22" y="206" class="tx" font-size="13.5">例：一份巡迴輔導服務紀錄</text>
+    <text x="22" y="232" class="tx-m" font-size="13">即使全是代號，存在本身就揭露身分</text></g>
+  <g><rect x="356" y="140" width="340" height="124" rx="11" class="fill-p st-r" stroke-width="1.5"/>
+    <circle cx="382" cy="170" r="15" class="fill-b"/>
+    <text x="382" y="176" text-anchor="middle" class="tx-i" font-size="15" font-weight="900">4</text>
+    <text x="406" y="176" class="tx" font-size="17" font-weight="900">夾帶第三人</text>
+    <text x="374" y="206" class="tx" font-size="13.5">例：行為紀錄寫到其他學生、照片裡的同學</text>
+    <text x="374" y="232" class="tx-m" font-size="13">未取得該生家長同意</text></g>
+  </svg>
+  <figcaption><b>四種來源機制不同，防範方式也不同。</b>混在一起談，會讓人要嘛過度緊張、要嘛防錯地方。第三種為特殊教育場域特有，普通教育沒有。</figcaption>
+  <details class="alt"><summary>以文字檢視本圖</summary>
+    <ol><li><strong>特種個人資料</strong>　例：障礙類別、鑑定結果、心評報告、就醫紀錄。適用比一般個資嚴格得多的規定</li><li><strong>準識別符</strong>　例：借用擴視機、電動輪椅加人工電子耳。樣本小時，代號等於沒有用</li><li><strong>資料集存在本身</strong>　例：一份巡迴輔導服務紀錄。即使全是代號，存在本身就揭露身分</li><li><strong>夾帶第三人</strong>　例：行為紀錄寫到其他學生、照片裡的同學。未取得該生家長同意</li></ol>
+  </details>
+</figure>
   <div class="redline">
     <div class="h"><span aria-hidden="true">▲</span>不得逾越之限制</div>
     <ul>
@@ -121,6 +158,57 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s3">存取權限驗證</h2><p class="lead">第一天下午之必做項目，執行時間約三十秒。</p></div></div>
     </summary>
     <div class="sec-body">
+
+  <figure class="dia">
+  <div class="t">資料表存取權限，設定前後的差別</div>
+  <svg viewBox="0 0 700 260" role="img" aria-labelledby="d3t d3d">
+    <title id="d3t">資料表列層級安全性設定前後之差別</title>
+    <desc id="d3d">左側為未設定，未登入的任何人取得網址即可讀取整張資料表；右側為已設定，未登入者讀不到任何資料，登入且具權限者方能讀取。</desc>
+
+    <g><rect x="4" y="4" width="332" height="252" rx="12" class="fill-hs"/>
+      <text x="24" y="34" class="tx-h" font-size="14" font-weight="900" letter-spacing="1.5">未設定</text>
+      <text x="24" y="60" class="tx" font-size="16" font-weight="800">任何人取得網址即可讀取</text>
+      <rect x="24" y="80" width="86" height="46" rx="8" class="fill-c st-r" stroke-width="1.5"/>
+      <text x="67" y="101" text-anchor="middle" class="tx" font-size="13" font-weight="700">未登入</text>
+      <text x="67" y="118" text-anchor="middle" class="tx-m" font-size="12">的任何人</text>
+      <path d="M116 103 L206 103" class="st-h" stroke-width="2.5" stroke-dasharray="0"/>
+      <path d="M206 103 l-11 -6 v12 z" class="fill-h"/>
+      <rect x="212" y="76" width="104" height="120" rx="8" class="fill-c st-h" stroke-width="2"/>
+      <text x="264" y="98" text-anchor="middle" class="tx-h" font-size="13" font-weight="900">資料表</text>
+      <line x1="224" y1="112" x2="304" y2="112" class="st-r" stroke-width="1"/>
+      <line x1="224" y1="132" x2="304" y2="132" class="st-r" stroke-width="1"/>
+      <line x1="224" y1="152" x2="304" y2="152" class="st-r" stroke-width="1"/>
+      <line x1="224" y1="172" x2="304" y2="172" class="st-r" stroke-width="1"/>
+      <text x="264" y="220" text-anchor="middle" class="tx-h" font-size="15" font-weight="900">全表可讀</text>
+      <text x="170" y="244" text-anchor="middle" class="tx-h" font-size="13">後果不可回復</text></g>
+
+    <g><rect x="364" y="4" width="332" height="252" rx="12" class="fill-s"/>
+      <text x="384" y="34" class="tx-b" font-size="14" font-weight="900" letter-spacing="1.5">已設定列層級安全性</text>
+      <text x="384" y="60" class="tx" font-size="16" font-weight="800">未登入者讀不到任何資料</text>
+      <rect x="384" y="80" width="86" height="46" rx="8" class="fill-c st-r" stroke-width="1.5"/>
+      <text x="427" y="101" text-anchor="middle" class="tx" font-size="13" font-weight="700">未登入</text>
+      <text x="427" y="118" text-anchor="middle" class="tx-m" font-size="12">的任何人</text>
+      <path d="M476 103 L556 103" class="st-r" stroke-width="2.5" stroke-dasharray="5 4"/>
+      <g><circle cx="530" cy="103" r="15" class="fill-c st-h" stroke-width="2.5"/>
+        <path d="M523 96 L537 110 M537 96 L523 110" class="st-h" stroke-width="2.5"/></g>
+      <rect x="572" y="76" width="104" height="120" rx="8" class="fill-c st-b" stroke-width="2"/>
+      <text x="624" y="98" text-anchor="middle" class="tx-b" font-size="13" font-weight="900">資料表</text>
+      <line x1="584" y1="112" x2="664" y2="112" class="st-r" stroke-width="1"/>
+      <line x1="584" y1="132" x2="664" y2="132" class="st-r" stroke-width="1"/>
+      <line x1="584" y1="152" x2="664" y2="152" class="st-r" stroke-width="1"/>
+      <line x1="584" y1="172" x2="664" y2="172" class="st-r" stroke-width="1"/>
+      <text x="624" y="220" text-anchor="middle" class="tx-b" font-size="15" font-weight="900">須登入且具權限</text>
+      <text x="530" y="244" text-anchor="middle" class="tx-b" font-size="13">開無痕視窗自行驗證</text></g>
+  </svg>
+  <figcaption><b>此為此類專案最常見且後果最嚴重之疏漏</b>，且生成式 AI 所產出之程式碼未必包含該項設定。驗證只需三十秒，務必每人自行做一次。</figcaption>
+  <details class="alt"><summary>以文字檢視本圖</summary>
+    <ul>
+      <li><strong>未設定</strong>　未登入的任何人取得網址即可讀取整張資料表，後果不可回復</li>
+      <li><strong>已設定列層級安全性</strong>　未登入者讀不到任何資料，須登入且具權限方能讀取</li>
+    </ul>
+    <p>驗證方式：開啟無痕視窗，於未登入狀態下輸入系統網址，檢視能否載入資料。</p>
+  </details>
+</figure>
   <p>資料表若未設定列層級安全性（Row Level Security），任何取得網址者均得讀取全表內容。此為此類專案<strong>最常見且後果最嚴重之疏漏</strong>，且生成式 AI 所產出之程式碼未必包含該項設定。</p>
 
   <ol class="steps">
@@ -203,6 +291,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=23"></script>
+<script src="assets/site.js?v=24"></script>
 </body>
 </html>

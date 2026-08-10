@@ -468,6 +468,36 @@ figure.chart summary{cursor:pointer;font-size:.86rem;font-weight:800;color:#0A5A
   padding:.35rem .4rem;}
 @media (forced-colors: active){figure.chart{border:1px solid currentColor;}}
 
+/* ══ 概念圖（內嵌 SVG，跟隨主題）════════ */
+figure.dia{margin:1.3rem 0;background:var(--card);border-radius:.8rem;
+  padding:1.1rem 1.2rem .9rem;box-shadow:var(--shadow);}
+figure.dia svg{display:block;width:100%;height:auto;
+  font-family:var(--sans);overflow:visible;}
+figure.dia .t{font-weight:900;font-size:1.02rem;margin-bottom:.7rem;
+  letter-spacing:-.01em;}
+figure.dia figcaption{margin-top:.8rem;padding-top:.7rem;
+  border-top:1px solid var(--rule);font-size:.88rem;color:var(--ink-2);line-height:1.65;}
+figure.dia figcaption b{color:var(--brand);font-weight:900;}
+figure.dia .alt{margin-top:.5rem;}
+figure.dia .alt summary{cursor:pointer;font-size:.84rem;font-weight:800;
+  color:var(--brand);padding:.3rem 0;}
+figure.dia .alt ol,figure.dia .alt ul{margin:.4rem 0 .3rem 1.3rem;font-size:.88rem;}
+figure.dia .alt li{margin-bottom:.25rem;}
+/* SVG 內的取色 */
+.dia .fill-b{fill:var(--brand);} .dia .fill-h{fill:var(--hot);}
+.dia .fill-g{fill:var(--gold);} .dia .fill-s{fill:var(--brand-soft);}
+.dia .fill-c{fill:var(--card);} .dia .fill-p{fill:var(--paper-2);}
+.dia .fill-hs{fill:var(--hot-soft);}
+.dia .st-r{stroke:var(--rule-2);} .dia .st-b{stroke:var(--brand);}
+.dia .st-h{stroke:var(--hot);} .dia .st-i{stroke:var(--ink-2);}
+.dia .tx{fill:var(--ink);} .dia .tx-m{fill:var(--muted);}
+.dia .tx-i{fill:var(--brand-ink);} .dia .tx-b{fill:var(--brand);}
+.dia .tx-h{fill:var(--hot);} .dia .tx-d{fill:#241900;}
+@media (forced-colors: active){
+  figure.dia{border:1px solid currentColor;}
+  .dia rect,.dia circle,.dia path,.dia line{stroke:currentColor !important;}
+}
+
 /* ══ 引文與提示 ═════════════════════════ */
 .law{background:var(--card);border-radius:.75rem;padding:1rem 1.2rem;margin:1rem 0;
   box-shadow:var(--shadow);border-left:6px solid var(--ink);}
