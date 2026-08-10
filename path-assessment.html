@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=25">
+<link rel="stylesheet" href="assets/style.css?v=26">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -60,7 +60,7 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="wrap">
     <p class="kicker">實作主題四．評量</p>
     <h1>多元作答評量系統</h1>
-    <p class="thesis">評量調整之目的非降低試題難度，<br>而在<b>移除取用能力所構成之障礙</b>。同一試題、多種作答方式、單一評分規準。</p>
+    <p class="thesis">評量調整不是把題目改簡單，<br>是<b>把取用能力造成的障礙拿掉</b>。同一份題目、多種作答方式、一套評分規準。</p>
     <div class="tags"><span>須建置資料庫</span><span>第一天下午</span><span>約 60 分鐘</span><span>兩階段實作皆適用</span></div>
   </div>
 </header>
@@ -68,7 +68,7 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="stage">
   <div class="wrap">
     <span class="tag">第一天下午</span>
-    <span class="txt">須建置資料庫之案例。含報讀音檔批次產生器</span>
+    <span class="txt">這個案例要接資料庫。含報讀音檔批次產生器</span>
     <a class="nx" href="dashboard.html">延伸：資料儀表板 →</a>
   </div>
 </div>
@@ -83,9 +83,9 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s1">問題界定</h2></div></div>
     </summary>
     <div class="sec-body">
-  <p>《特殊教育課程實施規範》就評量方式調整已明列多種形式，包含紙筆、口試、指認、實作、點字試卷、放大試卷、電子試題、有聲試題，以及提供試卷並報讀等。惟於紙筆評量之實體情境中，同時提供多種形式有其執行困難：同一節課內難以為不同學生分別準備不同形式之試卷。</p>
+  <p>《特殊教育課程實施規範》就評量方式調整已明列多種形式，包含紙筆、口試、指認、實作、點字試卷、放大試卷、電子試題、有聲試題，以及提供試卷並報讀等。但在紙筆評量的實體情境裡，要同時提供多種形式很難做到：同一節課內，沒辦法幫不同學生各準備一種試卷。</p>
 
-  <p>建置為線上系統後，前述限制得以解除。學生自行選擇作答方式，施測者取得之結果係以同一份評分規準判定。</p>
+  <p>做成線上系統，這個限制就解掉了。學生自己選作答方式，你拿到的結果用同一份評分規準判。</p>
 
   <p>段考報讀之完整拆解過程，見<a href="method.html#s2b">設計方法之報讀案例</a>。該案例示範五個提問如何導出一份可實作的規格，並對照國中教育會考之<a href="https://cap.rcpet.edu.tw/SpecTest4.html" target="_blank" rel="noopener">語音報讀服務規範</a>。該規範明列圖形、表格、特殊符號、形音義辨、區辨整合五類不以語音報讀，其中後兩類係因報讀將使該題所測量之能力消失，屬須逐題判斷之事項。</p>
 
@@ -104,18 +104,18 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <ol class="steps">
-    <li><div><div class="t">寫定本次評量之測量目標</div>
-      <div class="d">以一句話敘明。無法明確敘述者不宜繼續進行，後續各項判斷均以此句為依據。</div></div></li>
-    <li><div><div class="t">逐題標記目標能力與取用能力</div>
-      <div class="d">就每一題檢視：學生未能作答，可能係因不具備該項能力，抑或因無法輸入文字、無法辨識題目或無法理解題意。後者應全數處理。</div></div></li>
-    <li><div><div class="t">提供三種作答方式</div>
-      <div class="d">文字輸入、點選、口述錄音。三者均須能對應至同一份評分規準，此為本主題之核心工作，亦為難度最高之步驟。</div></div></li>
-    <li><div><div class="t">撰寫跨方式一致之評分規準</div>
-      <div class="d">「口述三項理由」與「書寫三項理由」應給予相同分數。評分規準若無法達成此項，三種方式即不等值，實質上構成標準之降低。</div></div></li>
+    <li><div><div class="t">先用一句話寫下這次要測什麼</div>
+      <div class="d"><strong>寫不出這一句，就先不要往下做。</strong>後面每一個判斷都是回頭看這句話。</div></div></li>
+    <li><div><div class="t">一題一題標：哪個是要測的能力，哪個是取用能力</div>
+      <div class="d">每題問一次：學生答不出來，是因為他真的不會，還是因為打不了字、看不清楚題目、讀不懂題意？<strong>後面這幾種全部都要處理掉。</strong></div></div></li>
+    <li><div><div class="t">給三種作答方式</div>
+      <div class="d">打字、點選、口述錄音。三種都要能對到同一份評分規準。<strong>這是這一主題的核心，也是最難的一步。</strong></div></div></li>
+    <li><div><div class="t">寫一份三種方式通用的評分規準</div>
+      <div class="d">「口述三項理由」和「寫出三項理由」要給一樣的分數。<strong>規準做不到這件事，三種方式就不等值，等於偷偷把標準降低了。</strong></div></div></li>
   </ol>
 
   <div class="note">
-    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。實際操作時<strong>不必從這裡開始</strong>——先用<a href="templates.html">指令模板</a>的模板 A 起手，再把模板 B、C 接在後面即可。下面這份可留待熟悉之後再參考。</p>
+    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。<strong>不用從這裡開始。</strong>先用<a href="templates.html">指令模板</a>的模板 A 起手，後面接模板 B、C 就好。下面這份等你熟了再回來看。</p>
   </div>
 
   <div class="cmd">
@@ -140,7 +140,7 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 
   <div class="note">
-    <p><b>「不設倒數計時」係刻意排除。</b>時間限制為最常見之隱性障礙，且多數評量並未將作答速度列為測量目標。若確有測量速度之需求，應明列於前述「測量目標」一句中。</p>
+    <p><b>「不設倒數計時」是故意的。</b>時間限制是最常見的隱形障礙，而且多數評量根本沒把作答速度當成要測的東西。<strong>真的要測速度，就寫進前面那句「測量目標」裡。</strong></p>
   </div>
     </div>
   </details>
@@ -153,16 +153,16 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s3">實作（二）：資料留存</h2><p class="lead">第一天下午後半。</p></div></div>
     </summary>
     <div class="sec-body">
-  <p>未留存資料之線上評量，其功能等同於電子版試卷。留存後方得回答下列問題：何題之答錯率異常偏高（通常為試題本身之問題）、採用不同作答方式者其表現是否存在差異（可能反映評分規準未等值）、同一學生前後兩次施測之變化。</p>
+  <p>不留資料的線上評量，功能跟電子版試卷沒兩樣。存下來之後才答得了這幾個問題：哪一題錯得特別多（通常是題目本身有問題）、用不同作答方式的人表現有沒有差（可能是評分規準沒等值）、同一個學生前後兩次差多少。</p>
 
-  <p>欄位設計、蒐集限制與存取權限驗證程序詳見<a href="backend.html">資料庫建置與個人資料保護</a>。本主題所涉資料於五類主題中敏感度最高，實作前請完整閱讀該頁。</p>
+  <p>欄位怎麼設、能收什麼、權限怎麼驗，見<a href="backend.html">資料庫建置與個人資料保護</a>。<strong>這一主題碰到的資料敏感度最高，動手之前請把那一頁讀完。</strong></p>
 
   <div class="redline">
     <div class="h"><span aria-hidden="true">▲</span>三項禁止事項</div>
     <ul>
-      <li>不得儲存姓名或學號。應儲存隨機碼，對照表以紙本形式留存於學校端。</li>
-      <li>不得儲存障礙類別，亦不得儲存班級型態。欄位中出現「資源班」字樣，即構成身分之標記。</li>
-      <li>作答方式欄位應儲存中性代碼（<code>typed</code>／<code>selected</code>／<code>spoken</code>），不得命名為「輔具需求」一類具指涉性之名稱。</li>
+      <li>不要存姓名或學號。存隨機碼，對照表印成紙本留在學校。</li>
+      <li>不要存障礙類別，也不要存班級型態。<strong>欄位裡出現「資源班」三個字，就是在標記身分。</strong></li>
+      <li>作答方式那一欄要存中性代碼（<code>typed</code>／<code>selected</code>／<code>spoken</code>），不要取「輔具需求」這種一看就知道在指誰的名字。</li>
     </ul>
   </div>
     </div>
@@ -178,20 +178,20 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="sec-body">
   <div class="gates">
     <div class="gate"><div class="g">多元表徵</div>
-      <div class="q">試題本身是否構成障礙</div>
-      <ul><li>題幹是否提供朗讀，且朗讀內容同時以文字呈現</li>
-      <li>題幹之閱讀難度是否高於所欲測量之能力</li>
-      <li>圖表題之圖像是否附有文字描述</li></ul></div>
+      <div class="q">題目本身會不會就是障礙</div>
+      <ul><li>題幹有沒有朗讀，而且唸的同時看得到文字</li>
+      <li>題幹的閱讀難度，會不會比你要測的能力還難</li>
+      <li>圖表題的圖有沒有文字描述</li></ul></div>
     <div class="gate"><div class="g">多元行動與表達</div>
-      <div class="q">三種作答方式是否確實等值</div>
-      <ul><li>持同一份規準，以三種方式各作答一題，分數能否一致判定</li>
-      <li>口述作答之路徑，於音量條件不足之教室能否實施；聽覺障礙學生是否另有等值路徑</li>
-      <li>是否設有倒數計時</li></ul></div>
+      <div class="q">三種作答方式真的等值嗎</div>
+      <ul><li>拿同一份規準，三種方式各答一題，分數判得出來一致嗎</li>
+      <li>口述那條路，在吵的教室做得到嗎；聽覺障礙學生有沒有另一條等值的路</li>
+      <li>有沒有設倒數計時</li></ul></div>
     <div class="gate"><div class="g">多元參與</div>
-      <div class="q">學生對自身作答狀態是否知悉</div>
-      <ul><li>完成後能否得知答對題數與錯誤所在</li>
-      <li>中途離開後能否返回續答</li>
-      <li>作答方式選定後能否更換</li></ul></div>
+      <div class="q">學生知不知道自己現在答到哪</div>
+      <ul><li>做完知不知道對幾題、錯在哪</li>
+      <li>中途離開，回得來繼續答嗎</li>
+      <li>選了作答方式之後還能不能換</li></ul></div>
   </div>
     </div>
   </details>
@@ -205,16 +205,16 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
 
-  <p>作法比照國中教育會考語音報讀服務：<strong>一題一軌，另附曲目對照表</strong>。依規範不報讀之題目仍產生一軌並提示自行閱讀試題本，使軌號與題號一致，考生不致因跳號而錯亂。</p>
+  <p>做法比照國中教育會考的語音報讀：<strong>一題一軌，另外附一份曲目對照表</strong>。依規範不報讀的題目一樣產生一軌，裡面提示自行閱讀試題本，這樣軌號和題號永遠對得上，學生不會因為跳號而錯亂。</p>
 
   <h3>三個步驟</h3>
   <ol class="steps">
-    <li><div><div class="t">取得純文字，不上傳試卷影像</div>
-      <div class="d">以裝置內建功能於本機擷取：Mac 與 iPhone 之照片可直接選取文字，Windows 11 剪取工具設有文字動作。出題教師持有電子檔者，本步驟略過。</div></div></li>
-    <li><div><div class="t">轉為報讀腳本</div>
-      <div class="d">以生成式 AI 依報讀規則規範化，並將圖形、表格、特殊符號、形音義辨、區辨整合五類標示為不報讀。指令範本見<a href="method.html#s2b">設計方法之報讀案例</a>。</div></div></li>
+    <li><div><div class="t">先拿到純文字，不要上傳試卷照片</div>
+      <div class="d">用裝置內建功能在自己電腦上擷取：Mac 和 iPhone 的照片可以直接選取文字，Windows 11 的剪取工具有文字動作。出題老師手上有電子檔的，這步跳過。</div></div></li>
+    <li><div><div class="t">轉成報讀腳本</div>
+      <div class="d">讓 AI 照報讀規則整理一遍，並把圖形、表格、特殊符號、形音義辨、區辨整合這五類標成不報讀。指令範本見<a href="method.html#s2b">設計方法的報讀案例</a>。</div></div></li>
     <li><div><div class="t">批次合成音檔</div>
-      <div class="d">執行腳本，一次產出逐題音檔與曲目對照表。實測七題約五秒，三十題約二十秒。語音合成使用作業系統內建功能，離線執行，題目文字不外傳。</div></div></li>
+      <div class="d">跑腳本，一次產出逐題音檔和曲目對照表。實測七題約五秒，三十題約二十秒。<strong>語音合成用作業系統內建功能，離線執行，題目文字不會外傳。</strong></div></div></li>
   </ol>
 
   <h3>腳本格式</h3>
@@ -245,15 +245,15 @@ d.setAttribute('data-fs',f||'m');})();
   <p>兩者輸入格式相同，輸出均含逐題音檔、曲目對照表 CSV 與可列印之 HTML。使用說明見 <a href="tools/README.md">tools/README.md</a>，輸入範例見<a href="tools/%E7%AF%84%E4%BE%8B%E8%85%B3%E6%9C%AC.txt">範例腳本</a>。</p>
 
   <div class="note">
-    <p><b>macOS 與 Windows 之內建工具均無法直接編碼 MP3</b>——前者之 <code>afconvert</code> 僅能解碼，後者之語音合成僅輸出 WAV。腳本會自動偵測並改用可行格式。需要 MP3 時，macOS 執行 <code>brew install lame</code>，Windows 安裝 ffmpeg。M4A 與 WAV 多數播放器亦可播放。</p>
+    <p><b>macOS 和 Windows 的內建工具都沒辦法直接編碼 MP3</b>：Mac 的 <code>afconvert</code> 只能解碼，Windows 的語音合成只吐 WAV。腳本會自動偵測，改用能用的格式。真的需要 MP3，Mac 執行 <code>brew install lame</code>，Windows 裝 ffmpeg。<strong>其實 M4A 和 WAV 多數播放器都放得出來。</strong></p>
   </div>
 
   <div class="redline">
     <div class="h"><span aria-hidden="true">▲</span>三項前提</div>
     <ul>
-      <li>試卷影像不上傳，文字於本機擷取後方交由生成式 AI 處理</li>
-      <li>音檔可重複播放，與人工報讀一至二次不等值，屬不同強度之評量調整，須於個別化教育計畫會議記載</li>
-      <li>題目文字用畢即自平台移除，音檔於考試結束後一併刪除</li>
+      <li>試卷照片不要上傳，先在自己電腦上擷取文字，再交給 AI 處理</li>
+      <li>音檔可以重複播放，跟人工報讀一到兩次不是同一件事，這是強度不同的評量調整，要在個別化教育計畫會議記載</li>
+      <li>題目文字用完就從平台移掉，音檔在考試結束後一併刪除</li>
     </ul>
   </div>
     </div>
@@ -275,6 +275,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=25"></script>
+<script src="assets/site.js?v=26"></script>
 </body>
 </html>

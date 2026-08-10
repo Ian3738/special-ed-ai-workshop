@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=25">
+<link rel="stylesheet" href="assets/style.css?v=26">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -60,7 +60,7 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="wrap">
     <p class="kicker">團務層級．行政</p>
     <h1>團務行政：排程、紀錄與經費</h1>
-    <p class="thesis">團務資料散在各團員手上，彙整時才發現對不起來。<br><b>具備資料留存能力</b>一項，為本次功能更新之實質意義所在。</p>
+    <p class="thesis">團務資料散在各團員手上，要彙整時才發現對不起來。<br>這次功能更新真正有用的一項，是<b>資料存得下來</b>。</p>
     <div class="tags"><span>須建置資料庫</span><span>團務層級</span><span>第一天下午</span></div>
   </div>
 </header>
@@ -68,7 +68,7 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="stage">
   <div class="wrap">
     <span class="tag">第一天下午</span>
-    <span class="txt">輔導團層級之題目。校長與團務承辦人員宜自此三類擇一</span>
+    <span class="txt">輔導團層級的題目。校長和團務承辦從這三類挑一個</span>
     <a class="nx" href="dashboard.html">延伸：資料儀表板 →</a>
   </div>
 </div>
@@ -85,7 +85,7 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="sec-body">
   <p>團務行政的負擔具有共同結構：<strong>同一份資料散在各團員手上，且無單一權威版本</strong>。到校服務紀錄在各自的筆記本，時數統計在承辦人的試算表，對外報送的表又是第三份。彙整時才發現三者對不起來。</p>
 
-  <p>試算表無法承擔此類需求之原因，在於其不具真正之資料庫結構：多人同時編輯易生衝突，亦不支援以行動裝置即時登錄。具備後端資料庫後，此類業務方具備系統化之條件。</p>
+  <p>試算表撐不住這類需求，因為它不是真正的資料庫：多人同時編輯會打架，也沒辦法拿手機當場登錄。<strong>有了後端資料庫，這類業務才有系統化的條件。</strong></p>
 
   <h3>常見題目</h3>
   <div class="grid">
@@ -104,24 +104,24 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">02</span>
-    <div><h2 id="s2">實作（一）：輸入介面</h2><p class="lead">第一天下午。應先建置輸入端，統計報表後續處理。</p></div></div>
+    <div><h2 id="s2">實作（一）：輸入介面</h2><p class="lead">第一天下午。先做輸入端，統計報表之後再說。</p></div></div>
     </summary>
     <div class="sec-body">
-  <p>常見之失敗模式為優先建置統計儀表板。<strong>無人登錄即無資料，儀表板將維持空白。</strong>應先將登錄流程簡化至可實際執行之程度。</p>
+  <p>最常見的失敗是先做統計儀表板。<strong>沒有人登錄就沒有資料，儀表板會一直是空的。</strong>先把登錄流程簡化到大家真的願意做。</p>
 
   <ol class="steps">
-    <li><div><div class="t">記錄現行作業流程</div>
-      <div class="d">如實記錄，包含所有冗餘步驟。「開啟甲檔複製，開啟乙檔貼上，再手動修改日期」一類敘述即為系統規格之來源。</div></div></li>
-    <li><div><div class="t">刪減至最少必要欄位</div>
-      <div class="d">逐欄檢視：缺少該欄位將產生何種影響。無實質影響者予以刪除。欄位數與登錄意願呈反比。</div></div></li>
-    <li><div><div class="t">配合行動裝置之使用情境</div>
-      <div class="d">實際使用情境多為站立於教室後方登錄，而非於辦公桌前操作。應加大按鈕、增加選項、減少文字輸入。</div></div></li>
-    <li><div><div class="t">完整執行一次並計時</div>
-      <div class="d">不宜以測試資料略作點選即認定完成。應自起始至結束完整執行，並記錄所需時間。逾兩分鐘即屬過長。</div></div></li>
+    <li><div><div class="t">把現在的做法照實寫下來</div>
+      <div class="d">照實寫，多餘的步驟也要寫。<strong>「開甲檔複製，開乙檔貼上，再手動改日期」這種句子，就是你的系統規格。</strong></div></div></li>
+    <li><div><div class="t">砍到只剩非要不可的欄位</div>
+      <div class="d">一欄一欄問：少了這一欄會怎樣？沒差的就刪掉。<strong>欄位愈多，大家愈不想登錄。</strong></div></div></li>
+    <li><div><div class="t">照手機的使用情境設計</div>
+      <div class="d">實際情況多半是站在教室後面單手登錄，不是坐在辦公桌前操作。按鈕加大、選項變多、少打字。</div></div></li>
+    <li><div><div class="t">自己完整跑一次，順便計時</div>
+      <div class="d">不要用測試資料隨便點兩下就算完成。從頭到尾跑一次，記下花多久。<strong>超過兩分鐘就是太久。</strong></div></div></li>
   </ol>
 
   <div class="note">
-    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。實際操作時<strong>不必從這裡開始</strong>——先用<a href="templates.html">指令模板</a>的模板 A 起手，再把模板 B、C 接在後面即可。下面這份可留待熟悉之後再參考。</p>
+    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。<strong>不用從這裡開始。</strong>先用<a href="templates.html">指令模板</a>的模板 A 起手，後面接模板 B、C 就好。下面這份等你熟了再回來看。</p>
   </div>
 
   <div class="cmd">
@@ -154,20 +154,20 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">實作（二）：資料庫與權限驗證</h2><p class="lead">第一天下午後半。本主題最關鍵之環節。</p></div></div>
+    <div><h2 id="s3">實作（二）：資料庫與權限驗證</h2><p class="lead">第一天下午後半。這一主題最關鍵的環節。</p></div></div>
     </summary>
     <div class="sec-body">
-  <p>行政資料之敏感度高於教材資料，其性質即為關於特定學生之紀錄。<strong>存取權限設定不當者，等同於將特殊教育學生名冊置於公開網址。</strong></p>
+  <p>行政資料比教材資料敏感，因為它本來就是關於特定學生的紀錄。<strong>權限沒設好，等於把特殊教育學生名冊掛在公開網址上。</strong></p>
 
-  <p>建置方式、蒐集限制與權限驗證程序詳見<a href="backend.html">資料庫建置與個人資料保護</a>。選擇本主題者請完整閱讀該頁。</p>
+  <p>怎麼建、能收什麼、權限怎麼驗，見<a href="backend.html">資料庫建置與個人資料保護</a>。<strong>選這一主題的人請把那一頁讀完。</strong></p>
 
   <div class="redline">
-    <div class="h"><span aria-hidden="true">▲</span>行政系統之特有風險</div>
+    <div class="h"><span aria-hidden="true">▲</span>行政系統特有的風險</div>
     <ul>
-      <li><strong>不記錄至個人。</strong>服務紀錄僅記人數與類型；一旦出現學生代號，整份資料集之敏感度即行跳升。</li>
-      <li><strong>資料累積性：</strong>教材資料多於一學期後停止蒐集，團務資料則逐年累積。保留期限應於建置時即行訂定。</li>
-      <li><strong>多人使用：</strong>系統建置後同仁將沿用。何人得檢視何等資料，應於設計階段即行界定。</li>
-      <li><strong>維運歸屬：</strong>帳號綁定於個人，人事異動後系統之接續維護無人負責。本項無技術解決方案，須循行政程序處理。</li>
+      <li><strong>不要記到個人。</strong>服務紀錄只記人數和類型。<strong>一旦出現學生代號，整份資料的敏感度就跳一級。</strong></li>
+      <li><strong>資料會一直累積：</strong>教材資料多半一學期就停了，團務資料是逐年疊上去的。保留期限在建置的時候就要訂。</li>
+      <li><strong>不只你一個人用：</strong>做好之後同仁會接著用。誰能看到哪些資料，設計階段就要講清楚。</li>
+      <li><strong>誰維護：</strong>帳號綁在個人身上，人一調動就沒人接手。<strong>這一項技術解決不了，要走行政程序。</strong></li>
     </ul>
   </div>
     </div>
@@ -178,29 +178,29 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">04</span>
-    <div><h2 id="s4">三向度檢核</h2><p class="lead">本主題之使用者為同仁，其中同樣存在視覺辨識或操作條件受限者。</p></div></div>
+    <div><h2 id="s4">三向度檢核</h2><p class="lead">這套系統的使用者是同仁，同仁裡面一樣有人看不清楚、有人操作條件受限。</p></div></div>
     </summary>
     <div class="sec-body">
   <div class="gates">
     <div class="gate"><div class="g">多元表徵</div>
-      <div class="q">於走廊、單手持行動裝置、強光環境下能否辨識</div>
-      <ul><li>字級與對比度是否足夠</li>
-      <li>狀態是否單獨以顏色表示</li>
-      <li>欄位名稱是否採用僅建置者理解之簡稱</li></ul></div>
+      <div class="q">在走廊上、單手拿手機、大太陽底下，看得清楚嗎</div>
+      <ul><li>字夠大嗎、對比夠嗎</li>
+      <li>狀態是不是只用顏色表示</li>
+      <li>欄位名稱是不是只有你自己看得懂的簡稱</li></ul></div>
     <div class="gate"><div class="g">多元行動與表達</div>
-      <div class="q">能否於兩分鐘內完成登錄</div>
-      <ul><li>文字輸入量能否改以選項替代</li>
-      <li>點擊區是否達 44×44px 之下限</li>
-      <li>登錄中途中斷後返回，已填內容是否留存</li></ul></div>
+      <div class="q">兩分鐘內登錄得完嗎</div>
+      <ul><li>要打的字能不能改成用選的</li>
+      <li>點擊區有沒有到 44×44px</li>
+      <li>登錄到一半被打斷，回來時填過的還在嗎</li></ul></div>
     <div class="gate"><div class="g">多元參與</div>
-      <div class="q">團員改採本系統之誘因為何</div>
-      <ul><li>是否減少一項其現行必須執行之步驟</li>
-      <li>既有資料能否匯入，抑或須重新登錄</li>
-      <li>登錄後能否自動產出個人時數，供差旅與鐘點核銷使用</li></ul></div>
+      <div class="q">團員為什麼要改用你這套</div>
+      <ul><li>有沒有幫他少掉一個現在非做不可的步驟</li>
+      <li>舊資料能不能匯進來，還是要重打一次</li>
+      <li>登錄完能不能自動算出個人時數，直接拿去核銷差旅和鐘點</li></ul></div>
   </div>
 
   <div class="note">
-    <p><b>末項為本主題成敗之關鍵。</b>團務系統推行失敗多非技術因素，而在於使用習慣之轉換成本。若系統僅係將工作負擔自承辦人員轉移至團員，其存續期通常不逾一學期。</p>
+    <p><b>最後一項決定這套系統活不活得下來。</b>團務系統推不動，多半不是技術問題，是大家換習慣的成本太高。<strong>如果你的系統只是把承辦人的工作量轉嫁給團員，通常撐不過一個學期。</strong></p>
   </div>
     </div>
   </details>
@@ -221,6 +221,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=25"></script>
+<script src="assets/site.js?v=26"></script>
 </body>
 </html>

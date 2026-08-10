@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=25">
+<link rel="stylesheet" href="assets/style.css?v=26">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -59,7 +59,7 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="stage">
   <div class="wrap">
     <span class="tag">第一天下午</span>
-    <span class="txt">輔導團層級之題目。校長與團務承辦人員宜自此三類擇一</span>
+    <span class="txt">輔導團層級的題目。校長和團務承辦從這三類挑一個</span>
     <a class="nx" href="dashboard.html">延伸：資料儀表板 →</a>
   </div>
 </div>
@@ -68,7 +68,7 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="wrap">
     <p class="kicker">團務層級．成果</p>
     <h1>成果建置：訪視佐證與年度成果</h1>
-    <p class="thesis">同一批事實，每年重新組裝成不同格式。<br>真正的難處在<b>紀錄未於發生當下留存</b>，事後即無從彙整。</p>
+    <p class="thesis">同一批事實，每年重新組裝成不同格式。<br>真正的難處是<b>事情發生當下沒留紀錄</b>，事後就湊不回來。</p>
     <div class="tags"><span>須建置資料庫</span><span>團務層級</span><span>第一天下午</span></div>
   </div>
 </header>
@@ -85,14 +85,14 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="sec-body">
   <p>輔導團的成果資料有一項共同特徵：<strong>同一批事實，每年要重新組裝成不同格式</strong>。到校服務紀錄、研習辦理紀錄、教師回饋、學生表現資料，在訪視自評表、年度成果報告、經費核銷報表與計畫申請書中反覆出現，僅欄位名稱與分類方式不同。</p>
 
-  <p>此類工作幾乎不含專業判斷，純為格式轉換，是生成式 AI 最不易出錯的一類。真正的難處在前一步：<strong>原始紀錄若未於發生當下留存，事後即無從彙整</strong>。</p>
+  <p>這類工作幾乎沒有專業判斷，純粹是格式轉換，是 AI 最不容易出錯的一類。真正的難處在前一步：<strong>事情發生當下沒留紀錄，事後就湊不回來。</strong></p>
 
   <div class="redline">
     <div class="h"><span aria-hidden="true">▲</span>佐證資料最常見的個資疏漏</div>
     <ul>
-      <li><strong>照片。</strong>學生作品上有姓名、上課照片可辨識面容、黑板上寫著班級座號。此為佐證資料中最常被忽略的一項。</li>
-      <li><strong>簽到表。</strong>含教師姓名、服務學校、聯絡方式，掃描後直接夾入佐證即屬過度揭露。</li>
-      <li><strong>個案討論紀錄。</strong>載有學生代號以外之描述時，於小樣本情形下仍可回推身分。</li>
+      <li><strong>照片。</strong>學生作品上有名字、上課照片看得到臉、黑板上寫著班級座號。<strong>這是佐證資料裡最常被忽略的一項。</strong></li>
+      <li><strong>簽到表。</strong>上面有教師姓名、服務學校、聯絡方式，掃描後直接夾進佐證就是揭露過頭。</li>
+      <li><strong>個案討論紀錄。</strong>只要寫了代號以外的描述，樣本一小就能回推是誰。</li>
     </ul>
   </div>
     </div>
@@ -107,18 +107,18 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <ol class="steps">
-    <li><div><div class="t">列出一年內要交出的所有表</div>
-      <div class="d">訪視自評表、年度成果報告、經費核銷、計畫申請、期中期末報告。逐一標明繳交時間與所需欄位。此步驟通常會發現多數欄位重複。</div></div></li>
-    <li><div><div class="t">回推最小留存欄位</div>
-      <div class="d">能同時支撐前述各表的最少欄位集合。日期、服務學校、服務類型、對象人數、主題、時數，多半已足夠。</div></div></li>
-    <li><div><div class="t">做成當下即可登錄的介面</div>
-      <div class="d">於服務結束當場以行動裝置登錄，兩分鐘內完成。事後補登的資料品質遠低於當場登錄。</div></div></li>
+    <li><div><div class="t">先列出一年內要交的所有表</div>
+      <div class="d">訪視自評表、年度成果報告、經費核銷、計畫申請、期中期末報告。一張一張標上繳交時間和需要的欄位。<strong>列完你通常會發現，大部分欄位是重複的。</strong></div></div></li>
+    <li><div><div class="t">回推最少要留哪些欄位</div>
+      <div class="d">找出能同時撐起上面每一張表的最小欄位集合。日期、服務學校、服務類型、對象人數、主題、時數，多半就夠了。</div></div></li>
+    <li><div><div class="t">做一個當場就能登錄的介面</div>
+      <div class="d">服務一結束就用手機登錄，兩分鐘內做完。<strong>事後補登的資料，品質比當場登錄差很多。</strong></div></div></li>
     <li><div><div class="t">最後才做輸出</div>
-      <div class="d">同一份資料依不同格式輸出。此步驟為純格式轉換，可交由生成式 AI 處理。</div></div></li>
+      <div class="d">同一份資料，照不同格式吐出來。這一步是純格式轉換，交給 AI 就好。</div></div></li>
   </ol>
 
   <div class="note">
-    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。實際操作時<strong>不必從這裡開始</strong>——先用<a href="templates.html">指令模板</a>的模板 A 起手，再把模板 B、C 接在後面即可。下面這份可留待熟悉之後再參考。</p>
+    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。<strong>不用從這裡開始。</strong>先用<a href="templates.html">指令模板</a>的模板 A 起手，後面接模板 B、C 就好。下面這份等你熟了再回來看。</p>
   </div>
 
   <div class="cmd">
@@ -138,7 +138,7 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 
   <div class="note">
-    <p><b>末兩條規則為防止數字對不上而設。</b>成果報告一旦出現與原始紀錄不符的數字，後續全部佐證都會被要求重新檢視。</p>
+    <p><b>最後兩條規則是為了防止數字對不上。</b>成果報告只要出現一個跟原始紀錄兜不攏的數字，<strong>後面全部佐證都會被要求重新檢視。</strong></p>
   </div>
     </div>
   </details>
@@ -148,24 +148,24 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">三向度檢核</h2><p class="lead">本主題之使用者為團員、受輔學校與訪視委員。</p></div></div>
+    <div><h2 id="s3">三向度檢核</h2><p class="lead">這份東西的讀者是團員、受輔學校和訪視委員。</p></div></div>
     </summary>
     <div class="sec-body">
   <div class="gates">
     <div class="gate"><div class="g">多元表徵</div>
-      <div class="q">訪視委員能否於短時間內找到所需資訊</div>
-      <ul><li>是否附有索引或目次，抑或須逐頁翻找</li>
-      <li>統計圖表是否附有一句結論，抑或僅呈現數字</li>
-      <li>照片是否附有文字說明</li></ul></div>
+      <div class="q">訪視委員短時間內找得到他要的東西嗎</div>
+      <ul><li>有沒有索引或目次，還是要一頁一頁翻</li>
+      <li>統計圖表有沒有附一句結論，還是只有數字</li>
+      <li>照片有沒有文字說明</li></ul></div>
     <div class="gate"><div class="g">多元行動與表達</div>
       <div class="q">團員登錄一次要花多久</div>
-      <ul><li>能否於服務結束當場以行動裝置完成</li>
-      <li>必填欄位是否過多，導致改以事後補登</li>
-      <li>既有的紙本紀錄能否匯入，抑或須重新輸入</li></ul></div>
+      <ul><li>服務一結束，當場用手機做得完嗎</li>
+      <li>必填欄位是不是太多，多到大家乾脆事後補登</li>
+      <li>現有的紙本紀錄能不能匯進來，還是要重打</li></ul></div>
     <div class="gate"><div class="g">多元參與</div>
-      <div class="q">團員登錄之後自己得到什麼</div>
-      <ul><li>能否自動產出個人時數統計，供差旅或鐘點核銷使用</li>
-      <li>若登錄只是把工作轉嫁給團員，該機制不會存續</li></ul></div>
+      <div class="q">團員登錄完，自己得到什麼</div>
+      <ul><li>能不能自動算出個人時數，直接拿去核銷差旅或鐘點</li>
+      <li><strong>如果登錄只是把工作轉嫁給團員，這個機制活不下去</strong></li></ul></div>
   </div>
     </div>
   </details>
@@ -179,9 +179,9 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <ul>
-    <li>將輸出流程<strong>封裝為技能檔</strong>，各團員均可自行產出所屬輔導區之報表</li>
-    <li>接上<a href="dashboard.html">儀表板</a>，以服務類型、月份、學校分布呈現年度分析</li>
-    <li>建立<strong>佐證資料去識別化檢查表</strong>，於彙整前逐項核對照片、簽到表與個案紀錄</li>
+    <li>把輸出流程<strong>封裝成技能檔</strong>，每位團員都能自己產出所屬輔導區的報表</li>
+    <li>接上<a href="dashboard.html">儀表板</a>，用服務類型、月份、學校分布呈現年度分析</li>
+    <li>做一張<strong>佐證資料去識別化檢查表</strong>，彙整前逐項核對照片、簽到表和個案紀錄</li>
   </ul>
     </div>
   </details>
@@ -202,6 +202,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=25"></script>
+<script src="assets/site.js?v=26"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=25">
+<link rel="stylesheet" href="assets/style.css?v=26">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -60,7 +60,7 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="wrap">
     <p class="kicker">實作主題一．教案</p>
     <h1>課程調整教案產生器</h1>
-    <p class="thesis">與會者對調整教案之撰寫已具備專業。<br>本主題所處理者為<b>每一單元均須重複撰寫</b>之工時問題。</p>
+    <p class="thesis">調整教案怎麼寫，你已經很會了。<br>這裡要解決的是<b>每個單元都得重寫一次</b>的工時問題。</p>
     <div class="tags"><span>無須資料庫</span><span>第一天上午</span><span>約 30 分鐘</span><span>產出為產生器而非單份教案</span></div>
   </div>
 </header>
@@ -68,7 +68,7 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="stage">
   <div class="wrap">
     <span class="tag">第一天上午</span>
-    <span class="txt">拆解完成、寫出規格之後，再對照此案例</span>
+    <span class="txt">先拆解、先寫出規格，再回來對照這個案例</span>
     <a class="nx" href="udl-check.html">交付前：三向度檢核 →</a>
   </div>
 </div>
@@ -83,12 +83,12 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s1">問題界定</h2></div></div>
     </summary>
     <div class="sec-body">
-  <p>調整教案之格式相對固定，通常包含學習重點、調整方式、教學活動、評量調整與支持策略等欄位。實際變動者僅為單元內容與學生於該領域之學習功能等級。</p>
+  <p>調整教案的格式其實很固定：學習重點、調整方式、教學活動、評量調整、支持策略。每次真正會變的只有兩樣：單元內容，還有學生在那個領域的學習功能等級。</p>
 
-  <p>據此，本主題之產出並非一份教案，而是<strong>一套可重複執行之教案生成流程</strong>。使用者填入變數後，系統依既定格式輸出草稿，使用者僅需就不符實際之處修正。</p>
+  <p>所以這一主題要做的不是一份教案，是<strong>一條可以重複跑的教案生成流程</strong>。你填變數，它照格式吐草稿，你只要改跟實際不合的地方。</p>
 
   <div class="note">
-    <p><b>驗收標準：</b>離場前更換單元名稱重新執行一次，應可輸出格式一致且內容正確之新教案。未能達成此項者，僅屬生成單份教案，不符本主題之產出定義。</p>
+    <p><b>做到什麼程度算完成：</b>散會前換一個單元名稱、重跑一次，能吐出格式一樣、內容正確的新教案。<strong>做不到這一點，你做的只是一份教案，不是產生器。</strong></p>
   </div>
     </div>
   </details>
@@ -98,22 +98,22 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">02</span>
-    <div><h2 id="s2">建置程序</h2><p class="lead">範例系統連結置於課堂共用看板，請自該系統修改，不宜自零開始建構。</p></div></div>
+    <div><h2 id="s2">建置程序</h2><p class="lead">範例系統的連結在課堂共用看板。從那個系統改，不要從零開始。</p></div></div>
     </summary>
     <div class="sec-body">
   <ol class="steps">
-    <li><div><div class="t">輸入既有之教案格式</div>
-      <div class="d">貼入所屬縣市或學校現行使用之教案表格。本步驟決定產出能否直接送件，不宜省略。無現成表格者，採用範例系統所附格式。</div></div></li>
-    <li><div><div class="t">將不變之內容寫入指令</div>
-      <div class="d">五種調整方式之定義、學習功能四級之判定原則、慣用之支持策略清單。此類內容每次相同，寫入指令後即無須重複輸入。</div></div></li>
-    <li><div><div class="t">保留三項變數欄位</div>
-      <div class="d">單元、學習功能等級、節數。僅此三項每次須更換。</div></div></li>
-    <li><div><div class="t">以兩種等級各執行一次並比對</div>
-      <div class="d">同一單元分別以「輕微缺損」與「嚴重缺損」執行，檢視輸出是否確實產生差異。若無差異，表示指令描述過於籠統。</div></div></li>
+    <li><div><div class="t">先貼你現在用的教案格式</div>
+      <div class="d">把你們縣市或學校現在在用的教案表格貼進去。<strong>這一步決定產出能不能直接送件，不要跳過。</strong>沒有現成表格的，用範例系統附的那份。</div></div></li>
+    <li><div><div class="t">把每次都一樣的東西寫進指令</div>
+      <div class="d">五種調整方式的定義、學習功能四級怎麼判、你慣用的支持策略清單。這些每次都一樣，寫進去一次，以後就不用再打。</div></div></li>
+    <li><div><div class="t">只留三格要換的</div>
+      <div class="d">單元、學習功能等級、節數。每次只有這三格會變。</div></div></li>
+    <li><div><div class="t">跑兩次比一比</div>
+      <div class="d">同一個單元，分別用「輕微缺損」和「嚴重缺損」各跑一次，看輸出有沒有真的不一樣。<strong>如果幾乎一樣，表示你的指令寫得太籠統。</strong></div></div></li>
   </ol>
 
   <div class="note">
-    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。實際操作時<strong>不必從這裡開始</strong>——先用<a href="templates.html">指令模板</a>的模板 A 起手，再把模板 B、C 接在後面即可。下面這份可留待熟悉之後再參考。</p>
+    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。<strong>不用從這裡開始。</strong>先用<a href="templates.html">指令模板</a>的模板 A 起手，後面接模板 B、C 就好。下面這份等你熟了再回來看。</p>
   </div>
 
   <div class="cmd">
@@ -132,7 +132,7 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 
   <div class="note">
-    <p><b>第三項規則為本指令之關鍵。</b>未加註該項時，生成結果通常直接採用簡化與減量，此為公開文獻中最常見之寫法。加註後，系統須先行檢視替代方案，並就其不可行之理由提出說明，使決策過程可供檢驗。</p>
+    <p><b>第三條規則是這份指令的關鍵。</b>不加這一條，它幾乎都會直接用簡化和減量，因為公開資料裡最常見的就是那種寫法。加了之後，它得先看過替代方案，還要說明為什麼不可行，<strong>你才看得到它的判斷過程。</strong></p>
   </div>
     </div>
   </details>
@@ -142,22 +142,22 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">三向度檢核</h2><p class="lead">本主題之使用者為教師，仍適用同一組檢核。</p></div></div>
+    <div><h2 id="s3">三向度檢核</h2><p class="lead">這個工具的使用者是老師，一樣要過這三關。</p></div></div>
     </summary>
     <div class="sec-body">
   <div class="gates">
     <div class="gate"><div class="g">多元表徵</div>
-      <div class="q">取得教案之教師能否理解其內容</div>
-      <ul><li>調整理由是否以可理解之敘述表達，抑或僅羅列專有名詞</li>
-      <li>原目標與調整後目標是否可一眼區辨</li></ul></div>
+      <div class="q">拿到教案的老師看不看得懂</div>
+      <ul><li>調整理由是用人話寫的，還是只堆專有名詞</li>
+      <li>原目標和調整後的目標，能不能一眼分出來</li></ul></div>
     <div class="gate"><div class="g">多元行動與表達</div>
-      <div class="q">教案所載之調整措施於現場能否執行</div>
-      <ul><li>是否要求不存在之設備或人力支援</li>
-      <li>評量調整部分能否納入一般班級之既有施測流程</li></ul></div>
+      <div class="q">教案上寫的調整，現場做不做得到</div>
+      <ul><li>有沒有要求根本沒有的設備或人力</li>
+      <li>評量調整那部分，塞不塞得進一般班級現在的考試流程</li></ul></div>
     <div class="gate"><div class="g">多元參與</div>
-      <div class="q">其他教師採用本產生器之誘因為何</div>
-      <ul><li>更換單元是否確實僅需更動變數，抑或須重新說明需求</li>
-      <li>輸出草稿須修改之幅度是否低於自行撰寫</li></ul></div>
+      <div class="q">別的老師為什麼要用你這個產生器</div>
+      <ul><li>換單元真的只要改變數嗎，還是又得重講一次需求</li>
+      <li>改草稿花的時間，有沒有比自己寫還少</li></ul></div>
   </div>
     </div>
   </details>
@@ -171,9 +171,9 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <ul>
-    <li>將產生器<strong>封裝為技能檔</strong>，提供輔導區內教師直接使用</li>
-    <li>增設<strong>教學內容審查</strong>環節：要求系統將生成之題目、答案與概念說明列為對照表，由使用者持課本逐項核對</li>
-    <li>建置資料庫，使歷次生成之教案得以留存並支援檢索，累積為個人教案資料庫（<a href="backend.html">建置方式</a>）</li>
+    <li>把產生器<strong>封裝成技能檔</strong>，讓輔導區裡的老師直接拿去用</li>
+    <li>加一道<strong>教學內容審查</strong>：叫它把生成的題目、答案、概念說明列成對照表，你拿課本逐項核對</li>
+    <li>接資料庫，把歷次生成的教案存起來、可以搜尋，累積成自己的教案庫（<a href="backend.html">建置方式</a>）</li>
   </ul>
     </div>
   </details>
@@ -194,6 +194,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=25"></script>
+<script src="assets/site.js?v=26"></script>
 </body>
 </html>

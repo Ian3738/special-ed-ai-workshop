@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=25">
+<link rel="stylesheet" href="assets/style.css?v=26">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -60,14 +60,14 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="wrap">
     <p class="kicker">共用資源</p>
     <h1>資料庫建置與個人資料保護</h1>
-    <p class="thesis">資料留存能力為本次功能更新之核心，<br>亦為<b>風險等級提升之所在</b>。建置前請完整閱讀本頁。</p>
+    <p class="thesis">資料存得下來是這次功能更新的核心，<br>也是<b>風險變高的地方</b>。動手之前請把這一頁讀完。</p>
   </div>
 </header>
 
 <div class="stage">
   <div class="wrap">
     <span class="tag">第一天下午</span>
-    <span class="txt">建置具資料庫之系統前必讀。存取權限驗證為當日必做項目</span>
+    <span class="txt">要做有資料庫的系統，這一頁一定要先讀。存取權限驗證當天一定要做</span>
     <a class="nx" href="path-assessment.html">接著：選一類需資料庫的案例 →</a>
   </div>
 </div>
@@ -82,9 +82,9 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s1">風險性質之改變</h2></div></div>
     </summary>
     <div class="sec-body">
-  <p>過往生成式 AI 之產出為靜態網頁，使用結束後不留存資料，其最不利之情形亦僅止於工具不堪使用。建置資料庫後，性質已改變為<strong>持續蒐集特殊教育學生之學習歷程資料</strong>。</p>
+  <p>以前用 AI 做出來的是靜態網頁，用完不留資料，最糟就是這個工具不好用。<strong>接了資料庫之後性質變了：你在持續蒐集特殊教育學生的學習歷程資料。</strong></p>
 
-  <p>特殊教育場域另有一項普通教育所無之問題：<strong>間接識別</strong>。資料表中縱使未含任何姓名，惟該系統若係提供資源班或巡迴輔導使用，「該筆資料存在」此一事實本身，即揭露當事人之障礙身分。此項難以事後補救，故須於設計階段即行處理。</p>
+  <p>特教場域還有一個普通教育沒有的問題：<strong>間接識別</strong>。就算資料表裡一個名字都沒有，只要這個系統是給資源班或巡迴輔導用的，「這筆資料存在」這件事本身，就洩漏了這個學生的障礙身分。<strong>這一點事後補不回來，設計的時候就要處理。</strong></p>
     </div>
   </details>
 </section>
@@ -93,7 +93,7 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">02</span>
-    <div><h2 id="s2">蒐集限制</h2><p class="lead">共七項。無法全數遵守者，不宜建置資料庫；靜態版本同樣可供使用。</p></div></div>
+    <div><h2 id="s2">蒐集限制</h2><p class="lead">共七項。<b>七項沒辦法全部做到，就不要建資料庫</b>，做靜態版本一樣能用。</p></div></div>
     </summary>
     <div class="sec-body">
 
@@ -141,12 +141,12 @@ d.setAttribute('data-fs',f||'m');})();
       <li><strong>跨校部署時各校建置獨立專案。</strong>不得共用單一資料庫，避免跨校比對後產生可識別性。</li>
       <li><strong>保留期限於建置時訂定</strong>，載明於系統說明，屆期刪除。</li>
       <li><strong>蒐集前依學校既有之個人資料告知同意程序辦理。</strong>不因屬內部工具而免除。</li>
-      <li><strong>先行確認縣市教育主管機關之資通安全規範。</strong>資料庫服務位於境外，跨境傳輸非建置者所得逕行決定。</li>
+      <li><strong>先確認縣市教育主管機關的資通安全規範。</strong>資料庫服務在境外，跨境傳輸不是建置的人可以自己決定的。</li>
     </ul>
   </div>
 
   <div class="note">
-    <p><b>研習現場一律使用虛擬資料。</b>不得以「僅為測試」為由將實際資料輸入測試環境；測試環境所儲存者仍屬個人資料。</p>
+    <p><b>研習現場一律用虛擬資料。</b>不要因為「只是測試」就把真實資料放進測試環境。<strong>測試環境裡存的一樣是個人資料。</strong></p>
   </div>
     </div>
   </details>
@@ -156,7 +156,7 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">存取權限驗證</h2><p class="lead">第一天下午之必做項目，執行時間約三十秒。</p></div></div>
+    <div><h2 id="s3">存取權限驗證</h2><p class="lead">第一天下午每個人都要做一次，三十秒。</p></div></div>
     </summary>
     <div class="sec-body">
 
@@ -201,7 +201,7 @@ d.setAttribute('data-fs',f||'m');})();
       <text x="624" y="220" text-anchor="middle" class="tx-b" font-size="15" font-weight="900">須登入且具權限</text>
       <text x="530" y="244" text-anchor="middle" class="tx-b" font-size="13">開無痕視窗自行驗證</text></g>
   </svg>
-  <figcaption><b>此為此類專案最常見且後果最嚴重之疏漏</b>，且生成式 AI 所產出之程式碼未必包含該項設定。驗證只需三十秒，務必每人自行做一次。</figcaption>
+  <figcaption><b>這是這類專案最常出、後果也最嚴重的疏漏</b>，而且 AI 生出來的程式碼不一定會幫你設。驗證只要三十秒，每個人都自己做一次。</figcaption>
   <details class="alt"><summary>以文字檢視本圖</summary>
     <ul>
       <li><strong>未設定</strong>　未登入的任何人取得網址即可讀取整張資料表，後果不可回復</li>
@@ -210,21 +210,21 @@ d.setAttribute('data-fs',f||'m');})();
     <p>驗證方式：開啟無痕視窗，於未登入狀態下輸入系統網址，檢視能否載入資料。</p>
   </details>
 </figure>
-  <p>資料表若未設定列層級安全性（Row Level Security），任何取得網址者均得讀取全表內容。此為此類專案<strong>最常見且後果最嚴重之疏漏</strong>，且生成式 AI 所產出之程式碼未必包含該項設定。</p>
+  <p>資料表沒設列層級安全性（Row Level Security）的話，<strong>任何人只要拿到網址，就能讀到整張表。</strong>這是這類專案最常出、後果也最嚴重的疏漏，而且 AI 生出來的程式碼不一定會幫你設。</p>
 
   <ol class="steps">
-    <li><div><div class="t">開啟無痕視窗</div>
-      <div class="d">或改用其他瀏覽器，須確保處於完全未登入之狀態。</div></div></li>
-    <li><div><div class="t">輸入系統網址</div>
-      <div class="d">檢視列表頁能否載入資料。若能載入，即為設定不當。</div></div></li>
-    <li><div><div class="t">取得資料表端點網址並直接開啟</div>
-      <div class="d">較徹底之檢測方式。向系統詢問該專案之資料表 API 端點，將該網址貼入無痕視窗。若回傳完整之 JSON 資料，表示權限全開。</div></div></li>
-    <li><div><div class="t">修正後重新驗證</div>
-      <div class="d">指令：「請為所有資料表開啟列層級安全性，未登入使用者不得讀取或寫入任何資料，並說明驗證方式。」修正後須重新檢測，不得逕以系統回報之結果為據。</div></div></li>
+    <li><div><div class="t">開一個無痕視窗</div>
+      <div class="d">或換一個瀏覽器。重點是完全沒登入的狀態。</div></div></li>
+    <li><div><div class="t">貼上你的系統網址</div>
+      <div class="d">看列表頁載不載得出資料。<strong>載得出來，就是設錯了。</strong></div></div></li>
+    <li><div><div class="t">再狠一點：直接開資料表的端點網址</div>
+      <div class="d">問系統要這個專案的資料表 API 端點，把那個網址貼進無痕視窗。<strong>如果回你一整包 JSON，表示權限全開。</strong></div></div></li>
+    <li><div><div class="t">改完再驗一次</div>
+      <div class="d">照抄這句：「請為所有資料表開啟列層級安全性，未登入使用者不得讀取或寫入任何資料，並說明驗證方式。」改完自己再測一次，<strong>不要它說改好了就算數。</strong></div></div></li>
   </ol>
 
   <div class="note">
-    <p><b>本項應排序於無障礙檢核之前。</b>無障礙設計不足者，其影響為使用不便；存取權限設定不當者，其後果不可回復。</p>
+    <p><b>這一項要排在無障礙檢核前面做。</b>無障礙沒做好，是用起來不方便；<strong>權限沒設好，後果救不回來。</strong></p>
   </div>
     </div>
   </details>
@@ -234,10 +234,10 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">04</span>
-    <div><h2 id="s4">欄位設計</h2><p class="lead">通則為：以最少欄位回答既定之研究問題。</p></div></div>
+    <div><h2 id="s4">欄位設計</h2><p class="lead">原則：用最少的欄位，回答你想問的問題。</p></div></div>
     </summary>
     <div class="sec-body">
-  <p>應先列出所欲回答之問題，再據以推導所需欄位。逆向操作將導致蒐集範圍過度擴張。</p>
+  <p><strong>先寫下你想回答的問題，再回推需要哪些欄位。</strong>反過來做，蒐集範圍一定愈開愈大。</p>
 
   <div class="tw">
     <table>
@@ -254,9 +254,9 @@ d.setAttribute('data-fs',f||'m');})();
     </table>
   </div>
 
-  <p>前述欄位不含姓名、學號、障礙類別與班級型態，惟已足以回答輔導團實務上須答覆之問題：語音路徑之使用比例、採用該路徑者之答對率差異、路徑切換頻率偏高之單元。</p>
+  <p>上面這些欄位沒有姓名、學號、障礙類別、班級型態，但已經夠回答輔導團實務上要答的問題：語音路徑多少人用、用的人答對率差多少、哪些單元的路徑切換特別頻繁。</p>
 
-  <p>該等問題實際呈現之樣貌，見<a href="dashboard.html">資料儀表板（示範）</a>。該頁另示範圖表之替代文字與資料表作法。</p>
+  <p>這些問題實際畫出來長什麼樣，見<a href="dashboard.html">資料儀表板（示範）</a>。那一頁也示範了圖表的替代文字和資料表怎麼做。</p>
     </div>
   </details>
 </section>
@@ -265,13 +265,13 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">05</span>
-    <div><h2 id="s5">須循行政程序確認之事項</h2><p class="lead">三項，均無技術解決方案。</p></div></div>
+    <div><h2 id="s5">要走行政程序確認的事</h2><p class="lead">三項，都不是技術能解決的。</p></div></div>
     </summary>
     <div class="sec-body">
   <ul>
-    <li><strong>費用負擔與帳號歸屬。</strong>免費方案就儲存容量與專案數設有上限，各校一專案之部署方式將迅速達到該上限。</li>
-    <li><strong>維運歸屬。</strong>建置者人事異動後，系統之接續維護由何人負責。帳號綁定於個人者，異動後即中斷。</li>
-    <li><strong>跨境傳輸之資通安全規範。</strong>應洽詢縣市教育主管機關，不宜由建置者逕行認定。</li>
+    <li><strong>錢誰出、帳號掛誰。</strong>免費方案的儲存容量和專案數都有上限，一校一專案很快就會撞到。</li>
+    <li><strong>誰維護。</strong>你調動之後，這個系統接下來誰顧。帳號綁在個人身上的，人一走就斷。</li>
+    <li><strong>跨境傳輸的資安規範。</strong>要問縣市教育主管機關，不要自己認定。</li>
   </ul>
     </div>
   </details>
@@ -292,6 +292,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=25"></script>
+<script src="assets/site.js?v=26"></script>
 </body>
 </html>

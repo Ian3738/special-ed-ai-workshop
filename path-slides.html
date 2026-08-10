@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=25">
+<link rel="stylesheet" href="assets/style.css?v=26">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -60,7 +60,7 @@ d.setAttribute('data-fs',f||'m');})();
   <div class="wrap">
     <p class="kicker">實作主題三．簡報</p>
     <h1>個案研討與親師溝通簡報</h1>
-    <p class="thesis">一學期之觀察紀錄分散於數個檔案。<br>本主題所建置者為<b>紀錄至簡報之轉換流程</b>。</p>
+    <p class="thesis">一學期的觀察紀錄散在好幾個檔案裡。<br>要做的是<b>從紀錄到簡報的轉換流程</b>。</p>
     <div class="tags"><span>無須資料庫</span><span>第一天上午</span><span>約 30 分鐘</span><span>產出為轉換流程</span></div>
   </div>
 </header>
@@ -68,7 +68,7 @@ d.setAttribute('data-fs',f||'m');})();
 <div class="stage">
   <div class="wrap">
     <span class="tag">第一天上午</span>
-    <span class="txt">拆解完成、寫出規格之後，再對照此案例</span>
+    <span class="txt">先拆解、先寫出規格，再回來對照這個案例</span>
     <a class="nx" href="udl-check.html">交付前：三向度檢核 →</a>
   </div>
 </div>
@@ -83,13 +83,13 @@ d.setAttribute('data-fs',f||'m');})();
     <div><h2 id="s1">問題界定</h2></div></div>
     </summary>
     <div class="sec-body">
-  <p>個案研討簡報之困難不在版面製作，而在<strong>將分散之紀錄整理為具邏輯結構之敘述</strong>。課堂觀察、評量結果與家長回饋分屬不同來源，其排列順序須由撰寫者自行判斷。</p>
+  <p>個案研討簡報的難處不在排版，在於<strong>把散落的紀錄整理成有邏輯的敘述</strong>。課堂觀察、評量結果、家長回饋來自不同地方，先講哪個、後講哪個，得你自己判斷。</p>
 
-  <p>本主題建置之轉換流程，係將去識別化之原始紀錄輸入後，輸出具既定結構之簡報草稿。內容正確性之判斷仍由撰寫者負責，系統負責之部分為整理與版面配置。</p>
+  <p>這一主題要做的轉換流程是：你把去識別化的原始紀錄丟進去，它照固定結構吐出簡報草稿。<strong>內容對不對還是你負責，它只負責整理和排版。</strong></p>
 
   <div class="redline">
-    <div class="h"><span aria-hidden="true">▲</span>本主題之個人資料風險最高</div>
-    <p>個案研討素材本身即屬高敏感度資料。<strong>研習現場一律使用虛擬個案或全代號資料。</strong>研習後處理實際資料時，姓名、學號、鑑定文號與就醫紀錄均應先行置換；生成式 AI 平台無須取得學生之識別資訊。</p>
+    <div class="h"><span aria-hidden="true">▲</span>這一主題的個資風險最高</div>
+    <p>個案研討的素材本身就是高敏感資料。<strong>研習現場一律用虛擬個案，或整份換成代號。</strong>回去處理實際資料時，姓名、學號、鑑定文號、就醫紀錄都要先換掉。<strong>AI 平台不需要知道這個學生是誰。</strong></p>
   </div>
     </div>
   </details>
@@ -103,18 +103,18 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <ol class="steps">
-    <li><div><div class="t">確認溝通對象</div>
-      <div class="d">提送個案研討會與提供家長者為兩份不同文件，其用詞、詳略程度與數據呈現方式均不相同。應先擇定其一。</div></div></li>
-    <li><div><div class="t">訂定固定結構</div>
-      <div class="d">背景、現況（優勢先行陳述）、已實施之策略、實施結果、後續所需支持。此一順序每次相同，寫入指令。</div></div></li>
-    <li><div><div class="t">輸入原始紀錄</div>
-      <div class="d">去識別化之觀察紀錄、評量結果與作品影像。原始程度愈高愈佳，無須預先整理。</div></div></li>
-    <li><div><div class="t">查核有無虛構內容</div>
-      <div class="d">本步驟最為關鍵。生成式 AI 具有補足缺漏資訊之傾向，且其產出具有相當之表面合理性。應逐頁對照原始紀錄，凡未見於原始資料者一律刪除。</div></div></li>
+    <li><div><div class="t">先決定講給誰聽</div>
+      <div class="d">送個案研討會的，跟給家長的，是兩份不同的文件——用詞、詳細程度、數據怎麼呈現全都不一樣。先挑一個。</div></div></li>
+    <li><div><div class="t">把結構訂死</div>
+      <div class="d">背景、現況（優勢先講）、這學期做過什麼、做了以後怎麼樣、接下來需要什麼支持。這個順序每次都一樣，寫進指令。</div></div></li>
+    <li><div><div class="t">把原始紀錄丟進去</div>
+      <div class="d">去識別化的觀察紀錄、評量結果、作品照片。<strong>愈原始愈好，不用先整理。</strong></div></div></li>
+    <li><div><div class="t">檢查有沒有它自己編的</div>
+      <div class="d"><strong>這一步最關鍵。</strong>它很會把缺的資訊補起來，而且補得很像真的。逐頁對照原始紀錄，原始資料裡沒有的，一律刪掉。</div></div></li>
   </ol>
 
   <div class="note">
-    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。實際操作時<strong>不必從這裡開始</strong>——先用<a href="templates.html">指令模板</a>的模板 A 起手，再把模板 B、C 接在後面即可。下面這份可留待熟悉之後再參考。</p>
+    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。<strong>不用從這裡開始。</strong>先用<a href="templates.html">指令模板</a>的模板 A 起手，後面接模板 B、C 就好。下面這份等你熟了再回來看。</p>
   </div>
 
   <div class="cmd">
@@ -137,7 +137,7 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 
   <div class="note">
-    <p><b>「逐頁標註資料依據」一項係為抑制虛構內容而設。</b>無法標註依據之頁面，即屬系統自行補充之內容。此一作法適用於所有要求事實正確性之產出。</p>
+    <p><b>「每頁標註依據」這一條，是為了擋它亂編。</b>標不出依據的那一頁，就是它自己補的。<strong>凡是要求事實正確的產出，都可以用這一招。</strong></p>
   </div>
     </div>
   </details>
@@ -147,23 +147,23 @@ d.setAttribute('data-fs',f||'m');})();
   <details>
     <summary>
       <div class="head"><span class="num" aria-hidden="true">03</span>
-    <div><h2 id="s3">三向度檢核</h2><p class="lead">本主題之使用者為家長與會議成員，其可及性門檻高於一般預期。</p></div></div>
+    <div><h2 id="s3">三向度檢核</h2><p class="lead">這份東西的讀者是家長和會議成員，門檻比你想的還高。</p></div></div>
     </summary>
     <div class="sec-body">
   <div class="gates">
     <div class="gate"><div class="g">多元表徵</div>
-      <div class="q">家長能否理解本頁內容</div>
-      <ul><li>專業術語是否附有白話說明</li>
-      <li>投影片字級於會場後排能否辨識</li>
-      <li>圖表是否附有一句結論說明，抑或須由讀者自行解讀</li></ul></div>
+      <div class="q">家長看不看得懂這一頁</div>
+      <ul><li>專業術語有沒有附白話說明</li>
+      <li>投影片的字，坐在會場後排看得到嗎</li>
+      <li>圖表有沒有附一句結論，還是要讀者自己看懂</li></ul></div>
     <div class="gate"><div class="g">多元行動與表達</div>
-      <div class="q">所請求對方執行之事項能否達成</div>
-      <ul><li>「請家長於家中配合練習」一類請求，是否符合其實際作息條件</li>
-      <li>需求敘述是否具體可執行，抑或僅陳述方向</li></ul></div>
+      <div class="q">你請對方做的事，他做得到嗎</div>
+      <ul><li>「請家長在家配合練習」這種要求，符合他們家的實際作息嗎</li>
+      <li>需求寫得夠具體可以執行，還是只講了個方向</li></ul></div>
     <div class="gate"><div class="g">多元參與</div>
-      <div class="q">對方於會後是否願意繼續討論</div>
-      <ul><li>是否先行陳述優勢（先陳述困難將顯著降低家長之參與意願）</li>
-      <li>是否保留由對方補充資訊之環節</li></ul></div>
+      <div class="q">散會之後，對方還願不願意再談</div>
+      <ul><li>有沒有先講優勢（先講困難，家長的參與意願會明顯降低）</li>
+      <li>有沒有留一個讓對方補充的環節</li></ul></div>
   </div>
     </div>
   </details>
@@ -177,9 +177,9 @@ d.setAttribute('data-fs',f||'m');})();
     </summary>
     <div class="sec-body">
   <ul>
-    <li>製作<strong>兩種版本</strong>：提送會議者與提供家長者，比較同一份資料之不同呈現方式</li>
-    <li>將轉換流程<strong>封裝為技能檔</strong>，供後續學期沿用</li>
-    <li>建置資料庫留存歷次紀錄，使<strong>下次會議得自動帶出前次之追蹤事項</strong>（<a href="backend.html">建置方式</a>）</li>
+    <li>做<strong>兩種版本</strong>：一份送會議、一份給家長，比比看同一批資料的呈現差在哪</li>
+    <li>把轉換流程<strong>封裝成技能檔</strong>，下學期直接接著用</li>
+    <li>接資料庫存歷次紀錄，<strong>下次開會自動帶出上次的追蹤事項</strong>（<a href="backend.html">建置方式</a>）</li>
   </ul>
     </div>
   </details>
@@ -200,6 +200,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=25"></script>
+<script src="assets/site.js?v=26"></script>
 </body>
 </html>
