@@ -13,7 +13,7 @@ try{t=localStorage.getItem('sped-theme');f=localStorage.getItem('sped-fs');}catc
 d.setAttribute('data-theme',t||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'));
 d.setAttribute('data-fs',f||'m');})();
 </script>
-<link rel="stylesheet" href="assets/style.css?v=24">
+<link rel="stylesheet" href="assets/style.css?v=25">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要內容</a>
@@ -33,6 +33,7 @@ d.setAttribute('data-fs',f||'m');})();
     <div class="wrap">
       <a href="index.html">總覽</a>
       <a href="kuse.html">認識 KUSE</a>
+      <a href="templates.html">指令模板</a>
       <span class="sp" aria-hidden="true"></span>
       <a href="method.html">設計方法</a>
       <a href="udl-check.html">檢核表</a>
@@ -110,6 +111,10 @@ d.setAttribute('data-fs',f||'m');})();
     <li><div><div class="t">以歷年已通過之計畫回測</div>
       <div class="d">若已通過之計畫被判為不通過，表示檢核條件過嚴；反之則過寬。回測後再調整條件。</div></div></li>
   </ol>
+
+  <div class="note">
+    <p><b>第一次做的人：</b>下面這份指令是完整版，看起來很長。實際操作時<strong>不必從這裡開始</strong>——先用<a href="templates.html">指令模板</a>的模板 A 起手，再把模板 B、C 接在後面即可。下面這份可留待熟悉之後再參考。</p>
+  </div>
 
   <div class="cmd">
     <div class="lbl">康軒 KUSE 指令</div>
@@ -203,6 +208,6 @@ d.setAttribute('data-fs',f||'m');})();
   </div>
 </footer>
 
-<script src="assets/site.js?v=24"></script>
+<script src="assets/site.js?v=25"></script>
 </body>
 </html>
